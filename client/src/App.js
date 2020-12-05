@@ -1,7 +1,8 @@
-import "./App.css";
+import React from "react";
+import EntryContainer from "./components/EntryContainer;
 
 function App() {
-  return <div className="App"></div>;
+  return <EntryContainer />;
 }
 
 export default App;
