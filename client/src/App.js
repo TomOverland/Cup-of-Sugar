@@ -1,8 +1,7 @@
 import React from "react";
-import EntryContainer from "./components/EntryContainer;
 
 function App() {
-  return <EntryContainer />;
+  return <div></div>;
 }
 
 export default App;
