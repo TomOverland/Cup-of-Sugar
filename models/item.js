@@ -9,7 +9,7 @@ module.exports = function (sequelize, Datatypes) {
       allowNull: false,
     },
     itemDescription: {
-      type: DataTypes.STRING,
+      type: DataTypes.TEXT,
       allowNull: false,
     },
     image: {
