@@ -1,6 +1,7 @@
-// const { Sequelize, DataTypes } = require('sequelize');
+const { DataTypes } = require('sequelize');
 // const { Sequelize } = require('.');
-import Sequelize from "sequelize";
+// import Sequelize from "sequelize";
+'use strict'
 
 module.exports = function (sequelize, Datatypes) {
   const Item = sequelize.define('Item', {
@@ -54,11 +55,11 @@ module.exports = function (sequelize, Datatypes) {
       allowNull: true,
       defaultValue: Date.now,
     },
-    updatedAt: {
-      type: DataTypes.Date,
-      allowNull: true,
-      defaultValue: Date.now,
-    },
+    // updatedAt: {
+    //   type: DataTypes.Date,
+    //   allowNull: true,
+    //   defaultValue: Date.now,
+    // },
   });
   //   makes the user (owner) ID a foreign key
 //   Item.associate = function (models) {
