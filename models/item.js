@@ -1,5 +1,6 @@
-const { DataTypes } = require('sequelize/types');
-const { Sequelize } = require('.');
+// const { Sequelize, DataTypes } = require('sequelize');
+// const { Sequelize } = require('.');
+import Sequelize from "sequelize";
 
 module.exports = function (sequelize, Datatypes) {
   const Item = sequelize.define('Item', {
@@ -60,8 +61,8 @@ module.exports = function (sequelize, Datatypes) {
     },
   });
   //   makes the user (owner) ID a foreign key
-  Item.associate = function (models) {
-    Item.belongsTo(models.User);
-  };
+//   Item.associate = function (models) {
+//     Item.belongsTo(models.User);
+//   };
   return Item;
 };
