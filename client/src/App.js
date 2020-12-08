@@ -7,6 +7,7 @@ import {
 import Login from "./views/Login";
 import Home from "./views/Home";
 import Product from "./views/Product"
+import PostProduct from "./views/PostProduct"
 
 function App() {
   return(
@@ -18,6 +19,9 @@ function App() {
           </Route>
           <Route exact path="/home">
             <Home />
+          </Route>
+          <Route exact path="/postproduct">
+            <PostProduct />
           </Route>
           <Route exact path="/product/:id">
             <Product />
