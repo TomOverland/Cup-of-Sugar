@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Component } from "react";
 import {
   BrowserRouter as Router, 
   Switch, 
@@ -8,6 +8,7 @@ import Login from "./views/Login";
 import Home from "./views/Home";
 import Product from "./views/Product"
 import PostProduct from "./views/PostProduct"
+import LoginButton from "./components/LoginButton/LoginButton";
 
 function App() {
   return(
@@ -16,6 +17,7 @@ function App() {
         <Switch>
           <Route exact path="/">
             <Login />
+            <LoginButton />
           </Route>
           <Route exact path="/home">
             <Home />
