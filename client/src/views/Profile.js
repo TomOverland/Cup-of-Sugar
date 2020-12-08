@@ -4,7 +4,8 @@
 import React from 'react';
 import { useAuth0 } from "@auth0/auth0-react";
 //import JSONpretty from 'react-json-pretty';
-// ^ JSON prettifier for webpages, would req an npm install.
+// ^ JSON prettifier for webpages, would req an npm install. Component below
+// would display the Auth0 "user" object.
 
 const Profile = () => {
     const { user, isAuthenticated } = useAuth0;
