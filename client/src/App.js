@@ -16,22 +16,22 @@ function App() {
     <div>
       <LoginButton />
       <LogoutButton />
-      <Router>
-        <Switch>
-          <Route exact path="/">
-            <Login />
-          </Route>
-          <Route exact path="/home">
-            <Home />
-          </Route>
-          <Route exact path="/postproduct">
-            <PostProduct />
-          </Route>
-          <Route exact path="/product/:id">
-            <Product />
-          </Route>
-        </Switch>
-      </Router>
+        <Router>
+          <Switch>
+            <Route exact path="/">
+              <Login />
+            </Route>
+            <Route exact path="/home">
+              <Home />
+            </Route>
+            <Route exact path="/postproduct">
+              <PostProduct />
+            </Route>
+            <Route exact path="/product/:id">
+              <Product />
+            </Route>
+          </Switch>
+        </Router>
     </div>
   ) 
 }
