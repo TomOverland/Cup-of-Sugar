@@ -7,10 +7,12 @@ module.exports = function (sequelize, Datatypes) {
     itemName: {
       type: DataTypes.STRING,
       allowNull: false,
+      notEmpty: true,
     },
     itemDescription: {
       type: DataTypes.TEXT,
       allowNull: false,
+      notEmpty: true,
     },
     image: {
       type: DataTypes.STRING,
@@ -28,6 +30,21 @@ module.exports = function (sequelize, Datatypes) {
       type: DataTypes.STRING,
       allowNull: false,
     },
+    email: {
+      type: DataTypes.STRING,
+      allowNull: false,
+      validate: {
+        isEmail: true,
+      },
+    },
+    // confirm number type for phone number
+    phone: {
+      type: DataTypes.FLOAT,
+      allowNull: true,
+    },
+    preferredContact: {
+      type: DataTypes.STRING,
+    },
     availableStatus: {
       type: DataTypes.BOOLEAN,
     },
@@ -42,7 +59,7 @@ module.exports = function (sequelize, Datatypes) {
       defaultValue: Date.now,
     },
   });
-//   makes the user (owner) ID a foreign key
+  //   makes the user (owner) ID a foreign key
   Item.associate = function (models) {
     Item.belongsTo(models.User);
   };
