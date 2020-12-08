@@ -8,7 +8,11 @@ import { useAuth0 } from "@auth0/auth0-react";
 // would display the Auth0 "user" object.
 
 const Profile = () => {
-    const { user, isAuthenticated } = useAuth0;
+    const { user, isAuthenticated, isLoading } = useAuth0;
+
+    if (isLoading) {
+        return <div>Loading...</div>;
+    }
 
     return (
         isAuthenticated && (
