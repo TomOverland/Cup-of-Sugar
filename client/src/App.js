@@ -7,7 +7,7 @@ import {
 import Login from "./views/Login";
 import Home from "./views/Home";
 import Product from "./views/Product"
-import PostProduct from "./views/PostProduct"
+import { PostProduct } from "./components/PostProduct/PostProduct"
 import LoginButton from "./components/LoginButton/LoginButton";
 import LogoutButton from "./components/LogoutButton/LogoutButton";
 
