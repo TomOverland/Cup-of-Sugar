@@ -12,12 +12,12 @@ import LogoutButton from "./components/LogoutButton/LogoutButton";
 function App() {
   return (
     <div>
-      <LoginButton />
-      <LogoutButton />
       <Router>
         <Switch>
           <Route exact path="/">
             <Login />
+            <LoginButton />
+            <LogoutButton />
           </Route>
           <Route exact path="/home">
             <Home />
