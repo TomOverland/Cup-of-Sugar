@@ -1,7 +1,8 @@
-import React from "react";
+import React from 'react';
+import { Sidebar } from '../components/Sidebar/Sidebar';
 
 const Home = () => {
-  return <div></div>;
+  return <Sidebar />;
 };
 
 export default Home;
