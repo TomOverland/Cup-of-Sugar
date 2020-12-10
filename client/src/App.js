@@ -1,6 +1,8 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Login from './views/Login';
+// We have a VIEWS and a COMPONENT Login.  We should figure out which we're going to use.
+// Probably similar issue with below.
 import Home from './views/Home';
 import Product from './views/Product';
 import { PostProduct } from './components/PostProduct/PostProduct';
