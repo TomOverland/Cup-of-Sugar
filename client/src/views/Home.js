@@ -1,10 +1,12 @@
 import React from "react";
 import Loader from "../components/Loader/Loader";
 import ProductCard from "../components/ProductCard/ProductCard";
+import { useAuth0 } from '@auth0/auth0-react';
 
 const Home = () => {
+  const { isAuthenticated } = useAuth0();
    
-let products = "" ;
+  let products = "" ;
   
   let content = null;
 
@@ -25,7 +27,7 @@ let products = "" ;
     )
   }
 
-  return (
+  return isAuthenticated && (
       <div>
         <h1 className="font-bold text-2xl mb-3">
                 Best Sellers
