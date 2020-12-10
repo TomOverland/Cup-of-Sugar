@@ -31,17 +31,19 @@
       <!--Start of Form-->
       <div class="post-item-form">
         <form>
+          <!-- input field 1 -->
           <div class="form-row">
             <div class="form-group col-md-6">
-              <label for="itemName">Item Name</label>
+              <label for="item-name">Item Name</label>
               <input
                 type="text"
                 class="form-control"
-                id="formGroupExampleInput"
+                id=""
                 placeholder="Ex: Paddleboard"
               />
             </div>
           </div>
+          <!-- Textarea -->
           <div class="form-row">
             <div class="form-group col-md-8">
               <label for="exampleFormControlTextarea1">Description</label>
@@ -53,9 +55,10 @@
               ></textarea>
             </div>
           </div>
+          <!-- inputfield 2 img -->
           <div class="form-row">
             <div class="form-group col-md-8">
-              <label for="itemName">Image (online hosted images only)</label>
+              <label for="item-image">Image (online hosted images only)</label>
               <input
                 type="text"
                 class="form-control"
@@ -64,6 +67,7 @@
               />
             </div>
           </div>
+          <!-- menu -->
           <div class="form-row">
             <div class="form-group col-md-4">
               <label for="categorySelectMenu">Select a Category</label>
@@ -72,7 +76,7 @@
                 <option>Appliances</option>
                 <option>Arts and Craft Supplies</option>
                 <option>Automotive</option>
-                <option>Baby items</option>
+                <option>Baby Items</option>
                 <option>Beauty</option>
                 <option>Bicycle</option>
                 <option>Board Games</option>
@@ -94,7 +98,8 @@
               </select>
             </div>
           </div>
-          <label for="maximumRentalLength">Rental Rate Per Day</label>
+          <!-- input field 3 -->
+          <label for="rental-rate">Rental Rate Per Day</label>
           <div class="form-row">
             <div class="input-group col-md-3">
               <div class="input-group-prepend">
@@ -111,9 +116,10 @@
               </div>
             </div>
           </div>
+          <!-- input field 4-->
           <div class="form-row">
             <div class="form-group col-md-4">
-              <label for="maximumRentalLength">Maximum Rental Time</label>
+              <label for="maximum-rental-time">Maximum Rental Time</label>
               <input
                 type="text"
                 class="form-control"
@@ -122,10 +128,10 @@
               />
             </div>
           </div>
-
+          <!-- input field 5-->
           <div class="form-row">
             <div class="form-group col-md-4">
-              <label for="listingEmail">Email</label>
+              <label for="listing-email">Email</label>
               <input
                 type="email"
                 class="form-control"
@@ -134,9 +140,10 @@
               />
             </div>
           </div>
+          <!-- input field 6-->
           <div class="form-row">
             <div class="form-group col-md-4">
-              <label for="inputPhone">Phone Number (optional)</label>
+              <label for="listing-phone">Phone Number (optional)</label>
               <input
                 type="text"
                 class="form-control"
@@ -144,6 +151,7 @@
                 placeholder="XXX-XXX-XXXX"
               />
             </div>
+            <!-- preferred contact method 7-->
             <div class="form-group col-md-4">
               <label for="inputPreferredContact"
                 >Preferred Contact Method</label
@@ -158,6 +166,7 @@
               </select>
             </div>
           </div>
+          <!-- make common components -->
           <button type="submit" class="btn btn-primary" value="submit">
             Save Listing
           </button>

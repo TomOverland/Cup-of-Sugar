@@ -1,13 +1,13 @@
-import React from "react";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import Login from "./views/Login";
+import React from 'react';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import Login from './views/Login';
 // We have a VIEWS and a COMPONENT Login.  We should figure out which we're going to use.
 // Probably similar issue with below.
-import Home from "./views/Home";
-import Product from "./views/Product";
-import PostProduct from "./views/PostProduct";
-import LoginButton from "./components/LoginButton/LoginButton";
-import LogoutButton from "./components/LogoutButton/LogoutButton";
+import Home from './views/Home';
+import Product from './views/Product';
+import { PostProduct } from './components/PostProduct/PostProduct';
+import LoginButton from './components/LoginButton/LoginButton';
+import LogoutButton from './components/LogoutButton/LogoutButton';
 
 function App() {
   return (

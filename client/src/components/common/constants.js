@@ -1,0 +1,26 @@
+export const categories = [
+  'Appliances',
+  'Arts and Craft Supplies',
+  'Automotive',
+  'Baby Items',
+  'Beauty',
+  'Bicycle',
+  'Board Games',
+  'Boating',
+  'Books',
+  'Camping',
+  "Children's Toys and Accessories",
+  'Clothes and Accessories',
+  'Electronics',
+  'Fitness',
+  'Furniture',
+  'Lawn and Garden',
+  'Miscellaneous',
+  'Music',
+  'Photo and Video',
+  'Sporting Goods',
+  'Tools',
+  'Video Games/Consoles',
+];
+
+
