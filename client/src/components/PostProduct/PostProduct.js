@@ -30,7 +30,7 @@ export function PostProduct() {
           <FormInputField
             class="post-product-item-image-link"
             title="Image (online hosted images only)"
-            placeholder="Paste an link for your image here"
+            placeholder="Paste a link for your image here"
             elementName="item-image"
           />
           <DropdownMenu />
