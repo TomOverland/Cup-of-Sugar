@@ -3,9 +3,8 @@ import Loader from "../components/Loader/Loader";
 import ProductCard from "../components/ProductCard/ProductCard";
 
 const Home = () => {
-  const url = ``;
-  
-  let products = "" ;
+   
+let products = "" ;
   
   let content = null;
 
