@@ -1,7 +1,8 @@
 // card of product displayed on results list and owner list
 // card of product displayed on results list and owner list
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link } from "react-router-dom"; 
+
 
 function ProductCard (props) {
     return(
@@ -15,6 +16,7 @@ function ProductCard (props) {
                     >
                     </div>
                 </Link>
+                
             <div className="p-3">
                 <h3 className="font-bold text-xl mb-3">
                 <Link to={`/products/${props.product.id}`}>

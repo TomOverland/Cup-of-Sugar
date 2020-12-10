@@ -10,7 +10,7 @@ const LogoutButton = () => {
 
     return(
         isAuthenticated && (
-            <button onClick={() => logout()}>
+            <button onClick={() => logout()} className="py-2 px-4 bg-red-500 hover:bg-red-700 text-white font-semibold rounded-lg shadow-md focus:outline-none">
                 Logout
             </button>
         )
