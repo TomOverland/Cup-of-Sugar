@@ -4,9 +4,9 @@ import React, {useState} from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"; 
 import { faBars } from "@fortawesome/free-solid-svg-icons";
 import {useTransition, animated} from 'react-spring';
-import NavigationMenu from "./NavigationMenu";
+import NavigationMenu from "../NavigationMenu/NavigationMenu";
 
-function NavTabs(props) {
+function Navbar(props) {
   const [showMenu, setShowMenu] = useState(false);
        
     const maskTransitions = useTransition(showMenu, null, {
@@ -59,4 +59,4 @@ function NavTabs(props) {
   );
 }
 
-export default NavTabs;
+export default Navbar;

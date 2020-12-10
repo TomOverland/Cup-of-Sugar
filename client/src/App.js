@@ -6,14 +6,13 @@ import Login from './views/Login';
 import Home from './views/Home';
 import Product from './views/Product';
 import { PostProduct } from './components/PostProduct/PostProduct';
-import LoginButton from './components/LoginButton/LoginButton';
-import LogoutButton from './components/LogoutButton/LogoutButton';
+import Header from "./components/Header/Header";
+import Footer from './components/Footer/Footer'
 
 function App() {
   return (
     <div>
-      <LoginButton />
-      <LogoutButton />
+      <Header />
       <Router>
         <Switch>
           <Route exact path="/">
@@ -30,6 +29,7 @@ function App() {
           </Route>
         </Switch>
       </Router>
+      <Footer />
     </div>
   );
 }
