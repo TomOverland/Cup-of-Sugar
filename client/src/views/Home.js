@@ -1,11 +1,14 @@
-import React from 'react';
-import Loader from '../components/Loader/Loader';
-import ProductCard from '../components/ProductCard/ProductCard';
+import React from "react";
+import Loader from "../components/Loader/Loader";
+import ProductCard from "../components/ProductCard/ProductCard";
+import { useAuth0 } from '@auth0/auth0-react';
 import { Sidebar } from '../components/Sidebar/Sidebar';
 
 const Home = () => {
-  let products = '';
-
+  const { isAuthenticated } = useAuth0();
+   
+  let products = "" ;
+  
   let content = null;
 
   if (products.error) {
@@ -20,7 +23,8 @@ const Home = () => {
     ));
   }
 
-  return (
+
+  return isAuthenticated && (
     <div>
       <h1 className="font-bold text-2xl mb-3">Best Sellers</h1>
       <div className="md:grid gap-4 grid-cols-3">{content}</div>
