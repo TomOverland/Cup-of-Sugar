@@ -6,3 +6,4 @@ const SingleProductPage = () => {
 };
 
 export default SingleProductPage;
+
