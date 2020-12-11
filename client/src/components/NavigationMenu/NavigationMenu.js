@@ -6,14 +6,24 @@ function NavigationMenu(props) {
          <div className="font-bold py-3">Main Menu</div>
            <ul>
              <li>
-               <Link to="/" className="text-blue-500 py-3 border-t border-b block"
+               <Link to="/postproduct" className="text-blue-500 py-3 border-t border-b block"
                onClick={props.closeMenu}>
-                Home
+                Post an item
                </Link>
              </li>
              <li>
-               <Link to="/about" className="text-blue-500 py-3 border-b block" onClick={props.closeMenu}>
-               About
+               <Link to="/" className="text-blue-500 py-3 border-b block" onClick={props.closeMenu}>
+               My Listings
+               </Link>
+             </li>
+             <li>
+               <Link to="/" className="text-blue-500 py-3 border-b block" onClick={props.closeMenu}>
+               My Rented Items
+               </Link>
+             </li>
+             <li>
+               <Link to="/" className="text-blue-500 py-3 border-b block" onClick={props.closeMenu}>
+               Logout
                </Link>
              </li>
             </ul>
