@@ -24,7 +24,9 @@ const Home = () => {
     <div>
       <h1 className="font-bold text-2xl mb-3">Best Sellers</h1>
       <div className="md:grid gap-4 grid-cols-3">{content}</div>
-      <Sidebar />
+      <div>
+        <Sidebar />
+      </div>
     </div>
   );
 };
