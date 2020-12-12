@@ -26,6 +26,7 @@ const Home = () => {
 
   return isAuthenticated && (
     <div>
+      <div id="toms-div"></div>
       <h1 className="font-bold text-2xl mb-3 pl-3">Best Sellers</h1>
       <hr />
       <div className="md:grid gap-4 grid-cols-3">{content}</div>

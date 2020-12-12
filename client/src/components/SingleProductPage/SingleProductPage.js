@@ -2,7 +2,12 @@
 import React from "react";
 
 const SingleProductPage = () => {
-  return <div></div>;
+  return (
+    <div>
+      <h1>Hello the World</h1>
+    </div>
+
+  );
 };
 
 export default SingleProductPage;
