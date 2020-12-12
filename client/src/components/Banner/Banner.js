@@ -8,7 +8,7 @@ import SiteDescription from "../SiteDescription/SiteDescription";
 function Banner() {
     return (
         // eslint-disable-next-line
-        <div class="max-w-4xl bg-cover"><img className="w-full" src="https://i.ibb.co/KhyQjvK/Decor-Online-Store-Website.png"></img>
+        <div class="container mx-auto"><img className="w-full" src="https://i.ibb.co/KhyQjvK/Decor-Online-Store-Website.png"></img>
            <div class="flex items-center justify-center h-full w-full bg-gray-900 bg-opacity-50">
                 <div class="absolute top-20 right-20">
                     <SiteDescription />
