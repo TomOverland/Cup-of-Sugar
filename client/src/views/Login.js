@@ -7,7 +7,9 @@ const Login = () => {
   const { isAuthenticated } = useAuth0();
 
     return !isAuthenticated && (
+      <div className="p-3">
       <Banner />
+      </div>
     )
 };
 

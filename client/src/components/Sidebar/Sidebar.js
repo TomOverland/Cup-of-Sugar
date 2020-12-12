@@ -32,6 +32,7 @@ export function Sidebar() {
             </div>
           );
         })}
+        <br />
         <hr />
         <br />
         <button type="submit" className="py-2 px-4 bg-red-600 hover:bg-red-700 text-white font-semibold rounded-lg shadow-md focus:outline-none" value="filter">

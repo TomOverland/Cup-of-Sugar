@@ -6,11 +6,11 @@ import { FormTextareaInput } from '../Textarea/textarea';
 
 export function PostProduct() {
   return (
-    <div>
-      <div className="container">
-        <div class="row">
-          <div class="card">
-            <div class="card-body" id="disclaimer">
+    <div className="container mx-auto">
+     
+        <div class="space-y-4">
+          <div class="card block border mb-4 rounded overflow-hidden">
+            <div class="card-body p-3" id="disclaimer">
               Cup Of Sugar is not responsible for your transactions. Rent items
               at your risk. Consider taking precautions such as requesting
               Drivers License information before making a transaction. We
@@ -19,7 +19,7 @@ export function PostProduct() {
             </div>
           </div>
         </div>
-        <form>
+        <form className="block border mb-4 rounded overflow-hidden">
           <FormInputField
             class="post-product-item-name-field"
             title="Item Name"
@@ -88,6 +88,5 @@ export function PostProduct() {
           </button>
         </form>
       </div>
-    </div>
   );
 }
