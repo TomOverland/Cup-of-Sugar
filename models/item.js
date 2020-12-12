@@ -1,7 +1,7 @@
 const { DataTypes } = require('sequelize');
 // const { Sequelize } = require('.');
 // import Sequelize from "sequelize";
-'use strict'
+('use strict');
 
 module.exports = function (sequelize, Datatypes) {
   const Item = sequelize.define('Item', {
@@ -62,8 +62,9 @@ module.exports = function (sequelize, Datatypes) {
     // },
   });
   //   makes the user (owner) ID a foreign key
-//   Item.associate = function (models) {
-//     Item.belongsTo(models.User);
-//   };
-  return Item;
+  Item.associate = function (models) {
+    Item.belongsTo(models.User);
+    //   };
+    return Item;
+  };
 };

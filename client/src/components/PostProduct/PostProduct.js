@@ -1,93 +1,140 @@
 import React from 'react';
-import { DropdownMenu } from '../DropdownMenu/DropdownMenu';
-import { FormInputField } from '../FormField/form-field';
-import { FormTextareaInput } from '../Textarea/textarea';
+import DropdownMenu from '../DropdownMenu/DropdownMenu';
+import { FormInputField } from '../FormField/FormField';
+import { FormTextareaInput } from '../Textarea/Textarea';
 // import { postItemToBackend } from 'myserviceFile';
 
-export function PostProduct() {
-  return (
-    <div>
-      <div className="container">
-        <div class="row">
-          <div class="card">
-            <div class="card-body" id="disclaimer">
-              Cup Of Sugar is not responsible for your transactions. Rent items
-              at your risk. Consider taking precautions such as requesting
-              Drivers License information before making a transaction. We
-              recommend using Paypal for rental transactions. Please contact
-              CupOSugarMPLS@gmail.com if you have questions.
+export default class PostProduct extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      itemName: '',
+      itemDescription: '',
+      image: '',
+      category: '',
+      rentalFee: '',
+      maxRentalDuration: '',
+      email: '',
+      phone: '',
+      preferredContact: '',
+      availableStatus: true,
+    };
+  }
+  handleInput = (event, name) => {
+    console.log("event, name", event.target.value, name);
+    this.setState({ [name]: event.target.value });
+  }
+
+  getDropDownValue = (event) => {
+
+  }
+  componentDidMount() {
+    console.log('componentDidMount', this.state);
+  }
+
+  handleSubmit = (event) => {
+    event.preventDefault();
+    // make api call to DB to create new Item
+  }
+  render() {
+    return (
+      <div>
+        <div className="container">
+          <div className="row">
+            <div className="card">
+              <div className="card-body" id="disclaimer">
+                Cup Of Sugar is not responsible for your transactions. Rent
+                items at your risk. Consider taking precautions such as
+                requesting Drivers License information before making a
+                transaction. We recommend using Paypal for rental transactions.
+                Please contact CupOSugarMPLS@gmail.com if you have questions.
+              </div>
             </div>
           </div>
+          <form onSubmit={this.handleSubmit}>
+            <FormInputField
+              class="post-product-item-name-field"
+              title="Item Name"
+              placeholder="Ex: Paddleboard"
+              name="itemTitle"
+              handleInput={this.handleInput}
+            />
+            <FormTextareaInput handleInput={this.handleInput} />
+            <FormInputField
+              class="post-product-item-image-link"
+              title="Image (online hosted images only)"
+              placeholder="Paste a link for your image here"
+              name="image"
+              handleInput={this.handleInput}
+            />
+            <DropdownMenu handleInput={this.handleInput} />
+            <label>Rental Rate Per Day</label>
+            <div className="form-row">
+              <div className="input-group col-md-3">
+                <div className="input-group-prepend">
+                  <span className="input-group-text">$</span>
+                </div>
+                <input
+                  type="text"
+                  className="form-control"
+                  aria-label="Amount (to the nearest dollar)"
+                  placeholder="0"
+                  handleInput={(e) => this.handleInput(e, 'rentalFee')}
+                />
+                <div className="input-group-append">
+                  <span className="input-group-text">.00</span>
+                </div>
+              </div>
+            </div>
+            <FormInputField
+              class="form-group col-md-4"
+              title="Maximum Rental Time"
+              placeholder="Example: 2 weeks"
+              name="maxRentalDuration"
+              handleInput={this.handleInput}
+            />
+            <FormInputField
+              class="form-group col-md-4"
+              title="Email"
+              placeholder="example@email.com"
+              name="email"
+              handleInput={this.handleInput}
+            />
+            <FormInputField
+              class="form-group col-md-4"
+              title="Phone Number (optional)"
+              placeholder="XXX-XXX-XXXX"
+              name="phone"
+              handleInput={this.handleInput}
+            />
+            <div className="form-group col-md-4">
+              <label>
+                Preferred Contact Method
+              </label>
+              <select
+                id="inputPreferredContact"
+                className="form-control"
+                name="preferredContact"
+                value={this.state.value}
+                onChange={(e) => this.handleInput(e)}
+              >
+                <option>Choose...</option>
+                <option value="Call or Text">Call or Text</option>
+                <option value="Call Only">Call Only</option>
+                <option value="Text Only">Text Only</option>
+                <option value="Email">Email</option>
+                <option value="No Preference">No Preference</option>
+              </select>
+            </div>
+            <button type="submit" className="btn btn-primary" value="Submit">
+              Save Listing
+            </button>
+            <button type="submit" className="btn btn-danger" value="cancel">
+              Cancel
+            </button>
+          </form>
         </div>
-        <form>
-          <FormInputField
-            class="post-product-item-name-field"
-            title="Item Name"
-            placeholder="Ex: Paddleboard"
-            elementName="item-title"
-          />
-          <FormTextareaInput />
-          <FormInputField
-            class="post-product-item-image-link"
-            title="Image (online hosted images only)"
-            placeholder="Paste a link for your image here"
-            elementName="item-image"
-          />
-          <DropdownMenu />
-          <label for="rental-rate">Rental Rate Per Day</label>
-          <div class="form-row">
-            <div class="input-group col-md-3">
-              <div class="input-group-prepend">
-                <span class="input-group-text">$</span>
-              </div>
-              <input
-                type="text"
-                class="form-control"
-                aria-label="Amount (to the nearest dollar)"
-                placeholder="0"
-              />
-              <div class="input-group-append">
-                <span class="input-group-text">.00</span>
-              </div>
-            </div>
-          </div>
-          <FormInputField
-            class="form-group col-md-4"
-            title="Maximum Rental Time"
-            placeholder="Example: 2 weeks"
-            elementName="maximum-rental-time"
-          />
-          <FormInputField
-            class="form-group col-md-4"
-            title="Email"
-            placeholder="example@email.com"
-            elementName="listing-email"
-          />
-          <FormInputField
-            class="form-group col-md-4"
-            title="Phone Number (optional)"
-            placeholder="XXX-XXX-XXXX"
-            elementName="listing-phone"
-          />
-          <div class="form-group col-md-4">
-            <label for="inputPreferredContact">Preferred Contact Method</label>
-            <select id="inputPreferredContact" class="form-control">
-              <option selected>Choose...</option>
-              <option>Call or Text</option>
-              <option>Call Only</option>
-              <option>Text Only</option>
-              <option>Email</option>
-              <option>No Preference</option>
-            </select>
-          </div>
-          <button type="submit" class="btn btn-primary" value="submit">
-            Save Listing
-          </button>
-          <button type="submit" class="btn btn-danger" value="cancel">
-            Cancel
-          </button>
-        </form>
       </div>
-    </div>
-  );
+    );
+  }
 }
