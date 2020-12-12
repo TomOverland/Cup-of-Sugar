@@ -14,8 +14,8 @@ import SingleProductPage from "./components/SingleProductPage/SingleProductPage"
 function App() {
   return (
     <div>
-      <Header />
       <Router>
+       <Header />
         <Switch>
           <Route exact path="/">
             <Login />
