@@ -9,13 +9,11 @@ import { PostProduct } from './components/PostProduct/PostProduct';
 import Header from "./components/Header/Header";
 import Footer from './components/Footer/Footer';
 import Login from './views/Login';
-import Banner from './components/Banner/Banner';
 
 function App() {
   return (
     <div>
       <Header />
-      <Banner />
       <Router>
         <Switch>
           <Route exact path="/">
