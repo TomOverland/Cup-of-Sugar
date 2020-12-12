@@ -6,7 +6,7 @@ function NavigationMenu(props) {
          <div className="font-bold py-3">Main Menu</div>
            <ul>
              <li>
-               <Link to="/postproduct" className="text-blue-500 py-3 border-t border-b block"
+               <Link to={{pathname: "/postproduct"}} className="text-blue-500 py-3 border-t border-b block"
                onClick={props.closeMenu}>
                 Post an item
                </Link>
