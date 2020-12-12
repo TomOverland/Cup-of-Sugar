@@ -8,7 +8,7 @@ export function FormInputField (props) {
               <label for={props.elementName}>{props.title}</label>
               <input
                 type="text"
-                class="form-control"
+                className="form-control"
                 id=""
                 placeholder={props.placeholder}
               />
