@@ -11,8 +11,8 @@ import Searchbar from "../Searchbar/Searchbar"
 const Header = () => {
   
   return (
-    <nav className=" bg-blue-900">
-      <div className="container flex items-center justify-between flex-wrap p-6">
+    <nav className=" bg-gray-500">
+      <div className="container flex items-center justify-between flex-wrap p-5">
         <div className="flex items-center flex-shrink-0 text-white mr-6">
         <Navbar />
           <span className="font-semibold text-xl tracking-tight pl-3">
