@@ -26,9 +26,10 @@ const Home = () => {
 
   return isAuthenticated && (
     <div>
-      <h1 className="font-bold text-2xl mb-3">Best Sellers</h1>
+      <h1 className="font-bold text-2xl mb-3 pl-3">Best Sellers</h1>
+      <hr />
       <div className="md:grid gap-4 grid-cols-3">{content}</div>
-      <div>
+      <div className="float-right">
         <Sidebar />
       </div>
     </div>

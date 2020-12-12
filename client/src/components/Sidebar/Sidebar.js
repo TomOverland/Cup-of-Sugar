@@ -12,7 +12,7 @@ export function Sidebar() {
               type="checkbox"
               id="gridCheck"
             ></input>
-            <label className="form-check-label" for="gridCheck">
+            <label className="pl-1 form-check-label" for="gridCheck">
               Currently Available
             </label>
           </div>
@@ -26,13 +26,15 @@ export function Sidebar() {
                 value={category}
                 id="defaultCheck1"
               ></input>
-              <label className="form-check-label" for="defaultCheck1">
+              <label className="pl-1 form-check-label" for="defaultCheck1">
                 {category}
               </label>
             </div>
           );
         })}
-        <button type="submit" className="btn btn-primary" value="filter">
+        <hr />
+        <br />
+        <button type="submit" className="py-2 px-4 bg-red-600 hover:bg-red-700 text-white font-semibold rounded-lg shadow-md focus:outline-none" value="filter">
           Filter
         </button>
       </form>
