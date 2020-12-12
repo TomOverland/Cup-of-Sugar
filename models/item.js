@@ -1,10 +1,10 @@
-const { DataTypes } = require('sequelize');
+const { DataTypes, Sequelize } = require("sequelize");
 // const { Sequelize } = require('.');
 // import Sequelize from "sequelize";
-'use strict'
+("use strict");
 
 module.exports = function (sequelize, Datatypes) {
-  const Item = sequelize.define('Item', {
+  const Item = sequelize.define("Item", {
     // ID will be automatically created when a new model is made.
     itemName: {
       type: DataTypes.STRING,
@@ -50,20 +50,12 @@ module.exports = function (sequelize, Datatypes) {
     availableStatus: {
       type: DataTypes.BOOLEAN,
     },
-    createdAt: {
-      type: DataTypes.DATE,
-      allowNull: true,
-      defaultValue: Date.now,
-    },
-    // updatedAt: {
-    //   type: DataTypes.Date,
-    //   allowNull: true,
-    //   defaultValue: Date.now,
-    // },
+    createdAt: Sequelize.DATE,
+    updatedAt: Sequelize.DATE,
   });
   //   makes the user (owner) ID a foreign key
-//   Item.associate = function (models) {
-//     Item.belongsTo(models.User);
-//   };
+  //   Item.associate = function (models) {
+  //     Item.belongsTo(models.User);
+  //   };
   return Item;
 };

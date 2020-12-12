@@ -1,4 +1,4 @@
-const { DataTypes } = require("sequelize");
+const { DataTypes, Sequelize } = require("sequelize");
 ("use strict");
 
 module.exports = function (sequelize, DataTypes) {
@@ -19,6 +19,8 @@ module.exports = function (sequelize, DataTypes) {
       type: DataTypes.STRING,
       allowNull: false,
     },
+    createdAt: Sequelize.DATE,
+    updatedAt: Sequelize.DATE,
   });
 
   return User;
