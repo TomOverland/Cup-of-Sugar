@@ -1,8 +1,6 @@
 import React from "react";
 import SiteDescription from "../SiteDescription/SiteDescription";
-// import Login from './../Login/Login';
-// import LoginButton from './../LoginButton/LoginButton';
-// import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+
 
 
 function Banner() {
