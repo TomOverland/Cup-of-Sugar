@@ -1,7 +1,7 @@
 const { DataTypes, Sequelize } = require("sequelize");
 // const { Sequelize } = require('.');
 // import Sequelize from "sequelize";
-("use strict");
+('use strict');
 
 module.exports = function (sequelize, Datatypes) {
   const Item = sequelize.define("Item", {
@@ -39,9 +39,9 @@ module.exports = function (sequelize, Datatypes) {
         isEmail: true,
       },
     },
-    // confirm number type for phone number
+    // changing phone number into string, maybe validate on "submit" in React form
     phone: {
-      type: DataTypes.FLOAT,
+      type: DataTypes.STRING,
       allowNull: true,
     },
     preferredContact: {
