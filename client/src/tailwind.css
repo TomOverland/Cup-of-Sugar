@@ -538,6 +538,8 @@ video {
 
 .container {
   width: 100%;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 @media (min-width: 640px) {
@@ -20400,6 +20402,38 @@ video {
   resize: both;
 }
 
+.hover\:resize-none:hover {
+  resize: none;
+}
+
+.hover\:resize-y:hover {
+  resize: vertical;
+}
+
+.hover\:resize-x:hover {
+  resize: horizontal;
+}
+
+.hover\:resize:hover {
+  resize: both;
+}
+
+.focus\:resize-none:focus {
+  resize: none;
+}
+
+.focus\:resize-y:focus {
+  resize: vertical;
+}
+
+.focus\:resize-x:focus {
+  resize: horizontal;
+}
+
+.focus\:resize:focus {
+  resize: both;
+}
+
 * {
   --tw-shadow: 0 0 #0000;
 }
@@ -30220,6 +30254,8 @@ video {
 @media (min-width: 640px) {
   .sm\:container {
     width: 100%;
+    margin-right: auto;
+    margin-left: auto;
   }
 
   @media (min-width: 640px) {
@@ -50082,6 +50118,38 @@ video {
     resize: both;
   }
 
+  .sm\:hover\:resize-none:hover {
+    resize: none;
+  }
+
+  .sm\:hover\:resize-y:hover {
+    resize: vertical;
+  }
+
+  .sm\:hover\:resize-x:hover {
+    resize: horizontal;
+  }
+
+  .sm\:hover\:resize:hover {
+    resize: both;
+  }
+
+  .sm\:focus\:resize-none:focus {
+    resize: none;
+  }
+
+  .sm\:focus\:resize-y:focus {
+    resize: vertical;
+  }
+
+  .sm\:focus\:resize-x:focus {
+    resize: horizontal;
+  }
+
+  .sm\:focus\:resize:focus {
+    resize: both;
+  }
+
   .sm\:shadow-sm {
     --tw-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
     box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
@@ -59840,6 +59908,8 @@ video {
 @media (min-width: 768px) {
   .md\:container {
     width: 100%;
+    margin-right: auto;
+    margin-left: auto;
   }
 
   @media (min-width: 640px) {
@@ -79702,6 +79772,38 @@ video {
     resize: both;
   }
 
+  .md\:hover\:resize-none:hover {
+    resize: none;
+  }
+
+  .md\:hover\:resize-y:hover {
+    resize: vertical;
+  }
+
+  .md\:hover\:resize-x:hover {
+    resize: horizontal;
+  }
+
+  .md\:hover\:resize:hover {
+    resize: both;
+  }
+
+  .md\:focus\:resize-none:focus {
+    resize: none;
+  }
+
+  .md\:focus\:resize-y:focus {
+    resize: vertical;
+  }
+
+  .md\:focus\:resize-x:focus {
+    resize: horizontal;
+  }
+
+  .md\:focus\:resize:focus {
+    resize: both;
+  }
+
   .md\:shadow-sm {
     --tw-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
     box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
@@ -89460,6 +89562,8 @@ video {
 @media (min-width: 1024px) {
   .lg\:container {
     width: 100%;
+    margin-right: auto;
+    margin-left: auto;
   }
 
   @media (min-width: 640px) {
@@ -109322,6 +109426,38 @@ video {
     resize: both;
   }
 
+  .lg\:hover\:resize-none:hover {
+    resize: none;
+  }
+
+  .lg\:hover\:resize-y:hover {
+    resize: vertical;
+  }
+
+  .lg\:hover\:resize-x:hover {
+    resize: horizontal;
+  }
+
+  .lg\:hover\:resize:hover {
+    resize: both;
+  }
+
+  .lg\:focus\:resize-none:focus {
+    resize: none;
+  }
+
+  .lg\:focus\:resize-y:focus {
+    resize: vertical;
+  }
+
+  .lg\:focus\:resize-x:focus {
+    resize: horizontal;
+  }
+
+  .lg\:focus\:resize:focus {
+    resize: both;
+  }
+
   .lg\:shadow-sm {
     --tw-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
     box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
@@ -119080,6 +119216,8 @@ video {
 @media (min-width: 1280px) {
   .xl\:container {
     width: 100%;
+    margin-right: auto;
+    margin-left: auto;
   }
 
   @media (min-width: 640px) {
@@ -138942,6 +139080,38 @@ video {
     resize: both;
   }
 
+  .xl\:hover\:resize-none:hover {
+    resize: none;
+  }
+
+  .xl\:hover\:resize-y:hover {
+    resize: vertical;
+  }
+
+  .xl\:hover\:resize-x:hover {
+    resize: horizontal;
+  }
+
+  .xl\:hover\:resize:hover {
+    resize: both;
+  }
+
+  .xl\:focus\:resize-none:focus {
+    resize: none;
+  }
+
+  .xl\:focus\:resize-y:focus {
+    resize: vertical;
+  }
+
+  .xl\:focus\:resize-x:focus {
+    resize: horizontal;
+  }
+
+  .xl\:focus\:resize:focus {
+    resize: both;
+  }
+
   .xl\:shadow-sm {
     --tw-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
     box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
@@ -148700,6 +148870,8 @@ video {
 @media (min-width: 1536px) {
   .\32xl\:container {
     width: 100%;
+    margin-right: auto;
+    margin-left: auto;
   }
 
   @media (min-width: 640px) {
@@ -168559,6 +168731,38 @@ video {
   }
 
   .\32xl\:resize {
+    resize: both;
+  }
+
+  .\32xl\:hover\:resize-none:hover {
+    resize: none;
+  }
+
+  .\32xl\:hover\:resize-y:hover {
+    resize: vertical;
+  }
+
+  .\32xl\:hover\:resize-x:hover {
+    resize: horizontal;
+  }
+
+  .\32xl\:hover\:resize:hover {
+    resize: both;
+  }
+
+  .\32xl\:focus\:resize-none:focus {
+    resize: none;
+  }
+
+  .\32xl\:focus\:resize-y:focus {
+    resize: vertical;
+  }
+
+  .\32xl\:focus\:resize-x:focus {
+    resize: horizontal;
+  }
+
+  .\32xl\:focus\:resize:focus {
     resize: both;
   }
 
