@@ -1,7 +1,7 @@
 import React from 'react';
 import DropdownMenu from '../DropdownMenu/DropdownMenu';
 import { FormInputField } from '../FormField/FormField';
-import { FormTextareaInput } from '../Textarea/Textarea';
+import FormTextareaInput from '../Textarea/Textarea';
 // import { postItemToBackend } from 'serviceFile';
 
 export default class PostProduct extends React.Component {
