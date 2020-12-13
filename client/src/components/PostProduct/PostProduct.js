@@ -8,20 +8,20 @@ export default class PostProduct extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      itemName: '',
-      itemDescription: '',
-      image: '',
-      category: '',
-      rentalFee: '',
-      maxRentalDuration: '',
-      email: '',
-      phone: '',
-      preferredContact: '',
+      itemName: "",
+      itemDescription: "",
+      image: "",
+      category: "",
+      rentalFee: "",
+      maxRentalDuration: "",
+      email: "",
+      phone: "",
+      preferredContact: "",
       availableStatus: true,
     };
   }
   handleInput = (event, name) => {
-    console.log('event, name', event.target.value, name);
+    console.log("event, name", event.target.value, name);
     this.setState({ [name]: event.target.value });
   };
 
@@ -32,7 +32,7 @@ export default class PostProduct extends React.Component {
   };
 
   componentDidMount() {
-    console.log('componentDidMount', this.state);
+    console.log("componentDidMount", this.state);
   }
 
   handleSubmit = (event) => {
@@ -122,7 +122,7 @@ export default class PostProduct extends React.Component {
               className="form-control"
               name="preferredContact"
               value={this.state.value}
-              onChange={(e) => this.handleInput(e, 'preferredContact')}
+              onChange={(e) => this.handleInput(e, "preferredContact")}
             >
               <option>Choose...</option>
               <option value="Call or Text">Call or Text</option>
