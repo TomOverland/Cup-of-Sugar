@@ -1,6 +1,6 @@
-import React from 'react';
+import React from "react";
 
-export function FormTextareaInput(props) {
+const FormTextareaInput = (props) => {
   return (
     <div className="space-y-6">
       <div className="block">
@@ -12,9 +12,11 @@ export function FormTextareaInput(props) {
           id="itemDescriptionTextarea"
           rows="5"
           placeholder="Describe your item and rental details here"
-          onChange={(e) => props.handleInput(e, 'itemDescription')}
+          onChange={(e) => props.handleInput(e, "itemDescription")}
         ></textarea>
       </div>
     </div>
   );
-}
+};
+
+export default FormTextareaInput;

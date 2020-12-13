@@ -1,14 +1,15 @@
 import React from "react";
 import Loader from "../components/Loader/Loader";
 import ProductCard from "../components/ProductCard/ProductCard";
-import { useAuth0 } from '@auth0/auth0-react';
-import { Sidebar } from '../components/Sidebar/Sidebar';
+import { useAuth0 } from "@auth0/auth0-react";
+import { Sidebar } from "../components/Sidebar/Sidebar";
+import Results from "../components/Results/Results";
 
 const Home = () => {
   const { isAuthenticated } = useAuth0();
-   
-  let products = "" ;
-  
+
+  let products = "";
+
   let content = null;
 
   if (products.error) {
@@ -23,17 +24,20 @@ const Home = () => {
     ));
   }
 
-
-  return isAuthenticated && (
-    <div>
-      <div id="toms-div"></div>
-      <h1 className="font-bold text-2xl mb-3 pl-3">Best Sellers</h1>
-      <hr />
-      <div className="md:grid gap-4 grid-cols-3">{content}</div>
-      <div className="float-right">
-        <Sidebar />
+  return (
+    isAuthenticated && (
+      <div>
+        <div id="toms-div">
+          <Results />
+        </div>
+        <h1 className="font-bold text-2xl mb-3 pl-3">Best Sellers</h1>
+        <hr />
+        <div className="md:grid gap-4 grid-cols-3">{content}</div>
+        <div className="float-right">
+          <Sidebar />
+        </div>
       </div>
-    </div>
+    )
   );
 };
 

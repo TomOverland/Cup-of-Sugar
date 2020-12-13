@@ -1,38 +1,38 @@
-import React from 'react';
-import DropdownMenu from '../DropdownMenu/DropdownMenu';
-import { FormInputField } from '../FormField/FormField';
-import { FormTextareaInput } from '../Textarea/Textarea';
+import React from "react";
+import DropdownMenu from "../DropdownMenu/DropdownMenu";
+import { FormInputField } from "../FormField/FormField";
+import FormTextareaInput from "../Textarea/textarea";
 // import { postItemToBackend } from 'myserviceFile';
 
 export default class PostProduct extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      itemName: '',
-      itemDescription: '',
-      image: '',
-      category: '',
-      rentalFee: '',
-      maxRentalDuration: '',
-      email: '',
-      phone: '',
-      preferredContact: '',
+      itemName: "",
+      itemDescription: "",
+      image: "",
+      category: "",
+      rentalFee: "",
+      maxRentalDuration: "",
+      email: "",
+      phone: "",
+      preferredContact: "",
       availableStatus: true,
     };
   }
   handleInput = (event, name) => {
-    console.log('event, name', event.target.value, name);
+    console.log("event, name", event.target.value, name);
     this.setState({ [name]: event.target.value });
   };
 
   getDropDownValue = (value) => {
     this.setState({ category: value }, () => {
-      console.log('getDrop', this.state.category);
+      console.log("getDrop", this.state.category);
     });
   };
 
   componentDidMount() {
-    console.log('componentDidMount', this.state);
+    console.log("componentDidMount", this.state);
   }
 
   handleSubmit = (event) => {
@@ -85,7 +85,7 @@ export default class PostProduct extends React.Component {
                 className="form-control"
                 aria-label="Amount (to the nearest dollar)"
                 placeholder="0"
-                handleInput={(e) => this.handleInput(e, 'rentalFee')}
+                handleInput={(e) => this.handleInput(e, "rentalFee")}
               />
               <div className="input-group-append">
                 <span className="input-group-text">.00</span>
@@ -120,7 +120,7 @@ export default class PostProduct extends React.Component {
               className="form-control"
               name="preferredContact"
               value={this.state.value}
-              onChange={(e) => this.handleInput(e, 'preferredContact')}
+              onChange={(e) => this.handleInput(e, "preferredContact")}
             >
               <option>Choose...</option>
               <option value="Call or Text">Call or Text</option>
