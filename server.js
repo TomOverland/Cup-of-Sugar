@@ -1,6 +1,6 @@
 const express = require("express");
 // const cors = require("cors");
-const PORT = process.env.PORT || 3007;
+const PORT = process.env.PORT || 3001;
 const db = require("./models");
 const app = express();
 
@@ -14,7 +14,7 @@ if (process.env.NODE_eNV === "production") {
   app.use(express.static("client/build"));
 }
 // Requiring api routes
-require('./controllers/apiRoutes')(app);
+require("./controllers/apiRoutes")(app);
 
 // app.get("/api/results", function (req, res) {
 //   db.Item.findAll().then(function (dbItems) {
