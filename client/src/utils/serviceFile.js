@@ -1,3 +1,5 @@
-module.exports = function postItemToBackend(itemData) {
+import API from "./API";
 
+module.exports = function postItemToBackend(itemData) {
+API.saveItem
 }

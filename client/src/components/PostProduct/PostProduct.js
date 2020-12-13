@@ -39,7 +39,7 @@ export default class PostProduct extends React.Component {
     event.preventDefault();
     console.log("submit clicked", this.state);
     // make api call to DB to create new Item
-    // postItemToBackend(this.state);
+    postItemToBackend(this.state);
   };
 
   render() {
