@@ -3,7 +3,7 @@ import axios from "axios";
 export default {
   getItems: () => {
     return axios
-      .get("http://localhost:3001/api/results")
+      .get("http://localhost:3001/api/results/")
       .then((result) => result.data);
   },
   deleteItem: (id) => {
