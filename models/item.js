@@ -1,7 +1,7 @@
 const { DataTypes, Sequelize } = require("sequelize");
 // const { Sequelize } = require('.');
 // import Sequelize from "sequelize";
-("use strict");
+('use strict');
 
 module.exports = function (sequelize, Datatypes) {
   const Item = sequelize.define("Item", {

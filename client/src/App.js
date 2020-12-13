@@ -5,7 +5,7 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 // Probably similar issue with below.
 import Home from './views/Home';
 // import Product from './views/Product';
-import { PostProduct } from './components/PostProduct/PostProduct';
+import PostProduct from './components/PostProduct/PostProduct';
 import Header from "./components/Header/Header";
 import Footer from './components/Footer/Footer';
 import Login from './views/Login';

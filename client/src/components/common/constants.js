@@ -23,4 +23,16 @@ export const categories = [
   'Video Games/Consoles',
 ];
 
+// export const testProduct = [
+//   itemName: '',
+//   itemDescription: '',
+//   image: '',
+//   category: '',
+//   rentalFee: '',
+//   maxRentalDuration: '',
+//   email: '',
+//   phone: '',
+//   preferredContact: '',
+//   availableStatus: true,
 
+// ]

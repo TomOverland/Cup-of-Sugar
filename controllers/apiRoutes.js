@@ -10,3 +10,19 @@ app.get("/api/results", function(req, res) {
       res.json(dbItems);
     });
   });
+
+// Create a new item listing
+// app.post('/api/item/postnewitem', function (req, res) {
+//   db.Item.create({
+//     itemName:
+//     itemDescription:
+//     image:
+//     category:
+//     rentalFee:
+//     maxRentalDuration:
+//     email:
+//     phone:
+//     preferredContact:
+    
+//   })
+// })
