@@ -1,19 +1,23 @@
 import React from "react";
-import Banner from 'react-js-banner';
+import SiteDescription from "../SiteDescription/SiteDescription";
+// import Login from './../Login/Login';
+// import LoginButton from './../LoginButton/LoginButton';
+// import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 
-const Banner = () => {
-    return <div>
+function Banner() {
+    return (
+        // eslint-disable-next-line
+        <div class="container mx-auto"><img className="w-full" src="https://i.ibb.co/KhyQjvK/Decor-Online-Store-Website.png"></img>
+           <div class="flex items-center justify-center h-full w-full bg-gray-900 bg-opacity-50">
+                <div class="absolute top-20 right-20">
+                    <SiteDescription />
 
-<Banner 
-  title="Cup of Sugar Banner" 
-  image={"https://i.ibb.co/rcMChvK/Add-a-heading-1.png"} 
-  imageClass="App-logo"
-  css={this.state.banner2Css}
-/>
-
-    </div>;
-  };
+                </div>
+            </div>
+        </div>
+    )
+};
   
   export default Banner;
  

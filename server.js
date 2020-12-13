@@ -27,3 +27,4 @@ db.sequelize.sync().then(function () {
     );
   });
 });
+

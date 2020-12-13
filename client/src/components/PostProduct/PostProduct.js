@@ -21,13 +21,11 @@ export default class PostProduct extends React.Component {
     };
   }
   handleInput = (event, name) => {
-    console.log("event, name", event.target.value, name);
+    console.log('event, name', event.target.value, name);
     this.setState({ [name]: event.target.value });
-  }
+  };
 
-  getDropDownValue = (event) => {
-
-  }
+  getDropDownValue = (event) => {};
   componentDidMount() {
     console.log('componentDidMount', this.state);
   }
@@ -35,105 +33,105 @@ export default class PostProduct extends React.Component {
   handleSubmit = (event) => {
     event.preventDefault();
     // make api call to DB to create new Item
-  }
+  };
+
   render() {
     return (
-      <div>
-        <div className="container">
-          <div className="row">
-            <div className="card">
-              <div className="card-body" id="disclaimer">
-                Cup Of Sugar is not responsible for your transactions. Rent
-                items at your risk. Consider taking precautions such as
-                requesting Drivers License information before making a
-                transaction. We recommend using Paypal for rental transactions.
-                Please contact CupOSugarMPLS@gmail.com if you have questions.
+      <div className="container mx-auto">
+        <div className="space-y-4">
+          <div className="card block border mb-4 rounded overflow-hidden">
+            <div className="card-body p-3" id="disclaimer">
+              Cup Of Sugar is not responsible for your transactions. Rent items
+              at your risk. Consider taking precautions such as requesting
+              Drivers License information before making a transaction. We
+              recommend using Paypal for rental transactions. Please contact
+              CupOSugarMPLS@gmail.com if you have questions.
+            </div>
+          </div>
+        </div>
+        <form
+          className="block border mb-4 rounded overflow-hidden"
+          onSubmit={this.handleSubmit}
+        >
+          <FormInputField
+            class="post-product-item-name-field"
+            title="Item Name"
+            placeholder="Ex: Paddleboard"
+            name="itemTitle"
+            handleInput={this.handleInput}
+          />
+          <FormTextareaInput handleInput={this.handleInput} />
+          <FormInputField
+            class="post-product-item-image-link"
+            title="Image (online hosted images only)"
+            placeholder="Paste a link for your image here"
+            name="image"
+            handleInput={this.handleInput}
+          />
+          <DropdownMenu handleInput={this.handleInput} />
+          <label>Rental Rate Per Day</label>
+          <div className="form-row">
+            <div className="input-group col-md-3">
+              <div className="input-group-prepend">
+                <span className="input-group-text">$</span>
+              </div>
+              <input
+                type="text"
+                className="form-control"
+                aria-label="Amount (to the nearest dollar)"
+                placeholder="0"
+                handleInput={(e) => this.handleInput(e, 'rentalFee')}
+              />
+              <div className="input-group-append">
+                <span className="input-group-text">.00</span>
               </div>
             </div>
           </div>
-          <form onSubmit={this.handleSubmit}>
-            <FormInputField
-              class="post-product-item-name-field"
-              title="Item Name"
-              placeholder="Ex: Paddleboard"
-              name="itemTitle"
-              handleInput={this.handleInput}
-            />
-            <FormTextareaInput handleInput={this.handleInput} />
-            <FormInputField
-              class="post-product-item-image-link"
-              title="Image (online hosted images only)"
-              placeholder="Paste a link for your image here"
-              name="image"
-              handleInput={this.handleInput}
-            />
-            <DropdownMenu handleInput={this.handleInput} />
-            <label>Rental Rate Per Day</label>
-            <div className="form-row">
-              <div className="input-group col-md-3">
-                <div className="input-group-prepend">
-                  <span className="input-group-text">$</span>
-                </div>
-                <input
-                  type="text"
-                  className="form-control"
-                  aria-label="Amount (to the nearest dollar)"
-                  placeholder="0"
-                  handleInput={(e) => this.handleInput(e, 'rentalFee')}
-                />
-                <div className="input-group-append">
-                  <span className="input-group-text">.00</span>
-                </div>
-              </div>
-            </div>
-            <FormInputField
-              class="form-group col-md-4"
-              title="Maximum Rental Time"
-              placeholder="Example: 2 weeks"
-              name="maxRentalDuration"
-              handleInput={this.handleInput}
-            />
-            <FormInputField
-              class="form-group col-md-4"
-              title="Email"
-              placeholder="example@email.com"
-              name="email"
-              handleInput={this.handleInput}
-            />
-            <FormInputField
-              class="form-group col-md-4"
-              title="Phone Number (optional)"
-              placeholder="XXX-XXX-XXXX"
-              name="phone"
-              handleInput={this.handleInput}
-            />
-            <div className="form-group col-md-4">
-              <label>
-                Preferred Contact Method
-              </label>
-              <select
-                id="inputPreferredContact"
-                className="form-control"
-                name="preferredContact"
-                value={this.state.value}
-                onChange={(e) => this.handleInput(e)}
-              >
-                <option>Choose...</option>
-                <option value="Call or Text">Call or Text</option>
-                <option value="Call Only">Call Only</option>
-                <option value="Text Only">Text Only</option>
-                <option value="Email">Email</option>
-                <option value="No Preference">No Preference</option>
-              </select>
-            </div>
-            <button type="submit" className="btn btn-primary" value="Submit">
-              Save Listing
-            </button>
-            <button type="submit" className="btn btn-danger" value="cancel">
-              Cancel
-            </button>
-          </form>
-        </div>
+          <FormInputField
+            class="form-group col-md-4"
+            title="Maximum Rental Time"
+            placeholder="Example: 2 weeks"
+            name="maxRentalDuration"
+            handleInput={this.handleInput}
+          />
+          <FormInputField
+            class="form-group col-md-4"
+            title="Email"
+            placeholder="example@email.com"
+            name="email"
+            handleInput={this.handleInput}
+          />
+          <FormInputField
+            class="form-group col-md-4"
+            title="Phone Number (optional)"
+            placeholder="XXX-XXX-XXXX"
+            name="phone"
+            handleInput={this.handleInput}
+          />
+          <div className="form-group col-md-4">
+            <label>Preferred Contact Method</label>
+            <select
+              id="inputPreferredContact"
+              className="form-control"
+              name="preferredContact"
+              value={this.state.value}
+              onChange={(e) => this.handleInput(e)}
+            >
+              <option>Choose...</option>
+              <option value="Call or Text">Call or Text</option>
+              <option value="Call Only">Call Only</option>
+              <option value="Text Only">Text Only</option>
+              <option value="Email">Email</option>
+              <option value="No Preference">No Preference</option>
+            </select>
+          </div>
+          <button type="submit" className="btn btn-primary" value="Submit">
+            Save Listing
+          </button>
+          <button type="submit" className="btn btn-danger" value="cancel">
+            Cancel
+          </button>
+        </form>
       </div>
     );
   }
