@@ -2,16 +2,23 @@
   "name": "cup-of-sugar",
   "version": "1.0.0",
   "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
-  "main": "index.js",
+  "main": "server.js",
   "dependencies": {
     "cors": "^2.8.5",
     "express": "^4.17.1",
+    "if-env": "^1.0.4",
     "mysql2": "^2.2.5",
     "sequelize": "^6.3.5"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "if-env NODE_ENV=production && npm run start:prod || npm run start:dev",
+    "start:prod": "node server.js",
+    "start:dev": "concurrently \"nodemon --ignore client/\" \"npm run client\"",
+    "client": "cd client && npm run start",
+    "install": "cd client && npm install",
+    "build": "cd client && npm run build",
+    "heroku-postbuild": "npm run build",
+    "seed": "node scripts/seedDB.js"
   },
   "repository": {
     "type": "git",
@@ -22,5 +29,9 @@
   "bugs": {
     "url": "https://github.com/TomOverland/Cup-of-Sugar/issues"
   },
-  "homepage": "https://github.com/TomOverland/Cup-of-Sugar#readme"
+  "homepage": "https://github.com/TomOverland/Cup-of-Sugar#readme",
+  "devDependencies": {
+    "concurrently": "^5.3.0",
+    "nodemon": "^2.0.6"
+  }
 }
