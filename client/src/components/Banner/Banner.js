@@ -8,12 +8,10 @@ import SiteDescription from "../SiteDescription/SiteDescription";
 function Banner() {
     return (
         // eslint-disable-next-line
-        <div class="container mx-auto"><img className="w-full" src="https://i.ibb.co/KhyQjvK/Decor-Online-Store-Website.png"></img>
-           <div class="flex items-center justify-center h-full w-full bg-gray-900 bg-opacity-50">
-                <div class="absolute top-20 right-20">
-                    <SiteDescription />
+        <div class="flex-row-reverse container mx-auto max-w-3xl object-none object-right-bottom md:object-top"><img className="w-full bg-right" src="https://media-public.canva.com/q-l3g/MADyQ2q-l3g/1/s3.jpg"></img>
+            <div class="absolute top-20 left-10">
+                <SiteDescription />
 
-                </div>
             </div>
         </div>
     )
