@@ -1,7 +1,7 @@
-import React from 'react';
-import DropdownMenu from '../DropdownMenu/DropdownMenu';
-import { FormInputField } from '../FormField/FormField';
-import { FormTextareaInput } from '../Textarea/Textarea';
+import React from "react";
+import DropdownMenu from "../DropdownMenu/DropdownMenu";
+import { FormInputField } from "../FormField/FormField";
+import FormTextareaInput from "../Textarea/Textarea";
 // import { postItemToBackend } from 'serviceFile';
 
 export default class PostProduct extends React.Component {
@@ -27,7 +27,7 @@ export default class PostProduct extends React.Component {
 
   getDropDownValue = (value) => {
     this.setState({ category: value.value }, () => {
-      console.log('getDrop', this.state.category);
+      console.log("getDrop", this.state.category);
     });
   };
 
@@ -87,7 +87,7 @@ export default class PostProduct extends React.Component {
                 className="form-control"
                 aria-label="Amount (to the nearest dollar)"
                 placeholder="0"
-                onChange={(e) => this.handleInput(e, 'rentalFee')}
+                onChange={(e) => this.handleInput(e, "rentalFee")}
               />
               <div className="input-group-append">
                 <span className="input-group-text">.00</span>
