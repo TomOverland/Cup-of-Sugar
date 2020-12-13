@@ -27,7 +27,7 @@ export default class PostProduct extends React.Component {
 
   getDropDownValue = (value) => {
     this.setState({ category: value.value }, () => {
-      console.log('getDrop', this.state.category);
+      console.log("getDrop", this.state.category);
     });
   };
 
@@ -44,10 +44,10 @@ export default class PostProduct extends React.Component {
 
   render() {
     return (
-      <div className="container mx-auto">
+      <div className="container mx-auto pt-2">
         <div className="space-y-4">
           <div className="card block border mb-4 rounded overflow-hidden">
-            <div className="card-body p-3" id="disclaimer">
+            <div className="card-body p-3 bg-red-400 text-white" id="disclaimer">
               Cup Of Sugar is not responsible for your transactions. Rent items
               at your risk. Consider taking precautions such as requesting
               Drivers License information before making a transaction. We
@@ -87,7 +87,7 @@ export default class PostProduct extends React.Component {
                 className="form-control"
                 aria-label="Amount (to the nearest dollar)"
                 placeholder="0"
-                onChange={(e) => this.handleInput(e, 'rentalFee')}
+                onChange={(e) => this.handleInput(e, "rentalFee")}
               />
               <div className="input-group-append">
                 <span className="input-group-text">.00</span>
