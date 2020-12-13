@@ -2,7 +2,7 @@ import React from 'react';
 import DropdownMenu from '../DropdownMenu/DropdownMenu';
 import { FormInputField } from '../FormField/FormField';
 import { FormTextareaInput } from '../Textarea/Textarea';
-// import { postItemToBackend } from 'myserviceFile';
+// import { postItemToBackend } from 'serviceFile';
 
 export default class PostProduct extends React.Component {
   constructor(props) {
@@ -26,7 +26,7 @@ export default class PostProduct extends React.Component {
   };
 
   getDropDownValue = (value) => {
-    this.setState({ category: value }, () => {
+    this.setState({ category: value.value }, () => {
       console.log('getDrop', this.state.category);
     });
   };
@@ -37,7 +37,9 @@ export default class PostProduct extends React.Component {
 
   handleSubmit = (event) => {
     event.preventDefault();
+    console.log("submit clicked", this.state);
     // make api call to DB to create new Item
+    // postItemToBackend(this.state);
   };
 
   render() {
@@ -62,7 +64,7 @@ export default class PostProduct extends React.Component {
             class="post-product-item-name-field"
             title="Item Name"
             placeholder="Ex: Paddleboard"
-            name="itemTitle"
+            name="itemName"
             handleInput={this.handleInput}
           />
           <FormTextareaInput handleInput={this.handleInput} />
@@ -85,7 +87,7 @@ export default class PostProduct extends React.Component {
                 className="form-control"
                 aria-label="Amount (to the nearest dollar)"
                 placeholder="0"
-                handleInput={(e) => this.handleInput(e, 'rentalFee')}
+                onChange={(e) => this.handleInput(e, 'rentalFee')}
               />
               <div className="input-group-append">
                 <span className="input-group-text">.00</span>
