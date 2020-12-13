@@ -4,15 +4,6 @@ import { FormInputField } from "../FormField/FormField";
 import FormTextareaInput from "../Textarea/Textarea";
 // import { postItemToBackend } from 'serviceFile';
 
-<<<<<<< HEAD
-export function PostProduct() {
-  return (
-    <div className="container mx-auto pt-3">
-     
-        <div class="space-y-4">
-          <div class="card block border mb-4 rounded overflow-hidden">
-            <div class="card-body p-3 bg-red-400 text-white" id="disclaimer">
-=======
 export default class PostProduct extends React.Component {
   constructor(props) {
     super(props);
@@ -57,7 +48,6 @@ export default class PostProduct extends React.Component {
         <div className="space-y-4">
           <div className="card block border mb-4 rounded overflow-hidden">
             <div className="card-body p-3" id="disclaimer">
->>>>>>> main
               Cup Of Sugar is not responsible for your transactions. Rent items
               at your risk. Consider taking precautions such as requesting
               Drivers License information before making a transaction. We
