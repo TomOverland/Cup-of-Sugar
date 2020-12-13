@@ -14,13 +14,13 @@ if (process.env.NODE_eNV === "production") {
   app.use(express.static("client/build"));
 }
 // Requiring api routes
-// require('./controllers/apiRoutes')(app);
+require('./controllers/apiRoutes')(app);
 
-app.get("/api/results", function (req, res) {
-  db.Item.findAll().then(function (dbItems) {
-    res.json(dbItems);
-  });
-});
+// app.get("/api/results", function (req, res) {
+//   db.Item.findAll().then(function (dbItems) {
+//     res.json(dbItems);
+//   });
+// });
 
 // Syncing our database and logging a message to the user upon success
 db.sequelize.sync().then(function () {
