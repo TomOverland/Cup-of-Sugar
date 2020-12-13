@@ -25,7 +25,12 @@ export default class PostProduct extends React.Component {
     this.setState({ [name]: event.target.value });
   };
 
-  getDropDownValue = (event) => {};
+  getDropDownValue = (value) => {
+    this.setState({ category: value }, () => {
+      console.log('getDrop', this.state.category);
+    });
+  };
+
   componentDidMount() {
     console.log('componentDidMount', this.state);
   }
@@ -68,7 +73,7 @@ export default class PostProduct extends React.Component {
             name="image"
             handleInput={this.handleInput}
           />
-          <DropdownMenu handleInput={this.handleInput} />
+          <DropdownMenu getDropDownValue={this.getDropDownValue} />
           <label>Rental Rate Per Day</label>
           <div className="form-row">
             <div className="input-group col-md-3">
@@ -104,7 +109,7 @@ export default class PostProduct extends React.Component {
           <FormInputField
             class="form-group col-md-4"
             title="Phone Number (optional)"
-            placeholder="XXX-XXX-XXXX"
+            placeholder="XXXXXXXXXX"
             name="phone"
             handleInput={this.handleInput}
           />
@@ -115,7 +120,7 @@ export default class PostProduct extends React.Component {
               className="form-control"
               name="preferredContact"
               value={this.state.value}
-              onChange={(e) => this.handleInput(e)}
+              onChange={(e) => this.handleInput(e, 'preferredContact')}
             >
               <option>Choose...</option>
               <option value="Call or Text">Call or Text</option>

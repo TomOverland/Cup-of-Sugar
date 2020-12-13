@@ -26,7 +26,7 @@ export function Sidebar() {
                 value={category}
                 id="defaultCheck1"
               ></input>
-              <label className="pl-1 form-check-label" for="defaultCheck1">
+              <label className="pl-1 form-check-label">
                 {category}
               </label>
             </div>
