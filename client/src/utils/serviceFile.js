@@ -1,5 +1,11 @@
-import API from "./API";
+import API from './API';
 
-module.exports = function postItemToBackend(itemData) {
-API.saveItem
-}
+
+ const postItemToBackend = (itemData) => {
+  return API.saveItem(itemData).then((res) => {
+    console.log('response', res);
+    return res === 'OK';
+  });
+};
+
+export default postItemToBackend;

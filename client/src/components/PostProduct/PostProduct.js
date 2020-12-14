@@ -2,52 +2,66 @@ import React from 'react';
 import DropdownMenu from '../DropdownMenu/DropdownMenu';
 import { FormInputField } from '../FormField/FormField';
 import FormTextareaInput from '../Textarea/Textarea';
-// import { postItemToBackend } from 'serviceFile';
+import postItemToBackend from '../../utils/serviceFile';
+import Modal from '../Modal/Modal';
 
 export default class PostProduct extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      itemName: "",
-      itemDescription: "",
-      image: "",
-      category: "",
-      rentalFee: "",
-      maxRentalDuration: "",
-      email: "",
-      phone: "",
-      preferredContact: "",
+      itemName: '',
+      itemDescription: '',
+      image: '',
+      category: '',
+      rentalFee: '',
+      maxRentalDuration: '',
+      email: '',
+      phone: '',
+      preferredContact: '',
       availableStatus: true,
+      showModal: false,
+      setShowModal: false,
     };
   }
   handleInput = (event, name) => {
-    console.log("event, name", event.target.value, name);
+    console.log('event, name', event.target.value, name);
     this.setState({ [name]: event.target.value });
   };
 
   getDropDownValue = (value) => {
     this.setState({ category: value.value }, () => {
-      console.log("getDrop", this.state.category);
+      console.log('getDrop', this.state.category);
     });
   };
 
   componentDidMount() {
-    console.log("componentDidMount", this.state);
+    console.log('componentDidMount', this.state);
   }
 
   handleSubmit = (event) => {
     event.preventDefault();
-    console.log("submit clicked", this.state);
+    console.log('submit clicked', this.state);
     // make api call to DB to create new Item
-    postItemToBackend(this.state);
+    postItemToBackend(this.state).then((postSucceeded) => {
+      if (postSucceeded) {
+        //set state showModal to true
+        this.setState({ showModal: true });
+      } else {
+        console.log("error");
+      }
+    });
   };
 
   render() {
     return (
       <div className="container mx-auto pt-2">
+        <div>{this.state.showModal ? <Modal /> : ''}</div>
         <div className="space-y-4">
           <div className="card block border mb-4 rounded overflow-hidden">
-            <div className="card-body p-3 bg-red-400 text-white" id="disclaimer">
+            <div
+              className="card-body p-3 bg-red-400 text-white"
+              id="disclaimer"
+            >
               Cup Of Sugar is not responsible for your transactions. Rent items
               at your risk. Consider taking precautions such as requesting
               Drivers License information before making a transaction. We
@@ -87,7 +101,7 @@ export default class PostProduct extends React.Component {
                 className="form-control"
                 aria-label="Amount (to the nearest dollar)"
                 placeholder="0"
-                onChange={(e) => this.handleInput(e, "rentalFee")}
+                onChange={(e) => this.handleInput(e, 'rentalFee')}
               />
               <div className="input-group-append">
                 <span className="input-group-text">.00</span>
@@ -122,7 +136,7 @@ export default class PostProduct extends React.Component {
               className="form-control"
               name="preferredContact"
               value={this.state.value}
-              onChange={(e) => this.handleInput(e, "preferredContact")}
+              onChange={(e) => this.handleInput(e, 'preferredContact')}
             >
               <option>Choose...</option>
               <option value="Call or Text">Call or Text</option>
