@@ -10,7 +10,7 @@ app.use(express.json());
 app.use(cors());
 
 // Serve Static Assests to Heroku
-if (process.env.NODE_eNV === "production") {
+if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
 }
 // Requiring api routes
