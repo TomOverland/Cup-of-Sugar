@@ -1,6 +1,6 @@
 const db = require('../models');
 // const Items = db.items;
-const Users = db.users;
+const User = db.user;
 // const Op = db.Sequelize.Op; // Operators
 // documentation: https://sequelize.org/v5/manual/querying.html
 
@@ -28,6 +28,22 @@ module.exports = function (app) {
     })
       .then(function (result) {
         console.log('item posted sucessfully');
+        res.sendStatus(200);
+      })
+      .catch(function (err) {
+        console.log(err);
+      });
+  });
+
+  // Delete an item listing
+  app.delete('/api/deleteitem/:id', function (req, res) {
+    db.Item.destroy({
+      where: {
+        id: req.body.id,
+      },
+    })
+      .then(function (result) {
+        console.log('Item was successfully deleted');
         res.sendStatus(200);
       })
       .catch(function (err) {
