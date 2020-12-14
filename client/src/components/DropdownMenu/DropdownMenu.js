@@ -21,11 +21,13 @@ export default class DropdownMenu extends React.Component {
   }
   render() {
     return (
-      <div className="form-row">
-        <div className="form-group col-md-4">
-          <label htmlFor="categorySelectMenu">Select a Category</label>
+      <div>
+          <hr className="pb-1"/>
+        <div>
+          <div htmlFor="categorySelectMenu" className="font-bold text-xl p-2 underline">Select a Category</div>
+          <br />
           <select
-            className="form-control"
+            className="form-control py-2 px-10 bg-white rounded-lg placeholder-gray-400 text-gray-900 appearance-none inline-block w-lg shadow-lg focus:outline-none focus:ring-2 focus:ring-blue-600 ml-3"
             id="categorySelect"
             name="category"
             value={this.state.value}

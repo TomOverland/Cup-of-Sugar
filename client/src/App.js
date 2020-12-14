@@ -7,9 +7,9 @@ import Home from './views/Home';
 // import Product from './views/Product';
 import PostProduct from './components/PostProduct/PostProduct';
 import Header from "./components/Header/Header";
-import Footer from './components/Footer/Footer';
 import Login from './views/Login';
 import SingleProductPage from "./components/SingleProductPage/SingleProductPage"
+import Contact from "./components/Contact/Contact"
 
 function App() {
   return (
@@ -33,9 +33,11 @@ function App() {
           <Route path="/productpage">
             <SingleProductPage />
           </Route>
+          <Route path="/contact">
+            <Contact />
+          </Route>
         </Switch>
       </Router>
-      <Footer />
     </div>
   );
 }

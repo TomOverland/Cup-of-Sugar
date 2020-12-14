@@ -1,26 +1,31 @@
 // View of single product from results list
 import React from "react";
 import { Link } from "react-router-dom";
+import Footer from "../Footer/Footer"
+
 const SingleProductPage = () => {
   return (
+    <div>
     <div className="container mx-auto pt-3">
-        <div className= "bg-gray-100 mb-4 rounded overflow-hidden max-w-6x1">
-            <div>
-              <img alt="mockup" src={process.env.PUBLIC_URL + "/logo512.png"} className="h-64 bg-blue bg-cover" />
+        <div className= "bg-gray-100 mb-4 rounded overflow-hidden py-10 px-10">
+            <div className="flex">
+              <img alt="mockup" src={process.env.PUBLIC_URL + "/lawnmower.jpg"} className="h-64 w-auto bg-blue bg-cover pb-1" />
+              <div className="text-2xl font-bold mb-3 flex-1 ml-3">Mockup Text</div>
+              <div className="text-lg mb-3 flex-1">Description of product</div>
+              <div className="text-lg mb-3 flex-1">Price per Day: $5.00</div>
+              
             </div>
-            <hr />
-            <div className="p-3">
-              <div className="text-2xl font-bold mb-3">Mockup Text</div>
-              <div className="text-lg mb-3">Description of product</div>
-              <div className="text-lg mb-3">Price per Day: $5.00</div>
-              <div>
-                 <Link to="/contact" className="bg-blue-500 text-white p-2 flex justify-center">Rent it!</Link>
-              </div>
+            <br />
+            <hr className="p-3"/>
+            <div className="p-3 flex">            
+                 <Link to="/contact" className="py-2 px-4 pr-4 bg-blue-500 hover:bg-blue-700 text-white font-semibold rounded-lg shadow-md focus:outline-none flex-2">Rent it!</Link>
+                 <Link to="/" className="ml-2 py-2 px-4 pr-4 bg-red-500 hover:bg-red-700 text-white font-semibold rounded-lg shadow-md focus:outline-none flex-2">Cancel</Link>
             </div>
-
-        </div>
+        </div> 
     </div>
-
+    <Footer />
+    </div>
+    
   );
 };
 
