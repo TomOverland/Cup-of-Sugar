@@ -16,7 +16,7 @@ const Header = () => {
         <div className="flex items-center flex-shrink-0 text-white mr-6">
         <Navbar />
           <span className="font-semibold text-xl tracking-tight pl-3">
-            <Link to="/home">Cup of Sugar</Link>
+            <Link to="/">Cup of Sugar</Link>
           </span>
         </div> 
         <Searchbar />

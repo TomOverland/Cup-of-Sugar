@@ -52,7 +52,7 @@ export default class PostProduct extends React.Component {
               at your risk. Consider taking precautions such as requesting
               Drivers License information before making a transaction. We
               recommend using Paypal for rental transactions. Please contact
-              Randomemail@gmail.com if you have questions.
+              CupOSugarMPLS@gmail.com if you have questions.
             </div>
           </div>
         
