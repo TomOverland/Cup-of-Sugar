@@ -10,6 +10,6 @@ export default {
     return axios.delete(`api/results/${id}`).then((result) => result.data);
   },
   saveItem: (itemData) => {
-    return axios.post("/api/post", itemData).then((result) => result.data);
+    return axios.post("http://localhost:3001/api/item/postnewitem", itemData).then((result) => result.data);
   },
 };

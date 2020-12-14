@@ -15,15 +15,15 @@ module.exports = function (app) {
   // Create a new item listing
   app.post('/api/item/postnewitem', function (req, res) {
     db.Item.create({
-      itemName: 'fetchtest',
-      itemDescription: 'testy',
-      image: 'imagelink',
-      category: 'testcat',
-      rentalFee: 1,
-      maxRentalDuration: '2day',
-      email: 'my@email.com',
-      phone: '4444444',
-      preferredContact: 'No Preference',
+      itemName: req.body.itemName,
+      itemDescription: req.body.itemDescription,
+      image: req.body.image,
+      category: req.body.category,
+      rentalFee: req.body.rentalFee,
+      maxRentalDuration: req.body.maxRentalDuration,
+      email: req.body.email,
+      phone: req.body.phone,
+      preferredContact: req.body.preferredContact,
       availableStatus: true,
     })
       .then(function (result) {

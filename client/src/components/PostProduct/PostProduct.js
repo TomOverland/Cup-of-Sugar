@@ -1,51 +1,62 @@
-import React from "react";
-import DropdownMenu from "../DropdownMenu/DropdownMenu";
-import { FormInputField } from "../FormField/FormField";
-import FormTextareaInput from "../Textarea/Textarea";
-// import { postItemToBackend } from 'serviceFile';
+import React from 'react';
+import DropdownMenu from '../DropdownMenu/DropdownMenu';
+import { FormInputField } from '../FormField/FormField';
+import FormTextareaInput from '../Textarea/Textarea';
+import postItemToBackend from '../../utils/serviceFile';
+import Modal from '../Modal/Modal';
 
 export default class PostProduct extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      itemName: "",
-      itemDescription: "",
-      image: "",
-      category: "",
-      rentalFee: "",
-      maxRentalDuration: "",
-      email: "",
-      phone: "",
-      preferredContact: "",
+      itemName: '',
+      itemDescription: '',
+      image: '',
+      category: '',
+      rentalFee: '',
+      maxRentalDuration: '',
+      email: '',
+      phone: '',
+      preferredContact: '',
       availableStatus: true,
+      showModal: false,
+      setShowModal: false,
     };
   }
   handleInput = (event, name) => {
-    console.log("event, name", event.target.value, name);
+    console.log('event, name', event.target.value, name);
     this.setState({ [name]: event.target.value });
   };
 
   getDropDownValue = (value) => {
     this.setState({ category: value.value }, () => {
-      console.log("getDrop", this.state.category);
+      console.log('getDrop', this.state.category);
     });
   };
 
   componentDidMount() {
-    console.log("componentDidMount", this.state);
+    console.log('componentDidMount', this.state);
   }
 
   handleSubmit = (event) => {
     event.preventDefault();
-    console.log("submit clicked", this.state);
+    console.log('submit clicked', this.state);
     // make api call to DB to create new Item
-    // postItemToBackend(this.state);
+    postItemToBackend(this.state).then((postSucceeded) => {
+      if (postSucceeded) {
+        //set state showModal to true
+        this.setState({ showModal: true });
+      } else {
+        console.log("error");
+      }
+    });
   };
 
   render() {
     return (
       <div>
       <div className="container mx-auto pt-2">
+        <div>{this.state.showModal ? <Modal /> : ''}</div>
         <div className="space-y-4">
           <div className="card block border mb-4 rounded overflow-hidden shadow-lg">
             <div className="card-body p-3 bg-red-400 text-white text-center text-lg p-5 " id="disclaimer">
@@ -132,7 +143,7 @@ export default class PostProduct extends React.Component {
               className="py-2 px-10 bg-white rounded-lg placeholder-gray-400 text-gray-900 appearance-none inline-block w-md shadow-lg focus:outline-none focus:ring-2 focus:ring-blue-600 flex-1 "
               name="preferredContact"
               value={this.state.value}
-              onChange={(e) => this.handleInput(e, "preferredContact")}
+              onChange={(e) => this.handleInput(e, 'preferredContact')}
             >
               <option>Choose...</option>
               <option value="Call or Text">Call or Text</option>
