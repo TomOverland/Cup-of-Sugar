@@ -3,6 +3,44 @@ const cors = require("cors");
 const PORT = process.env.PORT || 3001;
 const db = require("./models");
 const app = express();
+const jwt = require('express-jwt');
+const jwksRsa = require('jwks-rsa');
+
+// Authorization middleware. When used, the
+// Access Token must exist and be verified against
+// the Auth0 JSON Web Key Set
+const checkJwt = jwt({
+  // Dynamically provide a signing key
+  // based on the kid in the header and 
+  // the signing keys provided by the JWKS endpoint.
+  secret: jwksRsa.expressJwtSecret({
+    cache: true,
+    rateLimit: true,
+    jwksRequestsPerMinute: 5,
+    jwksUri: `https://dev-naiex9c2.us.auth0.com/.well-known/jwks.json`
+  }),
+
+  // Validate the audience and the issuer.
+  audience: 'http://localhost:3001/api',
+  issuer: `https://dev-naiex9c2.us.auth0.com/`,
+  algorithms: ['RS256']
+});
+
+// Add checkJwt as a param to the api route to make the api require an auth token
+//
+// // This route doesn't need authentication
+// app.get('/api/public', function(req, res) {
+//   res.json({
+//     message: 'Hello from a public endpoint! You don\'t need to be authenticated to see this.'
+//   });
+// });
+
+// // This route needs authentication
+// app.get('/api/private', checkJwt, function(req, res) {
+//   res.json({
+//     message: 'Hello from a private endpoint! You need to be authenticated to see this.'
+//   });
+// });
 
 //Middleware
 app.use(express.urlencoded({ extended: true }));
