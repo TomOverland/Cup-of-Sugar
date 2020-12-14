@@ -23,11 +23,6 @@ function NavigationMenu(props) {
                My Rented Items
                </Link>
              </li>
-             <li>
-               <Link to="/" className="text-blue-500 py-3 border-b block" onClick={props.closeMenu}>
-               Logout
-               </Link>
-             </li>
             </ul>
         </div>
     )
