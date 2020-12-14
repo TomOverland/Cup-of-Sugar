@@ -1,0 +1,7 @@
+.background-image {
+  background: url("https://cdn.tourcms.com/a/11676/2576/1/large.jpg");
+  height: 87vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}

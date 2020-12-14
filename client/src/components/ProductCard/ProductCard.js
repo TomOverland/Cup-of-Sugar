@@ -10,7 +10,7 @@ function ProductCard (props) {
             <div className="p-4 flex space-x-4 rounded-md ">
             <div className="flex-1 rounded-md p-6 bg-gray-100">
                 <div>
-                <img alt="mockup" src={process.env.PUBLIC_URL + "/logo512.png"} className="h-20 bg-blue bg-cover py-1 px-10" />
+                <img alt="mockup" src={process.env.PUBLIC_URL + "/lawnmower.jpg"} className="h-55 w-160 bg-blue bg-cover py-1  px-10" />
                 </div>
                 <hr />
                  <div className="py-1 px-10">
@@ -28,7 +28,7 @@ function ProductCard (props) {
             </div>
             <div className="flex-1 rounded-md p-6 bg-gray-100">
                 <div>
-                <img alt="mockup" src={process.env.PUBLIC_URL + "/logo512.png"} className="h-20 bg-blue bg-cover py-1 px-10" />
+                <img alt="mockup" src={process.env.PUBLIC_URL + "/logo512.png"} className="h-30 bg-blue bg-cover py-1 px-10" />
                 </div>
                 <hr />
                  <div className="py-1 px-10">
@@ -46,7 +46,7 @@ function ProductCard (props) {
             </div>
             <div className="flex-1 rounded-md p-6 bg-gray-100">
                 <div>
-                <img alt="mockup" src={process.env.PUBLIC_URL + "/logo512.png"} className="h-20 bg-blue bg-cover py-1 px-10" />
+                <img alt="mockup" src={process.env.PUBLIC_URL + "/logo512.png"} className="h-30 bg-blue bg-cover py-1 px-10" />
                 </div>
                 <hr />
                  <div className="py-1 px-10">
@@ -64,7 +64,7 @@ function ProductCard (props) {
             </div>
             <div className="flex-1 rounded-md p-6 bg-gray-100">
                 <div>
-                <img alt="mockup" src={process.env.PUBLIC_URL + "/logo512.png"} className="h-20 bg-blue bg-cover py-1 px-10" />
+                <img alt="mockup" src={process.env.PUBLIC_URL + "/logo512.png"} className="h-30 bg-blue bg-cover py-1 px-10" />
                 </div>
                 <hr />
                  <div className="py-1 px-10">

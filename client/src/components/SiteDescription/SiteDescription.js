@@ -6,7 +6,7 @@ const SiteDescription = () => {
   
 
     <div className="flex items-center justify-end h-full max-w-sm bject-none object-left">
-      <div className="mt-5 box-border p-2 border-2 border-black">
+      <div className="mt-5 box-border p-2 border-2 border-black bg-gray-100">
       <p className="font-black text-8xl">
         CUP OF SUGAR
       </p>
