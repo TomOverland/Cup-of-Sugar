@@ -46,8 +46,8 @@ export default class PostProduct extends React.Component {
     return (
       <div className="container mx-auto pt-2">
         <div className="space-y-4">
-          <div className="card block border mb-4 rounded overflow-hidden">
-            <div className="card-body p-3 bg-red-400 text-white" id="disclaimer">
+          <div className="card block border mb-4 rounded overflow-hidden shadow-lg">
+            <div className="card-body p-3 bg-red-400 text-white text-center text-lg p-5 " id="disclaimer">
               Cup Of Sugar is not responsible for your transactions. Rent items
               at your risk. Consider taking precautions such as requesting
               Drivers License information before making a transaction. We
@@ -55,13 +55,14 @@ export default class PostProduct extends React.Component {
               CupOSugarMPLS@gmail.com if you have questions.
             </div>
           </div>
-        </div>
+        
         <form
-          className="block border mb-4 rounded overflow-hidden"
+          className="block border mb-4 rounded overflow-hidden p-5 shadow-lg"
           onSubmit={this.handleSubmit}
         >
+          
           <FormInputField
-            class="post-product-item-name-field"
+            class="post-product-item-name-field font-bold text-l p-2 underline"
             title="Item Name"
             placeholder="Ex: Paddleboard"
             name="itemName"
@@ -75,51 +76,59 @@ export default class PostProduct extends React.Component {
             name="image"
             handleInput={this.handleInput}
           />
+          
           <DropdownMenu getDropDownValue={this.getDropDownValue} />
-          <label>Rental Rate Per Day</label>
-          <div className="form-row">
-            <div className="input-group col-md-3">
-              <div className="input-group-prepend">
-                <span className="input-group-text">$</span>
-              </div>
+          <br />
+          <hr className="pb-1"/>
+          <div>
+          <div className="font-bold text-xl p-2 underline">Rental Rate Per Day</div>
+          <div className="flex">
+             <span className="flex-2 py-2 px-2 bg-white placeholder-gray-400 text-gray-900 appearance-none inline-block w-sm">$:</span>       
               <input
                 type="text"
-                className="form-control"
-                aria-label="Amount (to the nearest dollar)"
-                placeholder="0"
+                className="flex-2 ml-1 py-1 px-1 bg-white rounded-lg placeholder-gray-400 text-gray-900 appearance-none inline-block w-md shadow-lg focus:outline-none focus:ring-2 focus:ring-blue-600"
+                aria-div="Amount (to the nearest dollar)"
+                placeholder=" 0"
                 onChange={(e) => this.handleInput(e, "rentalFee")}
               />
-              <div className="input-group-append">
-                <span className="input-group-text">.00</span>
+              <div className="flex-2 ml-1 py-2 px-2 bg-white placeholder-gray-400 text-gray-900 appearance-none inline-block w-sm">
+                <span>.00</span>
               </div>
             </div>
-          </div>
+            </div>
+            <br />
+          <hr className="pb-1"/>
           <FormInputField
-            class="form-group col-md-4"
+            class=""
             title="Maximum Rental Time"
             placeholder="Example: 2 weeks"
             name="maxRentalDuration"
             handleInput={this.handleInput}
           />
+          <hr className="pb-1"/>
           <FormInputField
-            class="form-group col-md-4"
+            class=""
             title="Email"
             placeholder="example@email.com"
             name="email"
             handleInput={this.handleInput}
           />
+          <hr className="pb-1"/>
           <FormInputField
-            class="form-group col-md-4"
+            class=""
             title="Phone Number (optional)"
             placeholder="XXXXXXXXXX"
             name="phone"
             handleInput={this.handleInput}
           />
-          <div className="form-group col-md-4">
-            <label>Preferred Contact Method</label>
+         <hr className="pb-1"/>
+          <div className="font-bold text-xl p-2 underline">
+            <div>Preferred Contact Method</div>
+            </div>
+            <div className="pb-3">
             <select
               id="inputPreferredContact"
-              className="form-control"
+              className="py-2 px-10 bg-white rounded-lg placeholder-gray-400 text-gray-900 appearance-none inline-block w-md shadow-lg focus:outline-none focus:ring-2 focus:ring-blue-600 flex-1 "
               name="preferredContact"
               value={this.state.value}
               onChange={(e) => this.handleInput(e, "preferredContact")}
@@ -132,13 +141,17 @@ export default class PostProduct extends React.Component {
               <option value="No Preference">No Preference</option>
             </select>
           </div>
-          <button type="submit" className="btn btn-primary" value="Submit">
+          <hr className="p-1"/>
+          <div className="flex">
+          <button type="submit" className="py-2 px-4 pr-4 bg-blue-500 hover:bg-blue-700 text-white font-semibold rounded-lg shadow-md focus:outline-none flex-2" value="Submit">
             Save Listing
           </button>
-          <button type="submit" className="btn btn-danger" value="cancel">
+          <button type="submit" className="py-2 px-4 bg-red-500 hover:bg-red-700 text-white font-semibold rounded-lg shadow-md focus:outline-none flex-2 ml-2" value="cancel">
             Cancel
           </button>
+          </div>
         </form>
+        </div>
       </div>
     );
   }

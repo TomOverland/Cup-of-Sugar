@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 const SingleProductPage = () => {
   return (
     <div className="container mx-auto pt-3">
-        <div className= "bg-gray-100 mb-4 rounded overflow-hidden max-w-6x1">
+        <div className= "bg-gray-100 mb-4 rounded overflow-hidden max-w-6x1 py-10 px-10">
             <div>
               <img alt="mockup" src={process.env.PUBLIC_URL + "/logo512.png"} className="h-64 bg-blue bg-cover" />
             </div>
