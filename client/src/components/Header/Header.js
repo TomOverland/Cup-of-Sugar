@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import Navbar from "../Navbar/Navbar"; 
 import LoginButton from "../LoginButton/LoginButton"
 import LogoutButton from "../LogoutButton/LogoutButton"
-import Searchbar from "../Searchbar/Searchbar"
+
 
 
 
@@ -19,7 +19,7 @@ const Header = () => {
             <Link to="/">Cup of Sugar</Link>
           </span>
         </div> 
-        <Searchbar />
+        
         <LoginButton />
         <LogoutButton />
       </div>
