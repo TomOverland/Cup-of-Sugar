@@ -42,3 +42,7 @@ export function Sidebar() {
     </>
   );
 }
+
+// Make a class based component, this.state = filter []
+// onChange? setState, push value into filter
+// onClick, 
