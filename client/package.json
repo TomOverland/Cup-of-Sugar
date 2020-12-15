@@ -19,13 +19,14 @@
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.1",
     "react-spring": "^8.0.27",
+    "tailwind": "^4.0.0",
     "tailwindcss": "^2.0.1",
     "web-vitals": "^0.2.4"
   },
   "scripts": {
     "build:css": "postcss src/index.css -o src/tailwind.css",
     "watch:css": "postcss src/index.css -o src/tailwind.css -w",
-    "start": "SET PORT=3000 npm run build:css && react-scripts start",
+    "start": "PORT=3000 npm run build:css && react-scripts start",
     "macstart": "PORT=3000 npm run build:css && react-scripts start",
     "build": "npm run build:css && react-scripts build",
     "test": "react-scripts test",

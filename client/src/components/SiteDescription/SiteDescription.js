@@ -12,7 +12,7 @@ const SiteDescription = () => {
       </p>
       <br />
       <p className="font-black text-2xl">
-        RENT. LEND. POST. REPEAT
+        RENT. LEND. POST. REPEAT.
       </p>
 
       <br />
@@ -24,7 +24,7 @@ const SiteDescription = () => {
           products. While allowing product owners to earn a return on rentable items, renters can easily borrow products at
           affordable rates without having to pay retail prices.
         <br />
-          Lend and borrow unused items locally, or earn easy money from products laying around your home and garage.
+          Lend and borrow items locally, or earn easy money from products laying around your home and garage.
 
         </p>
       </div>
