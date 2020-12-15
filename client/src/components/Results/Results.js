@@ -29,9 +29,10 @@ class Results extends React.Component {
     return (
       <div>
         <Profile />
-        <p>Current List of Items:</p>
         <hr />
-        <ul>
+        {/* <p>Current List of Items:</p> */}
+        
+        {/* <ul>
           {this.state.items.map((item) => (
             <p>
               <li>Item ID: {item.id}</li>
@@ -47,7 +48,7 @@ class Results extends React.Component {
               <li>available status: {item.availableStatus}</li>
             </p>
           ))}
-        </ul>
+        </ul> */}
       </div>
     );
   }
