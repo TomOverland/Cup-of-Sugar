@@ -12,6 +12,33 @@ module.exports = function (app) {
     });
   });
 
+  // Filter by category
+  // app.get('/api/results/filtered', function (req, res) {
+  //   db.Item.findAll({
+  //     where: {
+  //       [Op.or]: [
+  //         {category: req.body.}
+  //       ]
+  //     }
+  //   })
+  // })
+
+  // Get item by ID
+  app.get('/api/result/:id', function (req, res) {
+    db.Item.findOne({
+      where: {
+        id: req.params.id,
+      },
+    })
+      .then(function (result) {
+        console.log('item', result);
+        res.json(result);
+      })
+      .catch(function (err) {
+        console.log(err);
+      });
+  });
+
   // Create a new item listing
   app.post('/api/item/postnewitem', function (req, res) {
     db.Item.create({
