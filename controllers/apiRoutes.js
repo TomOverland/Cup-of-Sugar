@@ -77,4 +77,43 @@ module.exports = function (app) {
         console.log(err);
       });
   });
+
+  // Get all users
+  app.get('/api/users/', function (req, res) {
+    db.User.findAll().then(function (dbUsers) {
+      res.json(dbUsers);
+    });
+  })
+
+  // Get single user
+  app.get('/api/user/:id', function (req, res) {
+    db.User.findOne({
+      where: {
+        id: req.params.id,
+      },
+    })
+    .then(function (result) {
+      console.log('user: ', result);
+      res.json(result);
+    })
+    .catch(function (err) {
+      console.log(err);
+    });
+  });
+
+  // Create new user
+  app.post('/api/newuser/', function (req, res) {
+    db.User.create({
+      email: req.body.email,
+      auth0id: req.body.auth0id
+    })
+    .then(function (result) {
+      console.log('user added to database');
+      res.sendStatus(200);
+    })
+      .catch(function (err) {
+        console.log(err);
+      })
+  })
+
 };

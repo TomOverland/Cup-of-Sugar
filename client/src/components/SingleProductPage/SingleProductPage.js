@@ -1,7 +1,9 @@
 // View of single product from results list
 import React from "react";
 import { Link } from "react-router-dom";
-import Footer from "../Footer/Footer"
+import Footer from "../Footer/Footer";
+import { withAuthenticationRequired } from '@auth0/auth0-react';
+import Login from '../../views/Login';
 
 const SingleProductPage = () => {
   return (
@@ -29,5 +31,7 @@ const SingleProductPage = () => {
   );
 };
 
-export default SingleProductPage;
+export default withAuthenticationRequired(SingleProductPage, {
+  onRedirecting: () => <Login />
+});
 

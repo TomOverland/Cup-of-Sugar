@@ -2,29 +2,18 @@ import React from "react";
 import ReactDOM from "react-dom";
 import "./tailwind.css";
 import App from "./App";
-import { Auth0Provider } from "@auth0/auth0-react";
+import Auth0ProviderWithHistory from './auth/auth0-provider-with-history';
+import { Auth0Provider, withAuthenticationRequired } from "@auth0/auth0-react";
 import { BrowserRouter } from "react-router-dom";
-// import reportWebVitals from "./reportWebVitals";
 
-const domain = process.env.REACT_APP_AUTH0_DOMAIN;
-const clientId = process.env.REACT_APP_AUTH0_CLIENT_ID;
+// const domain = process.env.REACT_APP_AUTH0_DOMAIN;
+// const clientId = process.env.REACT_APP_AUTH0_CLIENT_ID;
 
 ReactDOM.render(
   <BrowserRouter>
-    <Auth0Provider
-      domain={domain}
-      clientId={clientId}
-      redirectUri={window.location.origin}
-      audience="https://dev-naiex9c2.us.auth0.com/api/v2/"
-      scope="read:current_user update:current_user_metadata"
-    >
+    <Auth0ProviderWithHistory>
       <App />
-    </Auth0Provider>
+    </Auth0ProviderWithHistory >
   </BrowserRouter>,
   document.getElementById("root")
 );
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-// reportWebVitals();
