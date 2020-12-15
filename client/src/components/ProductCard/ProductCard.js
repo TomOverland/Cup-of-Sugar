@@ -38,7 +38,8 @@ render() {
                     <div className="py-1 px-10">
                         <div className="text-2xl font-bold mb-3 underline">{item.itemName}</div>
                         <div className="text-lg mb-3">{item.itemDescription}</div>
-                         <div className="text-lg mb-3">{item.rentalFee}</div>
+                        <div className="text-lg mb-3 font-bold underline">Daily Fee:</div>
+                         <div className="text-lg mb-3">${item.rentalFee}.00</div>
                     </div>
                     <div>
                          <Link to="/productpage"
@@ -61,27 +62,4 @@ render() {
 }
 }
 export default ProductCard;
-//connection to api code
-
-/* <Link to={`/products/${props.product.id}`}>
-                    <div style= {{
-                        "backgroundImage": `url('${props.product.image[0].imageUrl}')`
-                        }}
-                        className="w-full h-64 bg-blue bg-cover"
-                    >
-                    </div>
-                </Link>
-                
-            <div className="p-3">
-                <h3 className="font-bold text-xl mb-3">
-                <Link to={`/products/${props.product.id}`}>
-                    {props.product.name}
-                </Link>
-                </h3>
-                <div className="font-bold mb-3">
-                    $ {props.product.price}
-                </div>  
-                <div className="font-bold mb-3">
-                    {props.product.description}
-                </div>   */
 

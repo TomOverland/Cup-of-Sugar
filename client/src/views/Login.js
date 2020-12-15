@@ -10,7 +10,9 @@ const Login = () => {
     return !isAuthenticated && (
       <div className="background-image">
         <Banner />      
-        <Footer />
+        <footer className="bg-gray-300 text-center text-xs p-3 fixed absolute bottom-0 w-full">
+            &copy; Cup of Sugar Copyright 2020
+        </footer>
       </div>
     )
 };
