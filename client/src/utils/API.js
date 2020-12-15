@@ -6,6 +6,11 @@ export default {
       .get("http://localhost:3001/api/results/")
       .then((result) => result.data);
   },
+  getSingleItem: (id) => {
+    return axios
+      .get(`http://localhost:3001/api/result/:${id}`)
+      .then((result) => result.data);
+  },
   deleteItem: (id) => {
     return axios.delete(`api/deleteitem/:${id}`).then((result) => result.data);
   },
