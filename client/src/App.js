@@ -23,7 +23,7 @@ function App() {
           </Route>
           <Route path="/home">
             <Home />
-          </Route>
+          </Route >
           <Route path="/postproduct">
             <PostProduct />
           </Route>

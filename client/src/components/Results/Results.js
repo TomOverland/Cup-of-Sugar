@@ -1,7 +1,8 @@
 // We appear to be using Home.js as the results page.  Consider deleting this.
 import React from "react";
 import API from "../../utils/API";
-// import Profile from "../Profile/Profile";
+import { useAuth0 } from '@auth0/auth0-react';
+import Profile from "../Profile/Profile";
 // import Home from './Home';
 
 class Results extends React.Component {
@@ -27,9 +28,11 @@ class Results extends React.Component {
   render() {
     return (
       <div>
-        <p>Here's the list of current items, and how to call them.</p>
+        <Profile />
         <hr />
-        <ul>
+        {/* <p>Current List of Items:</p> */}
+        
+        {/* <ul>
           {this.state.items.map((item) => (
             <p>
               <li>Item ID: {item.id}</li>
@@ -45,7 +48,7 @@ class Results extends React.Component {
               <li>available status: {item.availableStatus}</li>
             </p>
           ))}
-        </ul>
+        </ul> */}
       </div>
     );
   }
