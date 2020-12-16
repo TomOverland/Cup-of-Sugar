@@ -5,10 +5,10 @@ import SiteDescription from "../components/SiteDescription/SiteDescription";
 import "../components/Banner/banner.css";
 
 const Login = () => {
-  // const { isAuthenticated } = useAuth0();
+  const { isAuthenticated } = useAuth0();
 
-  // return !isAuthenticated &&
-  return (
+  return !isAuthenticated &&
+  (
     <div className="background-image">
       <div className="p-3 ml-5">
         <SiteDescription />

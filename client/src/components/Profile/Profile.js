@@ -5,13 +5,43 @@ import API from '../../utils/API';
 
 const Profile = () => {
   const { user, isAuthenticated, isLoading, getAccessTokenSilently } = useAuth0();
+  const [userMetadata, setUserMetadata] = useState(null);
   const [userList, setUserList] = useState();
 
   useEffect(() => {
+    const getUserMetadata = async () => {
+      const domain = "dev-naiex9c2.us.auth0.com";
+  
+      try {
+        const accessToken = await getAccessTokenSilently({
+          audience: `https://${domain}/api/v2/`,
+          scope: "read:current_user",
+        });
+  
+        const userDetailsByIdUrl = `https://${domain}/api/v2/users/${user.sub}`;
+  
+        const metadataResponse = await fetch(userDetailsByIdUrl, {
+          headers: {
+            Authorization: `Bearer ${accessToken}`,
+          },
+        });
+  
+        const { user_metadata } = await metadataResponse.json();
+  
+        setUserMetadata(user_metadata);
+      } catch (e) {
+        console.log(e.message);
+      }
+    };
+  
+    getUserMetadata();
+  }, []);
+
+  useEffect(() => {
     API.getUsers().then((res) => {
-        console.log("user response: ", res);
+        // console.log("user response: ", res);
         const apiUsers = res;
-        console.log("user response data: ", apiUsers);
+        // console.log("user response data: ", apiUsers);
      })
 
     const newUser = {
@@ -20,7 +50,7 @@ const Profile = () => {
         userEmail: user.email,
     }
 
-    console.log("newUser data: ", newUser)
+    // console.log("newUser data: ", newUser)
 
     // API.postUser(newUser).then((res) => {
     //     console.log("posting user: ", res);
