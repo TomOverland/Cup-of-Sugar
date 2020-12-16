@@ -1,7 +1,7 @@
 const db = require('../models');
 // const Items = db.items;
 const User = db.user;
-// const Op = db.Sequelize.Op; // Operators
+const Op = db.Sequelize.Op; // Operators
 // documentation: https://sequelize.org/v5/manual/querying.html
 
 module.exports = function (app) {
@@ -13,12 +13,13 @@ module.exports = function (app) {
   });
 
   // Filter by category
-  app.get('/api/results/filtered', function (req, res) {
+  app.get('/api/results/filtered/:category', function (req, res) {
+    console.log('in app.get', req.params.category);
+    reqArr = req.params.category.split(',');
+    console.log('after split', reqArr);
     db.Item.findAll({
       where: {
-        category: {
-          [Op.or]: [filterArr],
-        },
+        category: [reqArr],
       },
     })
       .then(function (results) {

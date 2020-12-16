@@ -1,15 +1,20 @@
 import React from 'react';
 // import { categories } from '../common/constants';
 import { Checkboxes, useCheckboxes } from '../Checkbox/Checkbox';
+import API from '../../utils/API';
 
 export function Sidebar() {
   const checkboxes = useCheckboxes();
 
   const handleSubmit = (event) => {
+    event.preventDefault();
     const categoryArr = checkboxes.checkboxes
       .filter((box) => box.checked)
-      .map((checkbox) => checkbox.name);
-    return console.log('categoryArr', categoryArr);
+      .map((checkbox) => checkbox.name).join(',');
+
+    API.getFilteredItems(categoryArr).then((response) => {
+      console.log('filter response', response);
+    });
   };
 
   return (

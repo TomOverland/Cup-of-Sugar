@@ -54,8 +54,8 @@ module.exports = function (sequelize, Datatypes) {
     updatedAt: Sequelize.DATE,
   });
   //   makes the user (owner) ID a foreign key
-    Item.associate = function (models) {
-      Item.belongsTo(models.User);
-    };
+    // Item.associate = function (models) {
+    //   Item.belongsTo(models.User);
+    // };
   return Item;
 };

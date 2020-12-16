@@ -6,18 +6,20 @@ export default {
       .get('http://localhost:3001/api/results/')
       .then((result) => result.data);
   },
-  getFilteredItems: (filterArr) => {
+  getFilteredItems: (categoryArr) => {
+    console.log("getFilteredItems", categoryArr)
     return axios
-      .get('http://localhost:3001/api/results/filtered')
-      .then((result) => result.data);
+      .get(`http://localhost:3001/api/results/filtered/${categoryArr}`)
+      .then((result) => result.data)
+      .catch((err) => console.log(err))
   },
   getSingleItem: (id) => {
     return axios
-      .get(`http://localhost:3001/api/result/:${id}`)
+      .get(`http://localhost:3001/api/result/${id}`)
       .then((result) => result.data);
   },
   deleteItem: (id) => {
-    return axios.delete(`api/deleteitem/:${id}`).then((result) => result.data);
+    return axios.delete(`api/deleteitem/${id}`).then((result) => result.data);
   },
   saveItem: (itemData) => {
     return axios
@@ -31,7 +33,7 @@ export default {
   },
   getSingleUser: (id) => {
     return axios
-      .get(`http://localhost:3001/api/user/:${id}`)
+      .get(`http://localhost:3001/api/user/${id}`)
       .then((result) => result.data);
   },
   postUser: (userData) => {
