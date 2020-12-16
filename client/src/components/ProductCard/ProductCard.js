@@ -27,7 +27,7 @@ class ProductCard extends Component {
 render() {
     return(
     
-        <div className="container mx-auto grid grid-cols-3 gap-4">
+        <div className="container mx-auto lg:grid grid-cols-3 gap-4">
             {this.state.items.map((item) => (
             <div className="p-4 flex space-x-4 rounded-md ">
                 <div className="flex-2 rounded-md p-6 bg-gray-100">
