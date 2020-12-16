@@ -8,6 +8,7 @@ import Footer from "./components/Footer/Footer";
 import Login from "./views/Login";
 import SingleProductPage from "./components/SingleProductPage/SingleProductPage";
 import Contact from "./components/Contact/Contact";
+import ProtectedRoute from './auth/ProtectedRoute';
 
 function App() {
   return (
@@ -19,21 +20,13 @@ function App() {
             <Login />
             <Home />
           </Route>
-          <Route path="/home">
-            <Home />
-          </Route>
-          <Route path="/postproduct">
-            <PostProduct />
-          </Route>
+          <ProtectedRoute path="/home" component={Home} />
+          <ProtectedRoute path="/postproduct" component={PostProduct} />
           {/* <Route path="/product/:id">
             <Product />
           </Route> */}
-          <Route path="/productpage">
-            <SingleProductPage />
-          </Route>
-          <Route path="/contact">
-            <Contact />
-          </Route>
+          <ProtectedRoute path="/productpage" component={SingleProductPage} />
+          <ProtectedRoute path="/contact" component={Contact} /> 
         </Switch>
         <Footer />
       </Router>
