@@ -34,7 +34,7 @@ function Navbar() {
                     <animated.div 
                         key={key} 
                         style={props}
-                        className="fixed bg-black-t-50 top-0 left-0 w-full h-full z-50"
+                        className="fixed top-0 left-0 w-full h-full z-50"
                         onClick={() => setShowMenu(false)}
                     >      
                         
