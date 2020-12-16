@@ -1,9 +1,14 @@
-import axios from "axios";
+import axios from 'axios';
 
 export default {
   getItems: () => {
     return axios
-      .get("http://localhost:3001/api/results/")
+      .get('http://localhost:3001/api/results/')
+      .then((result) => result.data);
+  },
+  getFilteredItems: (filterArr) => {
+    return axios
+      .get('http://localhost:3001/api/results/filtered')
       .then((result) => result.data);
   },
   getSingleItem: (id) => {
@@ -15,20 +20,23 @@ export default {
     return axios.delete(`api/deleteitem/:${id}`).then((result) => result.data);
   },
   saveItem: (itemData) => {
-    return axios.post("http://localhost:3001/api/item/postnewitem", itemData).then((result) => result.data);
+    return axios
+      .post('http://localhost:3001/api/item/postnewitem', itemData)
+      .then((result) => result.data);
   },
   getUsers: () => {
     return axios
-      .get("http://localhost:3001/api/users/")
+      .get('http://localhost:3001/api/users/')
       .then((result) => result.data);
   },
   getSingleUser: (id) => {
     return axios
-      .get(`http://localhost:3001/api/user/:${id}`).then((result) => result.data);
+      .get(`http://localhost:3001/api/user/:${id}`)
+      .then((result) => result.data);
   },
   postUser: (userData) => {
     return axios
-      .post("http://localhost:3001/api/newuser/", userData).then((result) => result.data);
+      .post('http://localhost:3001/api/newuser/', userData)
+      .then((result) => result.data);
   },
-
 };

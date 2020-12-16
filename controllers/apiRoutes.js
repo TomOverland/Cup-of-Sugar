@@ -13,15 +13,22 @@ module.exports = function (app) {
   });
 
   // Filter by category
-  // app.get('/api/results/filtered', function (req, res) {
-  //   db.Item.findAll({
-  //     where: {
-  //       [Op.or]: [
-  //         {category: req.body.}
-  //       ]
-  //     }
-  //   })
-  // })
+  app.get('/api/results/filtered', function (req, res) {
+    db.Item.findAll({
+      where: {
+        category: {
+          [Op.or]: [filterArr],
+        },
+      },
+    })
+      .then(function (results) {
+        console.log('items', results);
+        res.json(results);
+      })
+      .catch(function (err) {
+        console.log(err);
+      });
+  });
 
   // Get item by ID
   app.get('/api/result/:id', function (req, res) {
@@ -83,7 +90,7 @@ module.exports = function (app) {
     db.User.findAll().then(function (dbUsers) {
       res.json(dbUsers);
     });
-  })
+  });
 
   // Get single user
   app.get('/api/user/:id', function (req, res) {
@@ -92,28 +99,27 @@ module.exports = function (app) {
         id: req.params.id,
       },
     })
-    .then(function (result) {
-      console.log('user: ', result);
-      res.json(result);
-    })
-    .catch(function (err) {
-      console.log(err);
-    });
+      .then(function (result) {
+        console.log('user: ', result);
+        res.json(result);
+      })
+      .catch(function (err) {
+        console.log(err);
+      });
   });
 
   // Create new user
   app.post('/api/newuser/', function (req, res) {
     db.User.create({
       email: req.body.email,
-      auth0id: req.body.auth0id
+      auth0id: req.body.auth0id,
     })
-    .then(function (result) {
-      console.log('user added to database');
-      res.sendStatus(200);
-    })
+      .then(function (result) {
+        console.log('user added to database');
+        res.sendStatus(200);
+      })
       .catch(function (err) {
         console.log(err);
-      })
-  })
-
+      });
+  });
 };
