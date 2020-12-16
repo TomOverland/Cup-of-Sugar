@@ -1,28 +1,24 @@
-// This file is an example of how to restrict viewing certain information to
-// Authenticated users only.
-
-import React from 'react';
+import React from "react";
 import { useAuth0 } from "@auth0/auth0-react";
-//import JSONpretty from 'react-json-pretty';
-// ^ JSON prettifier for webpages, would req an npm install. Component below
-// would display the Auth0 "user" object.
 
 const Profile = () => {
-    const { user, isAuthenticated, isLoading } = useAuth0;
+  const { user, isAuthenticated, isLoading, getAccessTokenSilently } = useAuth0();
 
-    if (isLoading) {
-        return <div>Loading...</div>;
-    }
-    // Only return the following if the user isAuthenticated
-    return (
-        isAuthenticated && (
-            <div>
-                <h2>{user.name}</h2>
-                <p>{user.email}</p>
-                {/* <JSONPretty data={user} /> */}
-            </div>
-        )
+  if (isLoading) {
+    return <div>Loading ...</div>;
+  }
+
+  return (
+    isAuthenticated && (
+      <div>
+        <p>User Information:</p>
+        <hr/>
+        <p>Email: {user.email}</p>
+        <p>Auth0 ID: {user.sub}</p>
+        <br/>
+      </div>
     )
+  );
 };
 
 export default Profile;
