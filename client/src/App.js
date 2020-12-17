@@ -6,7 +6,7 @@ import PostProduct from "./components/PostProduct/PostProduct";
 import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
 import Login from "./views/Login";
-import SingleProductPage from "./components/SingleProductPage/SingleProductPage";
+import ProductDetails from "./components/ProductDetails/ProductDetails"
 import Contact from "./components/Contact/Contact";
 import ProtectedRoute from './auth/ProtectedRoute';
 import Wrapper from "./components/Wrapper/Wrapper";
@@ -27,7 +27,7 @@ function App() {
           {/* <Route path="/product/:id">
             <Product />
           </Route> */}
-          <ProtectedRoute path="/productpage" component={SingleProductPage} />
+          <ProtectedRoute path="/productpage/:id" component={ProductDetails} />
           <ProtectedRoute path="/contact" component={Contact} /> 
           </Wrapper>
         </Switch>
