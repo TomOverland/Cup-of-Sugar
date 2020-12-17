@@ -14,11 +14,11 @@ class SingleProductCard extends React.Component {
   componentDidMount() {
     // taking prop of searchId from SingleProductPage to use as search param in API.getSingleItem
     const id = this.props.searchId;
-    console.log("id on SingleProductCard: ", id);
+    // console.log("id on SingleProductCard: ", id);
 
     API.getSingleItem(id).then((res) => {
       const singleItem = res;
-      console.log("singleItem: ", singleItem);
+      // console.log("singleItem: ", singleItem);
 
       this.setState({
         singleItem: singleItem,

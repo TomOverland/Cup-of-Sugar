@@ -10,11 +10,11 @@ import SingleProductCard from "../SingleProductCard/SingleProductCard";
 const SingleProductPage = (props) => {
   // Get ID from URL param, then pass as prop to SingleProductCard
   const url = window.location.pathname;
-  console.log("url: ", url);
+  // console.log("url: ", url);
   const splitUrl = url.split("/productpage/");
-  console.log("splitUrl: ", splitUrl);
+  // console.log("splitUrl: ", splitUrl);
   const id = splitUrl[1];
-  console.log("id: ", id);
+  // console.log("id: ", id);
 
   return (
     <div>
