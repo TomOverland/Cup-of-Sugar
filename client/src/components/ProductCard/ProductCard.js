@@ -42,7 +42,7 @@ render() {
                          <div className="text-lg mb-3">${item.rentalFee}.00</div>
                     </div>
                     <div>
-                         <Link to="/productpage"
+                         <Link to={`/productpage/${item.id}`}
                          className="bg-blue-500 text-white p-2 flex justify-center w-full"
                              >
                          Check it out!
