@@ -14,9 +14,9 @@ module.exports = function (app) {
 
   // Filter by category
   app.get('/api/results/filtered/:category', function (req, res) {
-    console.log('in app.get', req.params.category);
+    // console.log('in app.get', req.params.category);
     reqArr = req.params.category.split(',');
-    console.log('after split', reqArr);
+    // console.log('after split', reqArr);
     db.Item.findAll({
       where: {
         category: [reqArr],
