@@ -1,4 +1,5 @@
 import React from "react";
+import Wrapper from "../Wrapper/Wrapper"
 
 export default class Contact extends React.Component {
   constructor(props) {
@@ -18,6 +19,8 @@ export default class Contact extends React.Component {
       }, 
     }
     return (
+      <div>
+        <Wrapper>
         <div className="container mx-auto pt-2">
           <div className="space-y-4">
               <div className="block border mb-4 rounded overflow-hidden shadow-lg">
@@ -57,8 +60,12 @@ export default class Contact extends React.Component {
                 {status === "ERROR" && <p>Ooops! There was an error.</p>}
                 <br />
             </form>
-            
+            <br />
           </div>
+        </div>
+        <br />
+        <br />
+        </Wrapper>
       </div>
     );
   }
