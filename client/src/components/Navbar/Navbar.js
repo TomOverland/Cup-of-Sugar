@@ -24,7 +24,7 @@ function Navbar() {
 
   return ( isAuthenticated && 
     <nav>
-            <span className="text-xl">
+            <span className="text-xl cursor-pointer">
             <FontAwesomeIcon
              icon={faBars}
              onClick={() => setShowMenu(!showMenu)}
