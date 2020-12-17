@@ -24,7 +24,7 @@ export default class PostProduct extends React.Component {
     };
   }
   handleInput = (event, name) => {
-    console.log('event, name', event.target.value, name);
+    // console.log('event, name', event.target.value, name);
     this.setState({ [name]: event.target.value });
   };
 
