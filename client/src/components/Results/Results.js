@@ -1,7 +1,6 @@
 // We appear to be using Home.js as the results page.  Consider deleting this.
 import React from "react";
 import API from "../../utils/API";
-import { useAuth0 } from '@auth0/auth0-react';
 import Profile from "../Profile/Profile";
 // import Home from './Home';
 
