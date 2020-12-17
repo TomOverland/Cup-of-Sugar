@@ -9,6 +9,7 @@ import Login from "./views/Login";
 import SingleProductPage from "./components/SingleProductPage/SingleProductPage";
 import Contact from "./components/Contact/Contact";
 import ProtectedRoute from './auth/ProtectedRoute';
+import Wrapper from "./components/Wrapper/Wrapper";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
       <Router>
         <Header />
         <Switch>
+        <Wrapper>
           <Route exact path="/">
             <Login />
             <Home />
@@ -27,7 +29,9 @@ function App() {
           </Route> */}
           <ProtectedRoute path="/productpage" component={SingleProductPage} />
           <ProtectedRoute path="/contact" component={Contact} /> 
+          </Wrapper>
         </Switch>
+        
         <Footer />
       </Router>
     </div>

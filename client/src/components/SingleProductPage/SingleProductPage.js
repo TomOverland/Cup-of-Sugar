@@ -3,10 +3,13 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { withAuthenticationRequired } from '@auth0/auth0-react';
 import Login from '../../views/Login';
+import Wrapper from "../Wrapper/Wrapper"
 
 const SingleProductPage = () => {
   return (
+    
     <div>
+      <Wrapper>
       <div className="flex space-x-4 p-3">
         <div className="flex-grow flex-1 items-center justify-center ">
           <div className= "bg-gray-100 mb-4 rounded overflow-auto py-10 px-10">
@@ -37,6 +40,9 @@ const SingleProductPage = () => {
           </div>
         </div>
       </div>
+      </Wrapper>
+      <br />
+      <br />
   </div>
     
     
