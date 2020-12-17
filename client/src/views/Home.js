@@ -6,7 +6,7 @@ import { Sidebar } from "../components/Sidebar/Sidebar";
 import Results from "../components/Results/Results";
 
 const Home = () => {
-  // const { isAuthenticated } = useAuth0();
+  const { isAuthenticated } = useAuth0();
 
   // let products = "";
 
@@ -24,10 +24,11 @@ const Home = () => {
   //   ));
   // }
 
-  //return ( isAuthenticated && (
-  return (
+  return isAuthenticated && (
     <div>
-      <div id="toms-div">{/* <Results /> */}</div>
+      <div id="toms-div">
+        <Results />
+        </div>
       <h1 className="font-bold text-2xl mb-3 pl-3">Best Sellers</h1>
       <hr />
       <div className="flex">

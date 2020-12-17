@@ -14,11 +14,11 @@ class ProductCard extends Component {
     
       // Component did mount gets called after the render() method, so the map method starts as undefined.
       componentDidMount() {
-        console.log("Component did mount... Sending Axios Request...");
+        // console.log("Component did mount... Sending Axios Request...");
         API.getItems().then((res) => {
-          console.log("response: ", res);
+        //   console.log("response: ", res);
           const items = res;
-          console.log("response data: ", items);
+        //   console.log("response data: ", items);
           this.setState({
             items: items,
           });
