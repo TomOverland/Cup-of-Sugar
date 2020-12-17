@@ -7,6 +7,7 @@ const Profile = () => {
   const { user, isAuthenticated, isLoading, getAccessTokenSilently } = useAuth0();
   const [userMetadata, setUserMetadata] = useState(null);
   const [userList, setUserList] = useState();
+  // adding a comment to help push changes
 
   useEffect(() => {
     const getUserMetadata = async () => {
