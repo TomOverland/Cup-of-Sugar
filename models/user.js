@@ -23,9 +23,9 @@ module.exports = function (sequelize, DataTypes) {
     updatedAt: Sequelize.DATE,
   });
   // for when we want to connect users to their listings
-  // User.associate = function (models) {
-  //   User.hasMany(models.Item);
-  // };
+  User.associate = function (models) {
+    User.hasMany(models.Item);
+  };
 
   return User;
 };
