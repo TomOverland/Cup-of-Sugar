@@ -29,28 +29,23 @@ class SingleProductCard extends React.Component {
   render() {
     return (
       <div>
-        <p>examples of single items</p>
-        <p>singleItem id: {this.state.singleItem.id}</p>
-        <p>singleItem name: {this.state.singleItem.itemName}</p>
-        <p>singleItem description: {this.state.singleItem.itemDescription}</p>
-
         <div className="container mx-auto pt-5 mt-5 ">
           <div className="bg-gray-100 mb-4 rounded overflow-auto py-10 px-10 space-y-4 justify-items-end">
             <img
               alt="mockup"
-              src={process.env.PUBLIC_URL + "/lawnmower.jpg"}
+              src={process.env.PUBLIC_URL + `${this.state.singleItem.image}`}
               className="h-64 w-auto  bg-blue bg-cover pb-1 block"
             />
             <br />
             <div className="text-base sm:text-lg md:text-xl lg:text-2xl font-bold block ml-4">
-              {}
+            {this.state.singleItem.itemName}
             </div>
             <hr />
             <div className="text-base sm:text-sm md:text-md lg:text-lg mt-3 block mr-2">
-              Description of product
+            {this.state.singleItem.itemDescription}
             </div>
             <div className="text-base sm:text-sm md:text-md lg:text-lg mt-3 block">
-              Price per Day: $5.00
+              ${this.state.singleItem.rentalFee} a Day
             </div>
             <br />
             <hr className="p-3" />
