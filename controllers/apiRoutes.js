@@ -60,6 +60,7 @@ module.exports = function (app) {
       phone: req.body.phone,
       preferredContact: req.body.preferredContact,
       availableStatus: true,
+      UserId: req.body.UserId,
     })
       .then(function (result) {
         console.log("item posted sucessfully");
