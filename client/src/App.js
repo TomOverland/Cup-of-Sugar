@@ -10,30 +10,26 @@ import SingleProductPage from "./components/SingleProductPage/SingleProductPage"
 import Contact from "./components/Contact/Contact";
 import ProtectedRoute from "./auth/ProtectedRoute";
 import OwnerList from "./components/OwnerList/OwnerList";
-// import Wrapper from "./components/Wrapper/Wrapper";
+import Wrapper from "./components/Wrapper/Wrapper";
 
 function App() {
   return (
     <div>
       <Router>
         <Header />
-        <Switch>
-          {/* <Wrapper> */}
+        <Wrapper> 
+        <Switch> 
           <Route exact path="/">
             <Login />
             <Home />
           </Route>
           <ProtectedRoute path="/home" component={Home} />
           <ProtectedRoute path="/postproduct" component={PostProduct} />
-          {/* <Route path="/product/:id">
-            <Product />
-          </Route> */}
           <ProtectedRoute path="/productpage" component={SingleProductPage} />
           <ProtectedRoute path="/contact" component={Contact} />
           <ProtectedRoute path="/owner" component={OwnerList} />
-          {/* </Wrapper> */}
         </Switch>
-
+        </Wrapper>
         <Footer />
       </Router>
     </div>

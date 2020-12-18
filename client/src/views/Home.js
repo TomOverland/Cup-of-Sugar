@@ -4,6 +4,7 @@ import ProductCard from "../components/ProductCard/ProductCard";
 import { useAuth0 } from "@auth0/auth0-react";
 import { Sidebar } from "../components/Sidebar/Sidebar";
 import Results from "../components/Results/Results";
+import Footer from "../components/Footer/Footer"
 
 const Home = () => {
   const { isAuthenticated } = useAuth0();
@@ -38,6 +39,7 @@ const Home = () => {
         <div className="float-right flex">
           <Sidebar />
         </div>
+        <Footer />
       </div>
     </div>
   );

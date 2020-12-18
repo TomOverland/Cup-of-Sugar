@@ -139,6 +139,7 @@ module.exports = function (app) {
       });
   });
 
+
   // Get Items by User
   app.get('api/item/:userid', function (req, res) {
     db.Item.findAll({
