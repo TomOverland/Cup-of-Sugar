@@ -138,4 +138,20 @@ module.exports = function (app) {
         console.log(err);
       });
   });
+
+  // Delete an item listing
+  app.delete('/api/deleteitem/:id', function (req, res) {
+    db.Item.destroy({
+      where: {
+        id: req.body.id,
+      },
+    })
+      .then(function (result) {
+        console.log('Item was successfully deleted');
+        res.sendStatus(200);
+      })
+      .catch(function (err) {
+        console.log(err);
+      });
+  });
 };
