@@ -39,7 +39,6 @@ const Home = () => {
         <div className="float-right flex">
           <Sidebar />
         </div>
-        <Footer />
       </div>
     </div>
   );
