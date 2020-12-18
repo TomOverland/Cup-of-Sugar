@@ -1,33 +1,28 @@
 // View of single product from results list
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import Footer from "../Footer/Footer"
+import { withAuthenticationRequired } from "@auth0/auth0-react";
+import Login from "../../views/Login";
+// import Wrapper from "../Wrapper/Wrapper"
+// import API from "../../utils/API";
+import SingleProductCard from "../SingleProductCard/SingleProductCard";
 
 const SingleProductPage = (props) => {
+  // Get ID from URL param, then pass as prop to SingleProductCard
+  const url = window.location.pathname;
+  // console.log("url: ", url);
+  const splitUrl = url.split("/productpage/");
+  // console.log("splitUrl: ", splitUrl);
+  const id = splitUrl[1];
+  // console.log("id: ", id);
+
   return (
     <div>
-    <div className="container mx-auto pt-3">
-        <div className= "bg-gray-100 mb-4 rounded overflow-hidden py-10 px-10">
-            <div className="flex">
-              <img alt="mockup" src={process.env.PUBLIC_URL + "/lawnmower.jpg"} className="h-64 w-auto bg-blue bg-cover pb-1" />
-            <div className="text-2xl font-bold mb-3 flex-1 ml-3">{props.item.itemName}</div>
-            <div className="text-lg mb-3 flex-1">{props.item.itemDescription}</div>
-            <div className="text-lg mb-3 flex-1">{props.item.rentalFee}</div>
-              
-            </div>
-            <br />
-            <hr className="p-3"/>
-            <div className="p-3 flex">            
-                 <Link to="/contact" className="py-2 px-4 pr-4 bg-blue-500 hover:bg-blue-700 text-white font-semibold rounded-lg shadow-md focus:outline-none flex-2">Rent it!</Link>
-                 <Link to="/" className="ml-2 py-2 px-4 pr-4 bg-red-500 hover:bg-red-700 text-white font-semibold rounded-lg shadow-md focus:outline-none flex-2">Cancel</Link>
-            </div>
-        </div> 
+      <SingleProductCard searchId={id} />
     </div>
-    <Footer />
-    </div>
-    
   );
 };
 
-export default SingleProductPage;
-
+export default withAuthenticationRequired(SingleProductPage, {
+  onRedirecting: () => <Login />,
+});

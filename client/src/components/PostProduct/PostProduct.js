@@ -4,6 +4,7 @@ import { FormInputField } from '../FormField/FormField';
 import FormTextareaInput from '../Textarea/Textarea';
 import postItemToBackend from '../../utils/serviceFile';
 import Modal from '../Modal/Modal';
+import { Link } from 'react-router-dom';
 
 export default class PostProduct extends React.Component {
   constructor(props) {
@@ -24,7 +25,7 @@ export default class PostProduct extends React.Component {
     };
   }
   handleInput = (event, name) => {
-    console.log('event, name', event.target.value, name);
+    // console.log('event, name', event.target.value, name);
     this.setState({ [name]: event.target.value });
   };
 
@@ -34,9 +35,9 @@ export default class PostProduct extends React.Component {
     });
   };
 
-  componentDidMount() {
-    console.log('componentDidMount', this.state);
-  }
+  // componentDidMount() {
+  //   console.log('componentDidMount', this.state);
+  // }
 
   handleSubmit = (event) => {
     event.preventDefault();
@@ -158,16 +159,14 @@ export default class PostProduct extends React.Component {
           <button type="submit" className="py-2 px-4 pr-4 bg-blue-500 hover:bg-blue-700 text-white font-semibold rounded-lg shadow-md focus:outline-none flex-2" value="Submit">
             Save Listing
           </button>
-          <button type="submit" className="py-2 px-4 bg-red-500 hover:bg-red-700 text-white font-semibold rounded-lg shadow-md focus:outline-none flex-2 ml-2" value="cancel">
+         
+          <Link to="/" type="button" className="py-2 px-4 bg-red-500 hover:bg-red-700 text-white font-semibold rounded-lg shadow-md focus:outline-none flex-2 ml-2" value="cancel">
             Cancel
-          </button>
+          </Link>
           </div>
         </form>
         </div>
       </div>
-      <footer className="bg-gray-300 text-center text-xs p-3 relative bottom-0 w-full">
-            &copy; Cup of Sugar Copyright 2020
-        </footer>
       </div>
       
     );

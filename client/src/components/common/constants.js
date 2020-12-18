@@ -22,4 +22,3 @@ export const categories = [
   'Tools',
   'Video Games/Consoles',
 ];
-

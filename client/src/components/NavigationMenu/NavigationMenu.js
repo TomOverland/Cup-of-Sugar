@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 function NavigationMenu(props) {
     return(
         <div>
-         <div className="font-bold py-3">Main Menu</div>
+         <div className="font-bolder text-black py-3">Main Menu</div>
            <ul>
              <li>
                <Link to={{pathname: "/postproduct"}} className="text-blue-500 py-3 border-t border-b block"
