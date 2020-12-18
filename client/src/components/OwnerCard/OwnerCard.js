@@ -6,7 +6,7 @@ class OwnerCard extends React.Component {
     super(props);
 
     this.state = {
-      dbUsers: [],
+      dbUser: [],
     };
   }
 
@@ -14,12 +14,19 @@ class OwnerCard extends React.Component {
     // when page loads, the authenticated user's auth0.sub is saved to currentUser variable.
     const currentUser = this.props.currentUser;
     // console.log("currentUser: ", currentUser);
+    const userSearchParam = currentUser.auth0_id;
+    console.log("user search param: ", userSearchParam);
+
     // Then, we search the database's user table for the user with that matching auth0.sub.
     // *** Change getUsers below to query for auth.sub... ***
-    API.getUsers().then((res) => {
+    API.getUserByAuth0(userSearchParam).then((res) => {
       //   console.log("user response: ", res);
-      const apiUsers = res;
-      //   console.log("apiUsers: ", apiUsers);
+      const dbUserInfo = res;
+      console.log("user info from db: ", dbUserInfo);
+
+      this.setState({
+        dbUser: dbUserInfo,
+      });
     });
   }
 
