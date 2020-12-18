@@ -23,7 +23,7 @@ VALUES
 ("734", "Marcelle LeShell", "marcyshell@ocean.com");
 ("425", "Paula Paulson", "pauliepaul@gmail.com");
 ("426", "Dennis Conrad", "dennyconnie@gmail.com");
-("295", "")
+("295", "Milhouse VonHooten", "millyhoot@gmail.com");
 
 
 
@@ -136,7 +136,7 @@ VALUES
         "dadjeans4ever@yahoo.com",
         "5028885333",
         "call or text",
-        "true"),
+        true),
 
     ("Canoe",
         "Paddle away for a weekend in this ultra light kevlar Wenonah canoe! Easily maneuverable and transportable.",
@@ -147,7 +147,7 @@ VALUES
         "bdubsguy@centurylink.com",
         "2995558833",
         "call or text",
-        "true"),
+        true),
 
 
     ("Gas Grill",
@@ -159,22 +159,36 @@ VALUES
         "grillmcchill@hotmail.com",
         "2995559388",
         "call only",
-        "true"),
+        true),
 
     ("PlayStation 4",
-        "The 1TB hard drive PlayStation 4 system lets you play the greatest games from acclaimed indies to award-winning AAA hits, along
-with more entertainment options from TV, music and more.",
-        "https://media.direct.playstation.com/is/image/sierialto/PS4_Slim%20Core_ProductHero_900x900?$Background_Large$")
-,
-10,
-"1 month",
-"gamer@gamesforever.com",
-"4928885233",
-"call or text",
-"true"),
+        "The 1TB hard drive PlayStation 4 system lets you play the greatest games from acclaimed indies to award-winning AAA hits, along with more entertainment options from TV, music and more.",
+        "https://media.direct.playstation.com/is/image/sierialto/PS4_Slim%20Core_ProductHero_900x900?$Background_Large$",
+        10,
+        "1 month",
+        "gamer@gamesforever.com",
+        "4928885233",
+        "call or text",
+        true),
 
-("Power Drill",
-"")
+    ("Power Drill",
+        "ATOMIC 20-Volt MAX Cordless Brushless Compact 1/2 in. Drill/Driver with 2 20-Volt 1.3Ah Batteries, Charger & Bag",
+        "https://images.homedepot-static.com/productImages/0a2413ea-a2dc-47a0-b7bb-5e5e91addffe/svn/dewalt-power-drills-dcd708bw205-64_1000.jpg",
+        15,
+        "1 month",
+        "bobbybuildsthings@yahoo.com",
+        "3958000225",
+        "call or text",
+        true),
+
+    (""
+
+
+
+
+)
+
+
 
 
 ;
