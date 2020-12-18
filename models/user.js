@@ -1,12 +1,12 @@
-const { DataTypes, Sequelize } = require('sequelize');
-('use strict');
+const { DataTypes, Sequelize } = require("sequelize");
+("use strict");
 
 module.exports = function (sequelize, DataTypes) {
-  const User = sequelize.define('User', {
+  const User = sequelize.define("User", {
     // The id obtained from auth0 cannot be null, and must be a unique id to the db
     auth0_id: {
       type: DataTypes.STRING,
-      allowNull: false,
+      allowNull: true,
       unique: true,
     },
     // The user's name cannot be null. This contains both first and last name.
@@ -17,7 +17,7 @@ module.exports = function (sequelize, DataTypes) {
     // the user's email cannot be null
     userEmail: {
       type: DataTypes.STRING,
-      allowNull: false,
+      allowNull: true,
     },
     createdAt: Sequelize.DATE,
     updatedAt: Sequelize.DATE,
