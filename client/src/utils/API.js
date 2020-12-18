@@ -42,6 +42,7 @@ export default {
       .then((result) => result.data);
   },
   postUser: (userData) => {
+    console.log("Userdata in App.js: ", userData);
     return axios
       .post("http://localhost:3001/api/newuser/", userData)
       .then((result) => result.data);

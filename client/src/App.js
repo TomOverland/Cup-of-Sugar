@@ -2,7 +2,7 @@ import React from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Home from "./views/Home";
 // import Product from './views/Product';
-import PostProduct from "./components/PostProduct/PostProduct";
+import PostProductPage from "./components/PostProductPage/PostProductPage";
 import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
 import Login from "./views/Login";
@@ -17,18 +17,18 @@ function App() {
     <div>
       <Router>
         <Header />
-        <Wrapper> 
-        <Switch> 
-          <Route exact path="/">
-            <Login />
-            <Home />
-          </Route>
-          <ProtectedRoute path="/home" component={Home} />
-          <ProtectedRoute path="/postproduct" component={PostProduct} />
-          <ProtectedRoute path="/productpage" component={SingleProductPage} />
-          <ProtectedRoute path="/contact" component={Contact} />
-          <ProtectedRoute path="/owner" component={OwnerList} />
-        </Switch>
+        <Wrapper>
+          <Switch>
+            <Route exact path="/">
+              <Login />
+              <Home />
+            </Route>
+            <ProtectedRoute path="/home" component={Home} />
+            <ProtectedRoute path="/postproduct" component={PostProductPage} />
+            <ProtectedRoute path="/productpage" component={SingleProductPage} />
+            <ProtectedRoute path="/contact" component={Contact} />
+            <ProtectedRoute path="/owner" component={OwnerList} />
+          </Switch>
         </Wrapper>
         <Footer />
       </Router>
