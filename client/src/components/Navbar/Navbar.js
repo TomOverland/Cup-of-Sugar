@@ -5,9 +5,11 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
 import {useTransition, animated} from 'react-spring';
 import NavigationMenu from "../NavigationMenu/NavigationMenu";
+import { useAuth0 } from '@auth0/auth0-react';
 
 function Navbar() {
   const [showMenu, setShowMenu] = useState(false);
+  const { isAuthenticated } = useAuth0();
        
     const maskTransitions = useTransition(showMenu, null, {
         from: { position: 'absolute', opacity: 0 },
@@ -20,9 +22,9 @@ function Navbar() {
         leave: { opacity: 0, transform: "translateX(-100%)" },
     })
 
-  return (
+  return ( isAuthenticated && 
     <nav>
-            <span className="text-xl">
+            <span className="text-xl cursor-pointer">
             <FontAwesomeIcon
              icon={faBars}
              onClick={() => setShowMenu(!showMenu)}
@@ -34,7 +36,7 @@ function Navbar() {
                     <animated.div 
                         key={key} 
                         style={props}
-                        className="fixed bg-black-t-50 top-0 left-0 w-full h-full z-50"
+                        className="fixed top-0 left-0 w-full h-full z-50"
                         onClick={() => setShowMenu(false)}
                     >      
                         
