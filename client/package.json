@@ -25,7 +25,7 @@
   "scripts": {
     "build:css": "postcss src/index.css -o src/tailwind.css",
     "watch:css": "postcss src/index.css -o src/tailwind.css -w",
-    "start": "SET PORT=3000 npm run build:css && react-scripts start",
+    "start": "PORT=3000 npm run build:css && react-scripts start",
     "macstart": "PORT=3000 npm run build:css && react-scripts start",
     "build": "npm run build:css && react-scripts build",
     "test": "react-scripts test",

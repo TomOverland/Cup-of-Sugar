@@ -1,3 +1,6 @@
+DROP DATABASE cupofsugar_db;
+CREATE DATABASE cupofsugar_db;
+
 SELECT *
 FROM cupofsugar_db.users;
 SELECT *
@@ -32,7 +35,8 @@ INSERT INTO items
     email,
     phone,
     preferredContact,
-    availableStatus)
+    availableStatus,
+    UserId)
 
 
 VALUES
@@ -287,8 +291,234 @@ VALUES
         "29588855555",
         "call or text",
         true,
-        21)
+        21),
+
+    ("Record Player",
+        "https://docs.google.com/presentation/d/18jaA5OXE9wEQJF_clv-fBg4SgMXWR6I2q-op_pAI7QQ/edit?usp=sharing",
+        "https://www.guitarcenter.com/Audio-Technica/AT-LP140XP-Direct-Drive-Professional-DJ-Turntable-Silver-1500000263150.gc?source=4WWMWXGL&storeCode=&source=4WWRWXGL&gclid=Cj0KCQiA5vb-BRCRARIsAJBKc6IzxKJYI72VuxhGV9pd2MehEGsEEIJ0f46esmH5C2V2pWeqJSi-mHYaArLuEALw_wcB",
+        "Music",
+        15,
+        "1 month",
+        "DJDarryl@gmail.com",
+        "2774993773",
+        "call or text",
+        true,
+        22),
+
+    ("Bike trainer",
+        "Ready to plug and play—it's fully assembled out of the box with a preinstalled Shimano 11-speed cassette—the Elite Suito bike trainer offers an easy and accurate indoor bike training experience",
+        "https://www.rei.com/product/169437/elite-suito-bike-trainer?CAWELAID=120217890008345424&CAGPSPN=pla&CAAGID=107744800784&CATCI=pla-452552822322&cm_mmc=PLA_Google%7C21700000001700551_1694370001%7C92700053575966107%7CTOF%7C71700000066691934&gclid=Cj0KCQiA5vb-BRCRARIsAJBKc6IcObBsn9Eee8ZBDPLRsY9xKVQclG_uLup7Kg045X4_tSDGu6TIFsQaAkfdEALw_wcB&gclsrc=aw.ds",
+        "Fitness",
+        15,
+        "2 months",
+        "cycling4ever@email.com",
+        "2948885552",
+        "call or text",
+        true,
+        23),
+
+    ("Bicycle",
+        "The Surly Pugsley may be the original fat bike, but this one is far from the original. Previously a great all-around fat bike, the Pugsley has been redesigned to be an ideal off-road touring and exploration rig",
+        "https://www.pristiwanicyclesstore.com/surly-pugsley/?sku=SKU-1399-Candied%20Yam%20Orange-Medium",
+        "Bicycle",
+        25,
+        "1 month",
+        "winterbikewanda@email.com",
+        "4882994279",
+        "call or text",
+        true,
+        24),
+
+    ("Table saw",
+        "Maximized for accuracy and capacity this 8-1/4 in. table saw includes on-board storage for blade guard assembly, non-through cut riving knife, anti-kickback pawls, blade change wrenches, miter gauge and push stick.",
+        "https://www.homedepot.com/p/DEWALT-15-Amp-Corded-8-1-4-in-Compact-Jobsite-Tablesaw-DWE7485/310178475?source=shoppingads&locale=en-US&mtc=Shopping-VF-F_D25T-G-D25T-25_9_PORTABLE_POWER-DEWALT-NA-Feed-LIA-NA-NA-All_Products&cm_mmc=Shopping-VF-F_D25T-G-D25T-25_9_PORTABLE_POWER-DEWALT-NA-Feed-LIA-NA-NA-All_Products-71700000065011383-58700005750113853-92700052422842283&gclid=Cj0KCQiA5vb-BRCRARIsAJBKc6LO2fLYIFe-DMD-DXx4sIDQWP_eqyJDfzFf2564qPBcw9FnPJ7ygyMaAvWKEALw_wcB&gclsrc=aw.ds",
+        "Tools",
+        25,
+        "1 month",
+        "Corythecontractor@email.com",
+        "2884992747",
+        "call or text",
+        true,
+        25),
+
+    ("Car jack",
+        "Yellow Jacket Low-Profile Super-Duty Jack — 3-Ton Lift Capacity, 4in.–23in. Lift Range",
+        "https:=//www.northerntool.com/images/product/2000x2000/566/56647_2000x2000.jpg",
+        "Automotive",
+        15,
+        "1 month",
+        "Bobsautoshop@email.com",
+        "2978493388",
+        "call or text",
+        true,
+        26),
+
+    ("Hair styler",
+        "Dyson Airwrap Complete (Nickel/Fuchsia)Engineered for multiple hair types. With barrels to curl and wave, and brushes to control, smooth or add volume",
+        "https://dyson-h.assetsadobe2.com/is/image/content/dam/dyson/images/products/primary/310731-01.png?$responsive$&cropPathE=desktop&fit=stretch,1&wid=1920",
+        "Beauty",
+        20,
+        "1 month",
+        "Fabian@email.com",
+        "2984772004",
+        "call or text",
+        true,
+        27),
+
+    ("Hammock",
+        "Quilted Sunbrella Hammock with stand",
+        "https://cdni.llbean.net/is/image/wim/223944_47413_41?hei=1092&wid=950&resMode=sharp2&defaultImage=llbstage/A0211793_2",
+        "Furniture",
+        10,
+        "3 months",
+        "dadjokes@email.com",
+        "2994828593",
+        "call or text",
+        true,
+        28),
+
+    ("Paella pan",
+        "The wide, 17 inch shallow carbon steel cooking surface is designed to sauté meats and vegetables prior to adding rice",
+        "https://assets.wsimgs.com/wsimgs/ab/images/dp/wcm/202038/0488/img7o.jpg",
+        "Miscellaneous",
+        5,
+        "1 month",
+        "cookingclasses@email.com",
+        "2985293848",
+        "call or text",
+        true,
+        29),
+
+    ("Sleeping pad",
+        "Get a better night's sleep in the backcountry with the NEMO Tensor insulated sleeping pad. Its lightweight design is stable and packable, updated with 2 layers of metalized film to fend off the chill.",
+        "https://www.rei.com/media/b8c4f612-89bb-47d1-92e5-78d350e6cc6d?size=784x588",
+        "Camping",
+        15,
+        "2 weeks",
+        "Happycamper@email.com",
+        "9328884449",
+        "call or text",
+        true,
+        30),
+
+    ("Ticket to Ride",
+        "Set out on an epic journey building railways across the country in the Ticket To Ride Board Game. Players use strategy and decision-making as they run trains and decide routes between iconic cities.",
+        "https://www.target.com/p/ticket-to-ride-board-game/-/A-14204015?ref=tgt_adv_XS000000&AFID=google_pla_df&fndsrc=tgtao&DFA=71700000012732838&CPNG=PLA_Toys%2BShopping_Local&adgroup=SC_Toys&LID=700000001170770pgs&LNM=PRODUCT_GROUP&network=g&device=c&location=9019670&targetid=pla-691112647197&ds_rl=1246978&ds_rl=1248099&gclid=Cj0KCQiA5vb-BRCRARIsAJBKc6KM1bT1Uc2rtG8PFDViN6vPIzE4cGW7OEFDhYjWpLp7IOAXbyM_oDwaAhSREALw_wcB&gclsrc=aw.ds",
+        "Board games",
+        3,
+        "1 month",
+        "boardgamerz@email.com",
+        "2885939204",
+        "call or text",
+        true,
+        31),
+
+    ("Codenames",
+        "Codenames is a top-rated spy game for multiple players that you won't stop playing! The two rival spymasters know the secret identities of 25 agents.",
+        "https://www.target.com/p/codenames-board-game/-/A-50364627?ref=tgt_adv_XS000000&AFID=google_pla_df&fndsrc=tgtao&DFA=71700000012732838&CPNG=PLA_Toys%2BShopping_Local&adgroup=SC_Toys&LID=700000001170770pgs&LNM=PRODUCT_GROUP&network=g&device=c&location=9019670&targetid=pla-933279105248&ds_rl=1246978&ds_rl=1248099&gclid=Cj0KCQiA5vb-BRCRARIsAJBKc6KyzMx_H28Xh9rWCI8qnLOdKwLJQp8NhDuNQFNtaaUS4y5akkECdDgaArhFEALw_wcB&gclsrc=aw.ds",
+        "Board games",
+        2,
+        "1 month",
+        "boardgamerz@email.com",
+        "2995277528",
+        "call or text",
+        true,
+        32),
+
+    ("Scattegories",
+        "Think fast! Team up in this fun, fast-paced game and rack your brain for items that fit the category.",
+        "Board games",
+        2,
+        "1 month",
+        "susiefunhater@email.com",
+        "2882775939",
+        "call or text",
+        true,
+        33),
+
+    ("Kayak",
+        "The Island Voyage 2 is a two-person inflatable family kayak filled with features that make it easy and fun to use. It inflates and deflates easily while packing down small so it can be stowed in the back of your vehicle.",
+        "https://cdni.llbean.net/is/image/wim/508239_2239_41?hei=1092&wid=950&resMode=sharp2&defaultImage=llbstage/A0211793_2",
+        "Boating",
+        25,
+        "1 week",
+        "karlkayaker@email.com",
+        "2985288228",
+        "call or text",
+        true,
+        34),
+
+    ("Leaf blower",
+        "EGO Power+ LB6504 180 mph 650 CFM 56 volt Battery Handheld Leaf Blower Kit (Battery & Charger)",
+        "https://www.acehardware.com/departments/lawn-and-garden/outdoor-power-equipment/leaf-blowers/7006685?store=09328&gclid=Cj0KCQiA5vb-BRCRARIsAJBKc6JiTKMCbfNihsb9mISJIWdUtyXW5hnbv-uW5NdSibtdiZWzoTMto8oaAupIEALw_wcB&gclsrc=aw.ds",
+        "Lawn and garden",
+        20,
+        "2 weeks",
+        "joeyjoejoejunior@email.com",
+        "3872229482",
+        "call or text",
+        true,
+        35),
+
+    ("Hover board",
+        "Halo Rover X, 8.5 inches. Ranked best hoverboard 2021",
+        "https://cdn.shopify.com/s/files/1/1142/0746/products/halo-rover-x-hoverboard-black-main-cfbg_1080x.jpg?v=1542132865",
+        "Sporting goods",
+        20,
+        "1 week",
+        "hoveringhal@gmail.com",
+        "2858200383",
+        "call or text",
+        true,
+        36),
+
+    ("Harp",
+        "The Rees Harps Special Edition Fullsicle Harp allows you to enjoy all the same great features of the standard Fullsicle Harp, but with an upgraded look, feel, and sound.",
+        "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcS_KN7oj4lbZjv3bUwGK0j764g-CEM7Przofai-BX354f81xVaFMvi2EgO3SfIAmleEJrB7Wdz5QAi717mUgYz4x10lfhyaLH1JrAZhUUdMwf3u6meRf3l7jw&usqp=CAE",
+        "Music",
+        25,
+        "2 weeks",
+        "MarytheMusician@email.com",
+        "3772994827",
+        "call or text",
+        true,
+        37),
+
+    ("Slip 'n Slide",
+        "The Turbo Chute Water Slide Lake Package features 3 - 20 foot sections of commercial strength sliding with 46 inches wide x 9 inches high PVC coated nylon inflatable wall barriers, an extra slippery coated 20 foot smooth overlapping slide surface and 4 stakes with 4 stake loops per section.",
+        "https://ak1.ostkcdn.com/images/products/7954801/Rave-Sports-Turbo-Chute-Water-Slide-Lake-Package-8ef4f93d-50dd-4510-8e7d-875b60504edb_600.jpg",
+        "Miscellaneous",
+        150,
+        "1 week",
+        "Larry@email.com",
+        "29852005828",
+        "call or text",
+        true,
+        38),
+
+    ("Outdoor event tent",
+        "10'x20' Waterproof Pop Up Canopy Tent with Sides. Perfect for your next outdoor gathering to provide shelter and shade.",
+        "https://cdn.shopify.com/s/files/1/0339/4889/products/07can001-20w4-dspv.jpg?v=1603351515",
+        "Miscellaneous",
+        50,
+        "3 weeks",
+        "events@email.com",
+        "2985829294",
+        "call",
+        true,
+        39)
 ,
+
+
+
+
+
+
+        
+
+        
+
+        
 
 
 
@@ -296,11 +526,3 @@ VALUES
         
 
 
-
-    
-
-
-
-
-
-;
