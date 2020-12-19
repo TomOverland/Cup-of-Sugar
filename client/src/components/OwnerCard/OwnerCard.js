@@ -3,6 +3,7 @@ import API from '../../utils/API';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEdit } from '@fortawesome/free-solid-svg-icons';
 import { faSkullCrossbones } from '@fortawesome/free-solid-svg-icons';
+import RentalStatusButton from '../RentalStatusButton/RentalStatusButton';
 import { Link } from 'react-router-dom';
 
 class OwnerCard extends React.Component {
@@ -52,6 +53,14 @@ class OwnerCard extends React.Component {
     // evaluate item.avaialableStatus to determine how a button attached to card should display to toggle status
   }
 
+  changeStatus = (event, status) => {
+    console.log('inside changeStatus', event.target.value, status);
+    const id = event.target.value;
+    API.changeStatus(id, {status}).then((res) => {
+      console.log("in OwnerCard post ChangeStat", res);
+    });
+  };
+
   // Delete a Listing from the DB, then update the state so it no longer appears on the page
   handleDelete = (event) => {
     console.log('this will be deleted', event.target.value);
@@ -60,11 +69,9 @@ class OwnerCard extends React.Component {
       const updatedDbUserItems = this.state.dbUserItems.filter((userItem) => {
         if (userItem.id != itemId) return userItem;
       });
-      this.setState(
-        {
-          dbUserItems: updatedDbUserItems,
-        },
-      );
+      this.setState({
+        dbUserItems: updatedDbUserItems,
+      });
     });
   };
 
@@ -88,14 +95,19 @@ class OwnerCard extends React.Component {
                   <li>preferred contact: {item.preferredContact}</li>
                   <li>available status: {item.availableStatus}</li>
                 </p>
-                <Link
-                // STILL NEED TO WRITE THIS NINA
-                  to="/editlisting"
-                  item={item}
+                <RentalStatusButton
+                  value={item.id}
+                  isAvailable={item.availableStatus}
+                  changeStatus={this.changeStatus}
+                />
+                <button
+                  // STILL NEED TO WRITE THIS NINA
+
+                  item={item.availableStatus}
                   className="py-2 px-4 bg-green-500 hover:bg-green-600 text-white font-semibold rounded-lg shadow-md focus:outline-none mr-1"
                 >
                   Edit <FontAwesomeIcon icon={faEdit} />
-                </Link>
+                </button>
                 <button
                   className="py-2 px-4 bg-red-500 hover:bg-red-600 text-white font-semibold rounded-lg shadow-md focus:outline-none"
                   type="button"
