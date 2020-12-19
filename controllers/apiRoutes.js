@@ -75,12 +75,12 @@ module.exports = function (app) {
   app.delete("/api/deleteitem/:id", function (req, res) {
     db.Item.destroy({
       where: {
-        id: req.body.id,
+        id: req.params.id,
       },
     })
       .then(function (result) {
         console.log("Item was successfully deleted");
-        res.sendStatus(200);
+        res.json(result);
       })
       .catch(function (err) {
         console.log(err);
