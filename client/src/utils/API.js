@@ -37,6 +37,7 @@ export default {
       .then((result) => result.data);
   },
   getUserByAuth0: (auth0_id) => {
+    console.log("just for fun, this works too, right?", auth0_id)
     return axios
       .get(`http://localhost:3001/api/users/${auth0_id}`)
       .then((result) => result.data);
@@ -47,4 +48,10 @@ export default {
       .post("http://localhost:3001/api/newuser/", userData)
       .then((result) => result.data);
   },
+  getItemsByUser: (UserId) => {
+    console.log("axios WUMBO:", UserId);
+    return axios
+    .get(`http://localhost:3001/api/owneditems/${UserId}`)
+    .then((result) => result.data);
+  }
 };
