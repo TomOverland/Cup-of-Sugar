@@ -7,14 +7,6 @@ import Results from '../components/Results/Results';
 import API from '../utils/API';
 // import Footer from "../components/Footer/Footer"
 
-const getDefaultItems = () => {
-  API.getItems().then((res) => {
-    console.log('response to home getDefaultItems: ', res);
-    const items = res;
-    return items;
-  });
-};
-
 // export function HomeDisplayItems(filteredItems) {
 //   const [items, setItems] = useState(filteredItems || getDefaultItems());
 //   return {
@@ -80,4 +72,3 @@ export function Home() {
   );
 }
 
-export default Home;
