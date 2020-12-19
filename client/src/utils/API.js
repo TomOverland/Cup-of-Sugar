@@ -19,7 +19,8 @@ export default {
       .then((result) => result.data);
   },
   deleteItem: (id) => {
-    return axios.delete(`api/deleteitem/${id}`).then((result) => result.data);
+    console.log("deleting id", id)
+    return axios.delete(`http://localhost:3001/api/deleteitem/${id}`).then((result) => result.data);
   },
   saveItem: (itemData) => {
     return axios

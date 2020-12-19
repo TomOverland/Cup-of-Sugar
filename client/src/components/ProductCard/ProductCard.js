@@ -8,7 +8,7 @@ import { faCheck } from '@fortawesome/free-solid-svg-icons';
 const ProductCard = (props) => {
   console.log('props in ProductCard', props);
 
-  // props.filteredProductsArr || []
+
   // constructor(props) {
   //   super(props);
 
