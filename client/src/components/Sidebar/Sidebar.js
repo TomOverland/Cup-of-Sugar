@@ -1,6 +1,8 @@
 import React from 'react';
 import { Checkboxes, useCheckboxes } from '../Checkbox/Checkbox';
 import API from '../../utils/API';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faSort } from "@fortawesome/free-solid-svg-icons";
 // import { HomeDisplayItems } from '../../views/Home';
 
 export function Sidebar(props) {
@@ -34,7 +36,7 @@ export function Sidebar(props) {
           className="py-2 px-4 bg-red-600 hover:bg-red-700 text-white font-semibold rounded-lg shadow-md focus:outline-none"
           value="submit"
         >
-          Filter
+          Filter<FontAwesomeIcon icon={faSort}/>
         </button>
       </form>
     </>
