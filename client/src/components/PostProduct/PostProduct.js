@@ -7,8 +7,8 @@ import Modal from "../Modal/Modal";
 import { Link } from "react-router-dom";
 import API from "../../utils/API";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCloudUploadAlt } from "@fortawesome/free-solid-svg-icons";
-import { faBackward } from "@fortawesome/free-solid-svg-icons";
+import { faCompactDisc } from "@fortawesome/free-solid-svg-icons";
+import { faTimes } from "@fortawesome/free-solid-svg-icons";
 
 export default class PostProduct extends React.Component {
   constructor(props) {
@@ -243,7 +243,7 @@ export default class PostProduct extends React.Component {
                   className="py-2 px-4 pr-4 bg-blue-500 hover:bg-blue-700 text-white font-semibold rounded-lg shadow-md focus:outline-none flex-2"
                   value="Submit"
                 >
-                  Save Listing <FontAwesomeIcon icon={faCloudUploadAlt}/>
+                  Save Listing <FontAwesomeIcon icon={faCompactDisc}/>
                 </button>
 
                 <Link
@@ -252,7 +252,7 @@ export default class PostProduct extends React.Component {
                   className="py-2 px-4 bg-red-500 hover:bg-red-700 text-white font-semibold rounded-lg shadow-md focus:outline-none flex-2 ml-2"
                   value="cancel"
                 >
-                  Cancel <FontAwesomeIcon icon={faBackward}/>
+                  Cancel <FontAwesomeIcon icon={faTimes}/>
                 </Link>
               </div>
             </form>

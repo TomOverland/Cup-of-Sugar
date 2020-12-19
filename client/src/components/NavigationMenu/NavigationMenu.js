@@ -18,11 +18,11 @@ function NavigationMenu(props) {
                My Listings
                </Link>
              </li>
-             <li>
+             {/* <li>
                <Link to="/" className="text-blue-500 py-3 border-b block" onClick={props.closeMenu}>
                My Rented Items
                </Link>
-             </li>
+             </li> */}
             </ul>
         </div>
     )
