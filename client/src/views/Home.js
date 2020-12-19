@@ -7,14 +7,6 @@ import Results from '../components/Results/Results';
 import API from '../utils/API';
 // import Footer from "../components/Footer/Footer"
 
-const getDefaultItems = () => {
-  API.getItems().then((res) => {
-    console.log('response to home getDefaultItems: ', res);
-    const items = res;
-    return items;
-  });
-};
-
 // export function HomeDisplayItems(filteredItems) {
 //   const [items, setItems] = useState(filteredItems || getDefaultItems());
 //   return {
@@ -27,22 +19,18 @@ export function Home() {
   const { isAuthenticated } = useAuth0();
   const [items, setItems] = useState();
 
-  useEffect(
-    () => {
-      API.getItems().then(res => {
-        setItems(res)
-      })
-    },[]
-  )
+  useEffect(() => {
+    API.getItems().then((res) => {
+      setItems(res);
+    });
+  }, []);
 
   // useEffect(() => {
   //   console.log("did it try?")
   // },[items])
-  
-  console.log("items have arrived in home", items)
 
+  console.log('items have arrived in home', items);
 
-  
   // let products = "";
 
   // let content = null;
@@ -72,12 +60,10 @@ export function Home() {
             <ProductCard items={items} />
           </div>
           <div className="float-right flex">
-            <Sidebar setItems={setItems}/>
+            <Sidebar setItems={setItems} />
           </div>
         </div>
       </div>
     )
   );
 }
-
-export default Home;
