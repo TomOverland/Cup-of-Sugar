@@ -31,6 +31,7 @@ export function Checkboxes({ checkboxes, setCheckbox }) {
           <input
             className="form-check-input"
             type="checkbox"
+            key={checkbox.name}
             checked={checkbox.checked}
             onChange={(e) => {
               setCheckbox(i, e.target.checked);
