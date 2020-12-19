@@ -39,7 +39,6 @@ console.log("Event1");
         <div className="float-right flex">
           <Sidebar />
         </div>
-        <Footer />
       </div>
     </div>
   );
