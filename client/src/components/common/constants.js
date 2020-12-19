@@ -20,5 +20,5 @@ export const categories = [
   'Photo and Video',
   'Sporting Goods',
   'Tools',
-  'Video Games/Consoles',
+  'Video Games and Consoles',
 ];

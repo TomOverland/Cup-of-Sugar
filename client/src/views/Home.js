@@ -1,14 +1,48 @@
-import React from "react";
+import React, { useState, useEffect } from 'react';
 // import Loader from "../components/Loader/Loader";
-import ProductCard from "../components/ProductCard/ProductCard";
-import { useAuth0 } from "@auth0/auth0-react";
-import { Sidebar } from "../components/Sidebar/Sidebar";
-import Results from "../components/Results/Results";
-import Footer from "../components/Footer/Footer"
+import ProductCard from '../components/ProductCard/ProductCard';
+import { useAuth0 } from '@auth0/auth0-react';
+import { Sidebar } from '../components/Sidebar/Sidebar';
+import Results from '../components/Results/Results';
+import API from '../utils/API';
+// import Footer from "../components/Footer/Footer"
 
-const Home = () => {
+const getDefaultItems = () => {
+  API.getItems().then((res) => {
+    console.log('response to home getDefaultItems: ', res);
+    const items = res;
+    return items;
+  });
+};
+
+// export function HomeDisplayItems(filteredItems) {
+//   const [items, setItems] = useState(filteredItems || getDefaultItems());
+//   return {
+//     setItems,
+//     items,
+//   };
+// }
+
+export function Home() {
   const { isAuthenticated } = useAuth0();
-console.log("Event1");
+  const [items, setItems] = useState();
+
+  useEffect(
+    () => {
+      API.getItems().then(res => {
+        setItems(res)
+      })
+    },[]
+  )
+
+  // useEffect(() => {
+  //   console.log("did it try?")
+  // },[items])
+  
+  console.log("items have arrived in home", items)
+
+
+  
   // let products = "";
 
   // let content = null;
@@ -25,24 +59,25 @@ console.log("Event1");
   //   ));
   // }
 
-  return isAuthenticated && (
-    <div>
-      <div id="toms-div">
-        <Results />
+  return (
+    isAuthenticated && (
+      <div>
+        <div id="toms-div">
+          <Results />
         </div>
-      <h1 className="font-bold text-2xl mb-3 pl-3">Best Sellers</h1>
-      <hr />
-      <div className="flex">
-        <div className="flex-1">
-          <ProductCard />
+        <h1 className="font-bold text-2xl mb-3 pl-3">Best Sellers</h1>
+        <hr />
+        <div className="flex">
+          <div className="flex-1">
+            <ProductCard items={items} />
+          </div>
+          <div className="float-right flex">
+            <Sidebar setItems={setItems}/>
+          </div>
         </div>
-        <div className="float-right flex">
-          <Sidebar />
-        </div>
-        <Footer />
       </div>
-    </div>
+    )
   );
-};
+}
 
 export default Home;

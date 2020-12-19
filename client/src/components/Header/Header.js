@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import Navbar from "../Navbar/Navbar"; 
 import AuthenticationButton from '../AuthenticationButton/AuthenticationButton';
+import Profile from "../Profile/Profile"
 
 const Header = () => {
   
@@ -13,6 +14,7 @@ const Header = () => {
           <span className="font-semibold text-xl pl-3">
             <Link to="/">Cup of Sugar</Link>
           </span>
+          
         </div> 
           <AuthenticationButton />
       </div>

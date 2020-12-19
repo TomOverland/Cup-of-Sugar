@@ -1,6 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import API from "../../utils/API";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCheckCircle } from "@fortawesome/free-solid-svg-icons";
+import { faBackward } from "@fortawesome/free-solid-svg-icons";
 
 class SingleProductCard extends React.Component {
   constructor(props) {
@@ -14,11 +17,11 @@ class SingleProductCard extends React.Component {
   componentDidMount() {
     // taking prop of searchId from SingleProductPage to use as search param in API.getSingleItem
     const id = this.props.searchId;
-    // console.log("id on SingleProductCard: ", id);
+    console.log("id on SingleProductCard: ", id);
 
     API.getSingleItem(id).then((res) => {
       const singleItem = res;
-      // console.log("singleItem: ", singleItem);
+      console.log("singleItem: ", singleItem);
 
       this.setState({
         singleItem: singleItem,
@@ -55,13 +58,13 @@ class SingleProductCard extends React.Component {
               to="/contact"
               className="py-2 px-4 pr-4 bg-blue-500 hover:bg-blue-700 text-white font-semibold rounded-lg shadow-md focus:outline-none flex-3"
             >
-              Rent it!
+              Rent it! <FontAwesomeIcon icon={faCheckCircle}/>
             </Link>
             <Link
               to="/"
               className="ml-2 py-2 px-4 pr-4 bg-red-500 hover:bg-red-700 text-white font-semibold rounded-lg shadow-md focus:outline-none flex-3"
             >
-              Cancel
+              Cancel <FontAwesomeIcon icon={faBackward}/>
             </Link>
           </div>
         </div>

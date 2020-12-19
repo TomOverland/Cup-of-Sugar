@@ -1,10 +1,10 @@
 import React from 'react';
 import { Checkboxes, useCheckboxes } from '../Checkbox/Checkbox';
 import API from '../../utils/API';
+// import { HomeDisplayItems } from '../../views/Home';
 
-export function Sidebar() {
+export function Sidebar(props) {
   const checkboxes = useCheckboxes();
-  console.log("SIDEBAR CHECKING IN")
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -12,9 +12,11 @@ export function Sidebar() {
       .filter((box) => box.checked)
       .map((checkbox) => checkbox.name)
       .join(',');
-// if catergoryArr == [], getAllItems
+    //NEED TO WRITE if catergoryArr == [], getAllItems---no, need a reset button.
     API.getFilteredItems(categoryArr).then((response) => {
       console.log('filter response', response);
+      props.setItems(response)
+     
     });
   };
 
