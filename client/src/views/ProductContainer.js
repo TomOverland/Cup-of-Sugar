@@ -11,7 +11,8 @@ class ProductContainer extends Component {
   }
  componentDidMount() {
   API.getItems().then((res) => {
-    //   console.log("response: ", res);
+      // console.log("response: ", res);
+      console.log("GETTING ITEMS IN PROD CONTAINER")
       const items = res;
     //   console.log("response data: ", items);
       this.setState({

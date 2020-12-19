@@ -42,47 +42,81 @@ export default class PostProduct extends React.Component {
     });
   };
 
-  // componentDidMount() {
-  //   console.log('componentDidMount', this.state);
-  // }
+  componentDidMount() {
+    console.log('componentDidMount', this.state);
+     // get current user information
+     const currentUser = this.props.currentUser;
+     // console.log("current user info before post req: ", currentUser);
+     const currentUserAuth0 = this.props.currentUser.auth0_id;
+     // console.log("Submit button currentUser: ", currentUserAuth0);
+ 
+     API.getUserByAuth0(currentUserAuth0).then((res) => {
+       const dbUserInfo = res;
+       // console.log("Get user by auth on post product: ", dbUserInfo);
+ 
+       // check if user exists in db after they post item
+       if (dbUserInfo == null) {
+         // if user exists, set state to user id
+         API.postUser(currentUser).then((res) => {
+           // console.log("response of API Post: ", res);
+           const userId = res.id;
+ 
+           this.setState({
+             UserId: userId,
+           });
+           // console.log("state after the post: ", this.state);
+         });
+       } else {
+         console.log("User already exists.");
+         // console.log("res id in else: ", res.id);
+         const userId = res.id;
+ 
+         this.setState({
+           UserId: userId,
+         });
+ 
+         console.log("else statement state: ", this.state);
+       }
+     });
+  }
 
   handleSubmit = (event) => {
     event.preventDefault();
     // console.log("submit clicked", this.state);
     // get current user information
-    const currentUser = this.props.currentUser;
-    // console.log("current user info before post req: ", currentUser);
-    const currentUserAuth0 = this.props.currentUser.auth0_id;
-    // console.log("Submit button currentUser: ", currentUserAuth0);
+    // const currentUser = this.props.currentUser;
+    // // console.log("current user info before post req: ", currentUser);
+    // const currentUserAuth0 = this.props.currentUser.auth0_id;
+    // // console.log("Submit button currentUser: ", currentUserAuth0);
 
-    API.getUserByAuth0(currentUserAuth0).then((res) => {
-      const dbUserInfo = res;
-      // console.log("Get user by auth on post product: ", dbUserInfo);
+    // API.getUserByAuth0(currentUserAuth0).then((res) => {
+    //   const dbUserInfo = res;
+    //   // console.log("Get user by auth on post product: ", dbUserInfo);
 
-      // check if user exists in db after they post item
-      if (dbUserInfo == null) {
-        // if user exists, set state to user id
-        API.postUser(currentUser).then((res) => {
-          // console.log("response of API Post: ", res);
-          const userId = res.id;
+    //   // check if user exists in db after they post item
+    //   if (dbUserInfo == null) {
+    //     // if user exists, set state to user id
+    //     API.postUser(currentUser).then((res) => {
+    //       // console.log("response of API Post: ", res);
+    //       const userId = res.id;
 
-          this.setState({
-            UserId: userId,
-          });
-          // console.log("state after the post: ", this.state);
-        });
-      } else {
-        console.log("User already exists.");
-        // console.log("res id in else: ", res.id);
-        const userId = res.id;
+    //       this.setState({
+    //         UserId: userId,
+    //       });
+    //       // console.log("state after the post: ", this.state);
+    //     });
+    //   } else {
+    //     console.log("User already exists.");
+    //     // console.log("res id in else: ", res.id);
+    //     const userId = res.id;
 
-        this.setState({
-          UserId: userId,
-        });
+    //     this.setState({
+    //       UserId: userId,
+    //     });
 
-        console.log("else statement state: ", this.state);
-      }
-    });
+    //     console.log("else statement state: ", this.state);
+    //   }
+    // });
 
     // make api call to DB to create new Item
     postItemToBackend(this.state).then((postSucceeded) => {

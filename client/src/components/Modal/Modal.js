@@ -30,13 +30,13 @@ const Modal = (props) => {
             </div>
             {/*footer*/}
             <div className="flex items-center justify-end p-6 border-t border-solid border-gray-300 rounded-b">
-              <Link to="/product/id:"
+              <Link to="/owner"
                 className="text-red-500 background-transparent font-bold uppercase px-6 py-2 text-sm outline-none focus:outline-none mr-1 mb-1"
                 type="button"
                 style={{ transition: 'all .15s ease' }}
                 onClick={() => console.log("clicked See listing") }
               >
-                See Listing
+                View My Listings
               </Link>
               <Link to="/"
                 className="bg-green-500 text-white active:bg-green-600 font-bold uppercase text-sm px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1"

@@ -144,10 +144,11 @@ module.exports = function (app) {
   });
 
   // Get Items by User
-  app.get("api/item/:userid", function (req, res) {
+  app.get("/api/owneditems/:UserId", function (req, res) {
+    console.log("server side user ID get")
     db.Item.findAll({
       where: {
-        UserId: req.params.id,
+        UserId: req.params.UserId,
       },
     })
       .then(function (results) {

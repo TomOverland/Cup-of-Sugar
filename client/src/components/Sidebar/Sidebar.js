@@ -4,6 +4,7 @@ import API from '../../utils/API';
 
 export function Sidebar() {
   const checkboxes = useCheckboxes();
+  console.log("SIDEBAR CHECKING IN")
 
   const handleSubmit = (event) => {
     event.preventDefault();

@@ -8,7 +8,7 @@ import Footer from "../components/Footer/Footer"
 
 const Home = () => {
   const { isAuthenticated } = useAuth0();
-
+console.log("Event1");
   // let products = "";
 
   // let content = null;
