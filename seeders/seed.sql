@@ -1,6 +1,3 @@
-DROP DATABASE cupofsugar_db;
-CREATE DATABASE cupofsugar_db;
-
 SELECT *
 FROM cupofsugar_db.users;
 SELECT *
