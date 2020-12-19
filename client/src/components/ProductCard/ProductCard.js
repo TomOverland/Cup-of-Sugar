@@ -3,6 +3,8 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom"; 
 import API from "../../utils/API"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCheck } from "@fortawesome/free-solid-svg-icons";
 
 
 class ProductCard extends Component {
@@ -46,7 +48,7 @@ render() {
                          <Link to={`/productpage/${item.id}`}
                          className="bg-blue-500 text-white p-2 flex justify-center w-full"
                          >
-                         Check it out!
+                         Check it out! <FontAwesomeIcon icon={faCheck}/>
                         </Link>
                     </div> 
                 </div>

@@ -1,6 +1,3 @@
-DROP DATABASE cupofsugar_db;
-CREATE DATABASE cupofsugar_db;
-
 SELECT *
 FROM cupofsugar_db.users;
 SELECT *
@@ -179,16 +176,4 @@ VALUES
         "bobbybuildsthings@yahoo.com",
         "3958000225",
         "call or text",
-        true),
-
-    (""
-
-
-
-
-)
-
-
-
-
-;
+        true);
