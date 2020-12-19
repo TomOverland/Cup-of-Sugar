@@ -1,70 +1,113 @@
-# Getting Started with Create React App
+# Cup of Sugar
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Description:
 
-## Available Scripts
+[Live Website](#).  
+Full stack CRUD application that uses React and Tailwind.CSS for the front-end, and Node, Express.js, Sequelize, and MySQL for the back-end. This application was built as a capstone project for the University of Minnesota Full-Stack Web Development Bootcamp by a cohort consisting of Tom Overland, Nina Koller, Stephanie Tomlin, Alexander McDonald, and Nou Vang.  This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-In the project directory, you can run:
+This website is a peer to peer rental application where users can post, rent, update, and delete items.  For users to use the website, they must first create an account by signing up with Auth0 authentication (There is a known error where if the user signs in through Google, they will not get a valid JSON Web Token.  Please "sign-up" with your google account). Once signed in, the user will be able to view rentable items in their area. The user will also be able to post a new item using the "Post an Item" link in the side nav-menu.  After the user has posted an item, they can view a list of the items that belong to them which are rentable by viewing the "My Listings" link in the side nav-menu.
 
-### `npm start`
+## Table of Contents
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- [Description](#description)
+- [Installation](#installation)
+- [Technology Used](#technology-used)
+- [Built With](#built-with)
+- [License](#license)
+- [Contact](#contact)
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
 
-### `npm test`
+## Installation:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+#### Step 1 - Make sure you have a code editor, MySQL Node.js, and Node Package Manager installed
 
-### `npm run build`
+The code editor I used was Visual Studio Code. It can be found [here](https://code.visualstudio.com/download).  
+Node.js and NPM download can be found [here](https://nodejs.org/en/).  
+MySQL can be found [here](https://www.mysql.com/downloads/).
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+#### Step 2 - Clone our repository
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+In your command terminal, type the following to clone this repository: "git clone https://github.com/TomOverland/Cup-of-Sugar.git"
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+#### Step 3 - Move to the correct directory
 
-### `npm run eject`
+Once you are in the directory that you downloaded Cup of Sugar into, type the following in your command line: "cd Cup-of-Sugar.git"
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+#### Step 4 - Install NPM dependencies
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+By typing "npm install" you will download all of the dependencies required for this application.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+#### Step 5 - Create your MySQL Database
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+#### Step 6 - Create your Config file
 
-## Learn More
+#### Step 7 - Create your Auth0 and Formspree accounts
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+#### Step 8 - Start the application
+Start the application by typing "npm run start" in your CLI. This will prompt Sequelize to create the item and user tables in your database. 
+This command will concurrently start the web application on localhost:3000 and the backend server on localhost:3001.
+We've included a seed file if you'd like to seed information. Type "npm run seed" to store several users and items into your database.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Technology used
+#### Back-End
 
-### Code Splitting
+* Node.js - Used to install dependencies and to make command line scripts.
+* Express - Used in conjunction with MongoDB to create the backend of the website.
+* MySQL - Used as our Database
+* Sequelize - ORM used to communicate with MySQL
+* JawsDB - Used to connect MySQL to Heroku
+* Heroku - Used to host our application
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+#### Front-End
 
-### Analyzing the Bundle Size
+* React - Used to create components and the front end of the website
+* JSX - Used in conjunction with React to create the front end of the website
+* CSS 3 - Used to style the website
+* Tailwind CSS - Used to structure the design of the site
+* Axios - Used to make API calls to our server
+* Auth0 - Used to authenticate users
+* Formspree - Used to handle form submissions
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## Built With
 
-### Making a Progressive Web App
+* VS Code - https://code.visualstudio.com/
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## License:
 
-### Advanced Configuration
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+For more information about the license, click the link below:
 
-### Deployment
+- [License](https://opensource.org/licenses/)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## Contributing:
 
-### `npm run build` fails to minify
+If you would like to contribute to our project, please create a new branch for the pull request.  Once it has been submitted, we will review!
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Tests:
+
+This application was not developed with any tests.
+
+## Contact:
+
+For more information about the application, please reach out to us!
+
+Tom Overland
+[GitHub](https://github.com/TomOverland)
+[LinkedIn](www.linkedin.com/in/thomasoverland)
+
+Nina Koller
+[Github](https://github.com/nckoller)
+[LinkedIn](https://www.linkedin.com/in/nina-koller-82b1994b/)
+
+Alexander McDonald
+[Github](https://github.com/acm4219)
+[LinkedIn](https://www.linkedin.com/in/alexander-mcdonald-80b52a166/)
+
+Steph Tomlin
+[Github](https://github.com/StephTomlin86)
+[LinkedIn](https://www.linkedin.com/in/stephanie-tomlin-935531145/)
+
+Nou Vang
+[Github](https://github.com/nomvaa)
+[LinkedIn](http://linkedin.com/in/nou-m-vang-8a766166)
