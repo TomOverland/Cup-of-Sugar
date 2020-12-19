@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import API from "../../utils/API";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCheckCircle } from "@fortawesome/free-solid-svg-icons";
-import { faBackward } from "@fortawesome/free-solid-svg-icons";
+import { faTimes } from "@fortawesome/free-solid-svg-icons";
 
 class SingleProductCard extends React.Component {
   constructor(props) {
@@ -40,7 +40,7 @@ class SingleProductCard extends React.Component {
               className="h-64 w-auto  bg-blue bg-cover pb-1 block"
             />
             <br />
-            <div className="text-base sm:text-lg md:text-xl lg:text-2xl font-bold block ml-4">
+            <div className="text-base sm:text-lg md:text-xl lg:text-2xl font-bold block">
             {this.state.singleItem.itemName}
             </div>
             <hr />
@@ -50,10 +50,12 @@ class SingleProductCard extends React.Component {
             <div className="text-base sm:text-sm md:text-md lg:text-lg mt-3 block">
               ${this.state.singleItem.rentalFee} a Day
             </div>
+            <div className="text-base sm:text-sm md:text-md lg:text-lg mt-3 block">
+             Maximum Rental Time: {this.state.singleItem.maxRentalDuration}
+            </div>
             <br />
             <hr className="p-3" />
-          </div>
-          <div>
+            <div>
             <Link
               to="/contact"
               className="py-2 px-4 pr-4 bg-blue-500 hover:bg-blue-700 text-white font-semibold rounded-lg shadow-md focus:outline-none flex-3"
@@ -64,9 +66,11 @@ class SingleProductCard extends React.Component {
               to="/"
               className="ml-2 py-2 px-4 pr-4 bg-red-500 hover:bg-red-700 text-white font-semibold rounded-lg shadow-md focus:outline-none flex-3"
             >
-              Cancel <FontAwesomeIcon icon={faBackward}/>
+              Cancel <FontAwesomeIcon icon={faTimes}/>
             </Link>
           </div>
+          </div>
+          
         </div>
       </div>
     );

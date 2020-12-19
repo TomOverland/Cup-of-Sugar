@@ -4,7 +4,6 @@ import Home from "./views/Home";
 // import Product from './views/Product';
 import PostProductPage from "./components/PostProductPage/PostProductPage";
 import Header from "./components/Header/Header";
-import Footer from "./components/Footer/Footer";
 import Login from "./views/Login";
 import SingleProductPage from "./components/SingleProductPage/SingleProductPage";
 import Contact from "./components/Contact/Contact";
@@ -17,7 +16,7 @@ function App() {
     <div>
       <Router>
         <Header />
-        <Wrapper>
+      
           <Switch>
             <Route exact path="/">
               <Login />
@@ -29,8 +28,6 @@ function App() {
             <ProtectedRoute path="/contact" component={Contact} />
             <ProtectedRoute path="/owner" component={OwnerList} />
           </Switch>
-        </Wrapper>
-        <Footer />
       </Router>
     </div>
   );
