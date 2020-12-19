@@ -12,7 +12,7 @@ export function Sidebar() {
       .filter((box) => box.checked)
       .map((checkbox) => checkbox.name)
       .join(',');
-
+// if catergoryArr == [], getAllItems
     API.getFilteredItems(categoryArr).then((response) => {
       console.log('filter response', response);
     });
