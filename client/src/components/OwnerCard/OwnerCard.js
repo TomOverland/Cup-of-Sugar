@@ -100,14 +100,14 @@ class OwnerCard extends React.Component {
                   isAvailable={item.availableStatus}
                   changeStatus={this.changeStatus}
                 />
-                <button
+                {/* <button
                   // STILL NEED TO WRITE THIS NINA
 
                   item={item.availableStatus}
                   className="py-2 px-4 bg-green-500 hover:bg-green-600 text-white font-semibold rounded-lg shadow-md focus:outline-none mr-1"
                 >
                   Edit <FontAwesomeIcon icon={faEdit} />
-                </button>
+                </button> */}
                 <button
                   className="py-2 px-4 bg-red-500 hover:bg-red-600 text-white font-semibold rounded-lg shadow-md focus:outline-none"
                   type="button"
