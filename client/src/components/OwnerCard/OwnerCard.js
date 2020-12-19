@@ -7,13 +7,14 @@ class OwnerCard extends React.Component {
 
     this.state = {
       dbUser: [],
+      dbUserItems: [],
     };
   }
 
   componentDidMount() {
     // when page loads, the authenticated user's auth0.sub is saved to currentUser variable.
     const currentUser = this.props.currentUser;
-    // console.log("currentUser: ", currentUser);
+    console.log("currentUser owner card: ", currentUser);
     const userSearchParam = currentUser.auth0_id;
     console.log("user search param: ", userSearchParam);
 

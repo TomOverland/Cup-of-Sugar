@@ -1,8 +1,8 @@
-const { DataTypes, Sequelize } = require('sequelize');
-('use strict');
+const { DataTypes, Sequelize } = require("sequelize");
+("use strict");
 
 module.exports = function (sequelize, DataTypes) {
-  const User = sequelize.define('User', {
+  const User = sequelize.define("User", {
     // The id obtained from auth0 cannot be null, and must be a unique id to the db
     auth0_id: {
       type: DataTypes.STRING,
@@ -23,9 +23,9 @@ module.exports = function (sequelize, DataTypes) {
     updatedAt: Sequelize.DATE,
   });
   // for when we want to connect users to their listings
-  // User.associate = function (models) {
-  //   User.hasMany(models.Item);
-  // };
+  User.associate = function (models) {
+    User.hasMany(models.Item);
+  };
 
   return User;
 };

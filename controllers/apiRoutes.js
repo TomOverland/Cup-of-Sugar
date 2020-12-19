@@ -60,6 +60,7 @@ module.exports = function (app) {
       phone: req.body.phone,
       preferredContact: req.body.preferredContact,
       availableStatus: true,
+      UserId: req.body.UserId,
     })
       .then(function (result) {
         console.log("item posted sucessfully");
@@ -127,11 +128,14 @@ module.exports = function (app) {
   // Create new user
   app.post("/api/newuser/", function (req, res) {
     db.User.create({
-      email: req.body.email,
-      auth0id: req.body.auth0id,
+      auth0_id: req.body.auth0_id,
+      userEmail: req.body.userEmail,
     })
       .then(function (result) {
         console.log("user added to database");
+        res.json(result);
+        const resJson = res.json(result);
+        console.log("controller json response of result: ", resJson);
         res.sendStatus(200);
       })
       .catch(function (err) {
@@ -139,16 +143,16 @@ module.exports = function (app) {
       });
   });
 
-  // Delete an item listing
-  app.delete('/api/deleteitem/:id', function (req, res) {
-    db.Item.destroy({
+  // Get Items by User
+  app.get("api/item/:userid", function (req, res) {
+    db.Item.findAll({
       where: {
-        id: req.body.id,
+        UserId: req.params.id,
       },
     })
-      .then(function (result) {
-        console.log('Item was successfully deleted');
-        res.sendStatus(200);
+      .then(function (results) {
+        console.log("items", results);
+        res.json(results);
       })
       .catch(function (err) {
         console.log(err);
