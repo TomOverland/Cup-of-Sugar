@@ -52,7 +52,7 @@ class OwnerCard extends React.Component {
     // evaluate item.avaialableStatus to determine how a button attached to card should display to toggle status
   }
 
-  // Delete a Listing from the DB
+  // Delete a Listing from the DB, then update the state so it no longer appears on the page
   handleDelete = (event) => {
     console.log('this will be deleted', event.target.value);
     const itemId = event.target.value;
@@ -89,6 +89,7 @@ class OwnerCard extends React.Component {
                   <li>available status: {item.availableStatus}</li>
                 </p>
                 <Link
+                // STILL NEED TO WRITE THIS NINA
                   to="/editlisting"
                   item={item}
                   className="py-2 px-4 bg-green-500 hover:bg-green-600 text-white font-semibold rounded-lg shadow-md focus:outline-none mr-1"
