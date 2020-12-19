@@ -1,7 +1,7 @@
 import React from "react";
 import Wrapper from "../Wrapper/Wrapper"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faExchangeAlt } from "@fortawesome/free-solid-svg-icons";
+import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 
 export default class Contact extends React.Component {
   constructor(props) {
@@ -58,7 +58,7 @@ export default class Contact extends React.Component {
                     className="block flex-2 ml-1 py-1 px-1 bg-white rounded-lg placeholder-gray-400 text-gray-900 appearance-none inline-block w-md shadow-md focus:outline-none focus:ring-2 focus:ring-blue-600 w-full"
                     style={style.textarea} />
                 <hr className="pt-2"/>
-                {status === "SUCCESS" ? <p>Thanks!</p> : <button className="py-2 px-4 bg-red-500 hover:bg-red-700 text-white font-semibold rounded-lg shadow-lg focus:outline-none flex-2 ml-2 block">Submit <FontAwesomeIcon icon={faExchangeAlt}/></button>} 
+                {status === "SUCCESS" ? <p>Thanks!</p> : <button className="py-2 px-4 bg-red-500 hover:bg-red-700 text-white font-semibold rounded-lg shadow-lg focus:outline-none flex-2 ml-2 block">Submit <FontAwesomeIcon icon={faEnvelope}/></button>} 
                 {status === "ERROR" && <p>Ooops! There was an error.</p>}
                 <br />
             </form>

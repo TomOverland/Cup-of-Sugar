@@ -5,6 +5,7 @@ import { useAuth0 } from "@auth0/auth0-react";
 import { Sidebar } from "../components/Sidebar/Sidebar";
 import Results from "../components/Results/Results";
 import API from "../utils/API";
+import Wrapper from "../components/Wrapper/Wrapper"
 // import Footer from "../components/Footer/Footer"
 
 // export function HomeDisplayItems(filteredItems) {
@@ -50,10 +51,11 @@ const Home = () => {
   return (
     isAuthenticated && (
       <div>
+        <Wrapper>
         <div id="toms-div">
           <Results />
         </div>
-        <h1 className="font-bold text-2xl mb-3 pl-3">Best Sellers</h1>
+        <h1 className="font-bold text-2xl mb-3 pl-3">Items Available For Rent</h1>
         <hr />
         <div className="flex">
           <div className="flex-1">
@@ -63,6 +65,7 @@ const Home = () => {
             <Sidebar setItems={setItems} />
           </div>
         </div>
+        </Wrapper>
       </div>
     )
   );
