@@ -2,7 +2,7 @@ import React from 'react';
 import API from '../../utils/API';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEdit } from '@fortawesome/free-solid-svg-icons';
-import { faDumpsterFire } from '@fortawesome/free-solid-svg-icons';
+import { faTrashAlt } from '@fortawesome/free-solid-svg-icons';
 import { Link } from 'react-router-dom';
 
 class OwnerCard extends React.Component {
@@ -106,7 +106,7 @@ class OwnerCard extends React.Component {
                   value={item.id}
                   onClick={(e) => this.handleDelete(e)}
                 >
-                  Delete <FontAwesomeIcon icon={faDumpsterFire} />
+                  Delete <FontAwesomeIcon icon={faTrashAlt} />
                 </button>
                 </div>
              
