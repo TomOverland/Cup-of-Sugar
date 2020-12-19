@@ -8,21 +8,19 @@ USE cupofsugar_db;
 INSERT INTO users
     (auth0_id, userName, userEmail)
 VALUES
-    ("123", "Bob Bobson", "bob@email.com");
-("398", "Paula Partyhard", "partyinpaula@partyhard.com");
-("236", "Brody Broadhead", "brobro@brother.com");
-("444", "Donald Dorkus", "donnieyoureoutofyourelement@thedude.com");
-("256", "Martha Washington", "marthwash@gmail.com");
-("294", "Betty Blargus", "bettyblarg@bigmail.com");
-("335","Nancy Knowitall", "Nancyknowsall@wiser.com");
-("398", "Bugger Borowitz", "bugbo@gmail.com");
-("430", "Veruca Salt", "saltybrat@wonka.com");
-("734", "Marcelle LeShell", "marcyshell@ocean.com");
-("425", "Paula Paulson", "pauliepaul@gmail.com");
-("426", "Dennis Conrad", "dennyconnie@gmail.com");
-("295", "Milhouse VonHooten", "millyhoot@gmail.com");
-
-
+    ("123", "Bob Bobson", "bob@email.com"),
+    ("398", "Paula Partyhard", "partyinpaula@partyhard.com"),
+    ("236", "Brody Broadhead", "brobro@brother.com"),
+    ("444", "Donald Dorkus", "donnieyoureoutofyourelement@thedude.com"),
+    ("256", "Martha Washington", "marthwash@gmail.com"),
+    ("294", "Betty Blargus", "bettyblarg@bigmail.com"),
+    ("335", "Nancy Knowitall", "Nancyknowsall@wiser.com"),
+    ("398", "Bugger Borowitz", "bugbo@gmail.com"),
+    ("430", "Veruca Salt", "saltybrat@wonka.com"),
+    ("734", "Marcelle LeShell", "marcyshell@ocean.com"),
+    ("425", "Paula Paulson", "pauliepaul@gmail.com"),
+    ("426", "Dennis Conrad", "dennyconnie@gmail.com"),
+    ("295", "Milhouse VonHooten", "millyhoot@gmail.com");
 
 INSERT INTO items
     (itemName,
@@ -35,6 +33,8 @@ INSERT INTO items
     phone,
     preferredContact,
     availableStatus)
+
+
 VALUES
     ("Test Item 1",
         "much description",
@@ -45,7 +45,8 @@ VALUES
         "test@email.com",
         "4444444444",
         "call or text",
-        true),
+        true,
+        1),
 
     ("Wheelbarrow",
         "Heavy duty, 6 cubit feet capacity, steel tray ACE wheelbarrow to suit almost any heavy duty project. Use to haul gravel, sand, stone, concrete.",
@@ -56,7 +57,8 @@ VALUES
         "carl-the-contractor@hotmail.com",
         "5556261562",
         "Email",
-        true),
+        true,
+        2),
 
     ("Painter's easel",
         "Three legged painter's easel that suits the needs of nearly any painter. Walnut finish. Hold canvases up to 4 feet tall/wide. Converts into drawing table.",
@@ -67,7 +69,8 @@ VALUES
         "Susan.Bleeker@artsyfartsy.com",
         "7539992222",
         "email",
-        true),
+        true,
+        3),
 
     ("Settlers of Catan",
         "A strategic board game where players look to collect resources before their opponents do.",
@@ -78,7 +81,8 @@ VALUES
         "joe@bro.com",
         "2952858882",
         "phone",
-        true),
+        true,
+        4),
 
     ("Settlers of Catan",
         "A strategic board game where players look to collect resources before their opponents do.",
@@ -89,7 +93,8 @@ VALUES
         "AlexAllenAnderson@AAA.com",
         "8483095883",
         "phone",
-        true),
+        true,
+        5),
 
     ("Lawnmower",
         "21 inch high wheel push mower with Honda engine",
@@ -100,7 +105,8 @@ VALUES
         "JakeJohnJosephson@aol.com",
         "3993339999",
         "call or text",
-        true),
+        true,
+        6),
 
     ("Stroller",
         "One hand folding with auto lock, handbrake and 3 mode front wheel. Accommodates newbords with use of car seat and up to 5 year olds",
@@ -111,7 +117,8 @@ VALUES
         "Carla_Pendleton@web.net",
         "3920779887",
         "call or text",
-        true),
+        true,
+        7),
 
     ("Karaoke machine",
         "Get your party on with this excellent karaoke machine! Featuring bluetooth, AUX, USB and FM radio connections, you can serenade the night away, and effectively annoy your neighbors",
@@ -122,58 +129,178 @@ VALUES
         "PartyingPaula@partyon.com",
         "6110004885",
         "call or text",
-        true),
+        true,
+        8),
 
     ("Bouncy Castle",
         "Parent of the YEAR goes to you if and when you rent this crazy bouncy house for your childs next celebration! Blower fan included",
-        "Childrens toys and accessories",
         "https://secure.img1-fg.wfcdn.com/im/96236198/resize-h800%5Ecompr-r85/1045/104557058/81%2527+x+106%2527+Bounce+House+with+Slide+and+Air+Blower.jpg",
+        "Childrens toys and accessories",
         75,
         "3 days",
         "dadjeans4ever@yahoo.com",
         "5028885333",
         "call or text",
-        true),
+        true,
+        9),
 
     ("Canoe",
         "Paddle away for a weekend in this ultra light kevlar Wenonah canoe! Easily maneuverable and transportable.",
-        "Boating",
         "https://cdn.shopify.com/s/files/1/0251/3213/8575/products/image_33390da8-d766-4a5b-a4ff-6d496efb3e54_1080x.png?v=1605112750",
+        "Boating",
         33,
         "1 week",
         "bdubsguy@centurylink.com",
         "2995558833",
         "call or text",
-        true),
+        true,
+        10),
 
 
     ("Gas Grill",
         "5 burner outdoor stainless steel grill. Electronic ignition, comes with wheels.",
-        "Appliances",
         "https://www.fleetfarm.com/images/product/0000000318810/l/1.jpg",
+        "Appliances",
         15,
         "1 week",
         "grillmcchill@hotmail.com",
         "2995559388",
         "call only",
-        true),
+        true,
+        11),
 
     ("PlayStation 4",
         "The 1TB hard drive PlayStation 4 system lets you play the greatest games from acclaimed indies to award-winning AAA hits, along with more entertainment options from TV, music and more.",
         "https://media.direct.playstation.com/is/image/sierialto/PS4_Slim%20Core_ProductHero_900x900?$Background_Large$",
+        "video games and consoles",
         10,
         "1 month",
         "gamer@gamesforever.com",
         "4928885233",
         "call or text",
-        true),
+        true,
+        12),
 
     ("Power Drill",
         "ATOMIC 20-Volt MAX Cordless Brushless Compact 1/2 in. Drill/Driver with 2 20-Volt 1.3Ah Batteries, Charger & Bag",
         "https://images.homedepot-static.com/productImages/0a2413ea-a2dc-47a0-b7bb-5e5e91addffe/svn/dewalt-power-drills-dcd708bw205-64_1000.jpg",
+        "Tools",
         15,
         "1 month",
         "bobbybuildsthings@yahoo.com",
         "3958000225",
         "call or text",
-        true);
+        true,
+        13),
+
+    ("Tennis raquets",
+        "Set of two Wilson tennis raquets. Great for beginner or experienced tennis players. Lightweight and easy to handle.",
+        "https://dks.scene7.com/is/image/GolfGalaxy/19WILABLDFL105XXXTNN?qlt=70&wid=992&fmt=webp",
+        "Sporting goods",
+        8,
+        "1 month",
+        "Tracy.Tennisstar@hotmail.com",
+        "2984929933",
+        "call or text",
+        true,
+        14),
+
+    ("Tent",
+        "REI Half Dome 2+ tent is a great camping companion. Comfortably sleeps up to 3 people. Light weight, easy to pack up, set up, and take anywhere your camping leads you.",
+        "https://www.rei.com/media/0d4d1ab5-0bc4-4946-862c-fdee323530e9?size=784x588",
+        "Camping",
+        15,
+        "3 weeks",
+        "CarlCampsalot@gmail.com",
+        "5526638364",
+        "call or text",
+        true,
+        15),
+
+    ("Sewing Machine",
+        "Brother CS7000X Computerized Sewing and Quilting Machine, 70 Built-in Stitches, LCD Display, Wide Table, 10 Included Feet, White",
+        "https://www.amazon.com/gp/product/B08BH5GTNC/ref=as_li_tf_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=B08BH5GTNC&SubscriptionId=AKIAIPFZKKNXUR5ABTTA&linkCode=as2&tag=bestprodtagl44298-20",
+        "Arts and crafts",
+        15,
+        "3 months",
+        "Susansews@sewgood.com",
+        "4202758399",
+        "call",
+        true,
+        16),
+
+    ("Banjo",
+        "Ibanez B200 Banjo. 5-string with Mahogany bowl and neck, Rolled brass Ton Ring, Rosewood Fingerboard, and Remo weatherking head.",
+        "https://www.sweetwater.com/store/detail/B200Banjo--ibanez-b200-banjo-natural",
+        "Music",
+        15,
+        "2 months",
+        "FingerpickinFred@email.com",
+        "2848028583",
+        "call or text",
+        true,
+        17),
+
+    ("Folding chairs",
+        "Teak folding chairs made of solid wood. Great for parties or when company comes for dinner. Solid, sturdy, handsome. Set of 4.",
+        "https://www.target.com/p/4pc-robin-folding-chair-set-teak-brown-winsome/-/A-53533357?ref=tgt_adv_XS000000&AFID=google_pla_df&fndsrc=tgtao&DFA=71700000012577538&CPNG=PLA_Furniture%2BShopping&adgroup=SC_Furniture&LID=700000001170770pgs&LNM=PRODUCT_GROUP&network=g&device=c&location=9019659&targetid=aud-978557310856:pla-811232886915&ds_rl=1246978&ds_rl=1248099&ds_rl=1247068&gclid=Cj0KCQiAw_H-BRD-ARIsALQE_2PyADPf4-tfbd5t_3KG2xWrkuNOmTPeT7FxPgrfEg707U97UConrm4aAqN_EALw_wcB&gclsrc=aw.ds",
+        "Furniture",
+        15,
+        "1 month",
+        "RitaMeterMaid@email.com",
+        "2884440028",
+        "call",
+        true,
+        18),
+
+    ("Pumpkin Costume",
+        "Inflatable pumpkin costume, great for dressing up for Halloween.",
+        "https://www.milanoo.com/p911754.html?Promotion=usaggPLACostumes_911754&currency=USD&gclid=Cj0KCQiAw_H-BRD-ARIsALQE_2NyYp_D_-95WMvtGgONnQF_2CG1lq1mRgMBDVzQjFqaIs0Sd2D2X5waApElEALw_wcB#C4694S9",
+        "Clothes and accessories",
+        15,
+        "1 month",
+        "halloweenharry@hotmail.com",
+        "2750005555",
+        "call or text",
+        true,
+        19),
+
+    ("The Lord of the Rings Trilogy",
+        "The classic series written by JRR Tolkien in hardback, including the preclude story of of 'The Hobbit.' Beautifully illustrated. A classic must read.",
+        "https://blackwells.co.uk/bookshop/product/9780008376109?gC=098f6bcd4&gclid=Cj0KCQiAw_H-BRD-ARIsALQE_2PeGWRzTr86OxoaLBtLIVz-xf5KI_atJs79lUqgNoy8FqjN925NiX4aAinNEALw_wcB",
+        "Books",
+        2.50,
+        "1 year",
+        "bilbobagginses@hobbit.com",
+        "4783908333",
+        "email",
+        true,
+        20),
+
+    ("Camera",
+        "Panasonic - LUMIX G7 Mirrorless 4K Photo Digital Camera Body with 14-42mm f3.5-5.6 II Lens - Black",
+        "https://www.bestbuy.com/site/panasonic-lumix-g7-mirrorless-4k-photo-digital-camera-body-with-14-42mm-f3-5-5-6-ii-lens-black/7588027.p?skuId=7588027&ref=212&loc=1&extStoreId=281&ref=212&loc=1&ds_rl=1268655&gclid=Cj0KCQiAw_H-BRD-ARIsALQE_2PkRTDF_Xl6cQlONy2uE2cfqjoxoJM05EqvptEKL-R3HhVcFC6BVtIaAl3AEALw_wcB&gclsrc=aw.ds",
+        "Photo and video",
+        15,
+        "2 weeks",
+        "Candacecamera@comcast.com",
+        "29588855555",
+        "call or text",
+        true,
+        21)
+,
+
+
+
+
+        
+
+
+
+    
+
+
+
+
+
+;
