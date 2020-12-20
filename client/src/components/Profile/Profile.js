@@ -74,7 +74,7 @@ const Profile = () => {
   return (
     isAuthenticated && (
       <div>
-        <div className="text-base sm:text-sm md:text-md lg:text-lg font-bold block ml-2 underline pt-2 pb-2">Hello: {user.email}</div>
+        {/* <div className="text-base sm:text-sm md:text-md lg:text-lg font-bold block ml-2 underline pt-2 pb-2">Hello: {user.email}</div> */}
       </div>
     )
   );

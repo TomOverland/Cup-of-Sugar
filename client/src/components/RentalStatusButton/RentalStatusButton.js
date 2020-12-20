@@ -4,7 +4,7 @@ import { faSyncAlt } from '@fortawesome/free-solid-svg-icons';
 
 const RentalStatusButton = (props, changeStatus) => {
     const [isAvailable, setIsAvailable] = useState(props.isAvailable);
-//   console.log('in RentalStatButton', props, "isAvailableconst", isAvailable);
+
   
   return (
     <button
@@ -18,7 +18,6 @@ const RentalStatusButton = (props, changeStatus) => {
       onClick={(e) => {
           props.changeStatus(e, props.isAvailable ? 0 : 1)
           setIsAvailable(!isAvailable);
-          console.log("after onClick setstate", isAvailable)
         }
     }
     >

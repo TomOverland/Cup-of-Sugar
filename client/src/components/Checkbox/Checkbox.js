@@ -17,12 +17,13 @@ export function useCheckboxes(defaultCheckboxes) {
     newCheckboxes[index].checked = checked;
     setCheckboxes(newCheckboxes);
   }
-
+  
   return {
     setCheckbox,
     checkboxes,
   };
 }
+
 export function Checkboxes({ checkboxes, setCheckbox }) {
   return (
     <>

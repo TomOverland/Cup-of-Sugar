@@ -121,7 +121,6 @@ export default class PostProduct extends React.Component {
     // make api call to DB to create new Item
     postItemToBackend(this.state).then((postSucceeded) => {
       if (postSucceeded) {
-        //set state showModal to true
         this.setState({ showModal: true });
       } else {
         console.log("error");
@@ -182,7 +181,7 @@ export default class PostProduct extends React.Component {
                   <input
                     type="text"
                     className="flex-2 ml-1 py-1 px-1 bg-white rounded-lg placeholder-gray-400 text-gray-900 appearance-none inline-block w-md shadow-lg focus:outline-none focus:ring-2 focus:ring-blue-600"
-                    aria-div="Amount (to the nearest dollar)"
+                    aria-live="Amount (to the nearest dollar)"
                     placeholder=" 0"
                     onChange={(e) => this.handleInput(e, "rentalFee")}
                   />

@@ -1,5 +1,5 @@
 // List of items owned by the signed in user.
-import React, { useEffect } from "react";
+import React from "react";
 import OwnerCard from "../OwnerCard/OwnerCard";
 import { useAuth0 } from "@auth0/auth0-react";
 import Wrapper from "../Wrapper/Wrapper"

@@ -11,7 +11,7 @@ const FormTextareaInput = (props) => {
     <div className="space-y-6">
        <hr className="pt-1" />
       <div className="block">
-        <div for="itemDescription" className="font-bold text-xl p-2 underline">
+        <div className="font-bold text-xl p-2 underline">
           Description
         </div>
         <br />
