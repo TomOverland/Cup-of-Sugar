@@ -207,7 +207,7 @@ VALUES
         "2984929933",
         "call or text",
         true,
-        14),
+        12),
 
     ("Tent",
         "REI Half Dome 2+ tent is a great camping companion. Comfortably sleeps up to 3 people. Light weight, easy to pack up, set up, and take anywhere your camping leads you.",
@@ -219,7 +219,7 @@ VALUES
         "5526638364",
         "call or text",
         true,
-        15),
+        12),
 
     ("Sewing Machine",
         "Brother CS7000X Computerized Sewing and Quilting Machine, 70 Built-in Stitches, LCD Display, Wide Table, 10 Included Feet, White",
@@ -231,7 +231,7 @@ VALUES
         "4202758399",
         "call",
         true,
-        16),
+        13),
 
     ("Banjo",
         "Ibanez B200 Banjo. 5-string with Mahogany bowl and neck, Rolled brass Ton Ring, Rosewood Fingerboard, and Remo weatherking head.",
@@ -243,7 +243,7 @@ VALUES
         "2848028583",
         "call or text",
         true,
-        17),
+        10),
 
     ("Folding chairs",
         "Teak folding chairs made of solid wood. Great for parties or when company comes for dinner. Solid, sturdy, handsome. Set of 4.",
@@ -255,7 +255,7 @@ VALUES
         "2884440028",
         "call",
         true,
-        18),
+        1),
 
     ("Pumpkin Costume",
         "Inflatable pumpkin costume, great for dressing up for Halloween.",
@@ -267,7 +267,7 @@ VALUES
         "2750005555",
         "call or text",
         true,
-        19),
+        9),
 
     ("The Lord of the Rings Trilogy",
         "The classic series written by JRR Tolkien in hardback, including the preclude story of of 'The Hobbit.' Beautifully illustrated. A classic must read.",
@@ -279,7 +279,7 @@ VALUES
         "4783908333",
         "email",
         true,
-        20),
+        2),
 
     ("Camera",
         "Panasonic - LUMIX G7 Mirrorless 4K Photo Digital Camera Body with 14-42mm f3.5-5.6 II Lens - Black",
@@ -291,7 +291,7 @@ VALUES
         "29588855555",
         "call or text",
         true,
-        21),
+        11),
 
     ("Record Player",
         "https://docs.google.com/presentation/d/18jaA5OXE9wEQJF_clv-fBg4SgMXWR6I2q-op_pAI7QQ/edit?usp=sharing",
@@ -303,7 +303,7 @@ VALUES
         "2774993773",
         "call or text",
         true,
-        22),
+        12),
 
     ("Bike trainer",
         "Ready to plug and play—it's fully assembled out of the box with a preinstalled Shimano 11-speed cassette—the Elite Suito bike trainer offers an easy and accurate indoor bike training experience",
@@ -315,7 +315,7 @@ VALUES
         "2948885552",
         "call or text",
         true,
-        23),
+        13),
 
     ("Bicycle",
         "The Surly Pugsley may be the original fat bike, but this one is far from the original. Previously a great all-around fat bike, the Pugsley has been redesigned to be an ideal off-road touring and exploration rig",
@@ -327,7 +327,7 @@ VALUES
         "4882994279",
         "call or text",
         true,
-        24),
+        9),
 
     ("Table saw",
         "Maximized for accuracy and capacity this 8-1/4 in. table saw includes on-board storage for blade guard assembly, non-through cut riving knife, anti-kickback pawls, blade change wrenches, miter gauge and push stick.",
@@ -339,7 +339,7 @@ VALUES
         "2884992747",
         "call or text",
         true,
-        25),
+        7),
 
     ("Car jack",
         "Yellow Jacket Low-Profile Super-Duty Jack — 3-Ton Lift Capacity, 4in.–23in. Lift Range",
@@ -351,7 +351,7 @@ VALUES
         "2978493388",
         "call or text",
         true,
-        26),
+        6),
 
     ("Hair styler",
         "Dyson Airwrap Complete (Nickel/Fuchsia)Engineered for multiple hair types. With barrels to curl and wave, and brushes to control, smooth or add volume",
@@ -363,7 +363,7 @@ VALUES
         "2984772004",
         "call or text",
         true,
-        27),
+        7),
 
     ("Hammock",
         "Quilted Sunbrella Hammock with stand",
@@ -375,7 +375,7 @@ VALUES
         "2994828593",
         "call or text",
         true,
-        28),
+        8),
 
     ("Paella pan",
         "The wide, 17 inch shallow carbon steel cooking surface is designed to sauté meats and vegetables prior to adding rice",
@@ -387,7 +387,7 @@ VALUES
         "2985293848",
         "call or text",
         true,
-        29),
+        12),
 
     ("Sleeping pad",
         "Get a better night's sleep in the backcountry with the NEMO Tensor insulated sleeping pad. Its lightweight design is stable and packable, updated with 2 layers of metalized film to fend off the chill.",
@@ -399,7 +399,7 @@ VALUES
         "9328884449",
         "call or text",
         true,
-        30),
+        1),
 
     ("Ticket to Ride",
         "Set out on an epic journey building railways across the country in the Ticket To Ride Board Game. Players use strategy and decision-making as they run trains and decide routes between iconic cities.",
@@ -411,7 +411,7 @@ VALUES
         "2885939204",
         "call or text",
         true,
-        31),
+        2),
 
     ("Codenames",
         "Codenames is a top-rated spy game for multiple players that you won't stop playing! The two rival spymasters know the secret identities of 25 agents.",
@@ -423,7 +423,7 @@ VALUES
         "2995277528",
         "call or text",
         true,
-        32),
+        3),
 
     ("Scattegories",
         "Think fast! Team up in this fun, fast-paced game and rack your brain for items that fit the category.",
@@ -434,7 +434,7 @@ VALUES
         "2882775939",
         "call or text",
         true,
-        33),
+        4),
 
     ("Kayak",
         "The Island Voyage 2 is a two-person inflatable family kayak filled with features that make it easy and fun to use. It inflates and deflates easily while packing down small so it can be stowed in the back of your vehicle.",
@@ -446,7 +446,7 @@ VALUES
         "2985288228",
         "call or text",
         true,
-        34),
+        4),
 
     ("Leaf blower",
         "EGO Power+ LB6504 180 mph 650 CFM 56 volt Battery Handheld Leaf Blower Kit (Battery & Charger)",
@@ -458,7 +458,7 @@ VALUES
         "3872229482",
         "call or text",
         true,
-        35),
+        5),
 
     ("Hover board",
         "Halo Rover X, 8.5 inches. Ranked best hoverboard 2021",
@@ -470,7 +470,7 @@ VALUES
         "2858200383",
         "call or text",
         true,
-        36),
+        6),
 
     ("Harp",
         "The Rees Harps Special Edition Fullsicle Harp allows you to enjoy all the same great features of the standard Fullsicle Harp, but with an upgraded look, feel, and sound.",
@@ -482,7 +482,7 @@ VALUES
         "3772994827",
         "call or text",
         true,
-        37),
+        7),
 
     ("Slip 'n Slide",
         "The Turbo Chute Water Slide Lake Package features 3 - 20 foot sections of commercial strength sliding with 46 inches wide x 9 inches high PVC coated nylon inflatable wall barriers, an extra slippery coated 20 foot smooth overlapping slide surface and 4 stakes with 4 stake loops per section.",
@@ -494,7 +494,7 @@ VALUES
         "29852005828",
         "call or text",
         true,
-        38),
+        8),
 
     ("Outdoor event tent",
         "10'x20' Waterproof Pop Up Canopy Tent with Sides. Perfect for your next outdoor gathering to provide shelter and shade.",
@@ -506,23 +506,5 @@ VALUES
         "2985829294",
         "call",
         true,
-        39)
+        9)
 ,
-
-
-
-
-
-
-        
-
-        
-
-        
-
-
-
-
-        
-
-
