@@ -14,13 +14,13 @@ const OwnerList = () => {
 
   return (
     <div>
-      
+      <Wrapper>
        <h1 className="font-bold text-2xl mb-3 pl-3 pt-3">Your Listings</h1>
       <hr />
       <div className="text-base sm:text-sm md:text-md lg:text-lg font-bold block ml-2 underline">Welcome: {currentUser.userName}</div>
       <br/>
       <OwnerCard currentUser={currentUser} />
-      <Wrapper />
+      </Wrapper>
     </div>
   );
 };
