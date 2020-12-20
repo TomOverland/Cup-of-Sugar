@@ -61,7 +61,7 @@ class OwnerCard extends React.Component {
     const itemId = event.target.value;
     API.deleteItem(itemId).then((res) => {
       const updatedDbUserItems = this.state.dbUserItems.filter((userItem) => {
-        if (userItem.id !== itemId) return userItem;
+        if (userItem.id != itemId) return userItem;
       });
       this.setState({
         dbUserItems: updatedDbUserItems,
