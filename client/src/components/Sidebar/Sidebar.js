@@ -2,8 +2,6 @@ import React from 'react';
 import { Checkboxes, useCheckboxes } from '../Checkbox/Checkbox';
 import API from '../../utils/API';
 
-// import { HomeDisplayItems } from '../../views/Home';
-
 export function Sidebar(props) {
   const checkboxes = useCheckboxes();
 
@@ -13,13 +11,24 @@ export function Sidebar(props) {
       .filter((box) => box.checked)
       .map((checkbox) => checkbox.name)
       .join(',');
-    //NEED TO WRITE if catergoryArr == [], getAllItems---no, need a reset button.
     API.getFilteredItems(categoryArr).then((response) => {
       console.log('filter response', response);
-      props.setItems(response)
-     
+      props.setItems(response);
     });
   };
+
+  const resetCheckboxes = () => {
+    //target all checkboxes on the page by class, put them in a const (arr)
+    const checkboxArr = document.getElementsByClassName('form-check-input');
+    console.log(checkboxArr);
+    //forEach through the checkboxes
+    Array.prototype.forEach.call(checkboxArr, (checkbox) => {
+      console.log('checkbox.checked', checkbox.checked)
+      checkbox.checked = false
+    });
+    // checkboxArr.forEach(checkbox => {(checkbox.checked = 'false')});
+    //set each checkbox...
+  }
 
   return (
     <>
@@ -38,9 +47,16 @@ export function Sidebar(props) {
           Filter
         </button>
         <button
-          type="submit"
+          type="button"
           className="py-2 px-4 bg-red-600 hover:bg-red-700 text-white font-semibold rounded-lg shadow-md focus:outline-none"
-          value="submit"
+          value="reset"
+          onClick={(e) => {
+            API.getItems().then((response) => {
+              props.setItems(response);
+              resetCheckboxes();
+            });
+          
+          }}
         >
           Reset
         </button>

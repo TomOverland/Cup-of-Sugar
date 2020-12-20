@@ -1,10 +1,9 @@
 import React from 'react';
 import API from '../../utils/API';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faEdit } from '@fortawesome/free-solid-svg-icons';
+// import { faEdit } from '@fortawesome/free-solid-svg-icons';
 import RentalStatusButton from '../RentalStatusButton/RentalStatusButton';
 import { faTrashAlt } from '@fortawesome/free-solid-svg-icons';
-import { Link } from 'react-router-dom';
 
 class OwnerCard extends React.Component {
   constructor(props) {
@@ -27,9 +26,7 @@ class OwnerCard extends React.Component {
     // *** Change getUsers below to query for auth.sub... ***
     API.getUserByAuth0(userSearchParam)
       .then((res) => {
-        //   console.log("user response: ", res);
         const dbUserInfo = res;
-        console.log('user info from db: ', dbUserInfo);
 
         this.setState({
           dbUser: dbUserInfo,
@@ -49,12 +46,9 @@ class OwnerCard extends React.Component {
           console.log('state before ownerlist renders', this.state);
         });
       });
-
-    // evaluate item.avaialableStatus to determine how a button attached to card should display to toggle status
   }
-
+  // Event that allows user to change the rental status of their items
   changeStatus = (event, status) => {
-    console.log('inside changeStatus', event.target.value, status);
     const id = event.target.value;
     API.changeStatus(id, { status }).then((res) => {
       console.log('in OwnerCard post ChangeStat', res);
@@ -67,7 +61,7 @@ class OwnerCard extends React.Component {
     const itemId = event.target.value;
     API.deleteItem(itemId).then((res) => {
       const updatedDbUserItems = this.state.dbUserItems.filter((userItem) => {
-        if (userItem.id != itemId) return userItem;
+        if (userItem.id !== itemId) return userItem;
       });
       this.setState({
         dbUserItems: updatedDbUserItems,
