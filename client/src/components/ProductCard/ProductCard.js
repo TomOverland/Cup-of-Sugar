@@ -6,7 +6,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCheck } from "@fortawesome/free-solid-svg-icons";
 
 const ProductCard = (props) => {
-  console.log("props in ProductCard", props);
+  // console.log("props in ProductCard", props);
 
   // constructor(props) {
   //   super(props);
