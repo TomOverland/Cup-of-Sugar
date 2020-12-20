@@ -2,6 +2,7 @@ import React from 'react';
 import API from '../../utils/API';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEdit } from '@fortawesome/free-solid-svg-icons';
+import RentalStatusButton from '../RentalStatusButton/RentalStatusButton';
 import { faTrashAlt } from '@fortawesome/free-solid-svg-icons';
 import { Link } from 'react-router-dom';
 
@@ -52,6 +53,14 @@ class OwnerCard extends React.Component {
     // evaluate item.avaialableStatus to determine how a button attached to card should display to toggle status
   }
 
+  changeStatus = (event, status) => {
+    console.log('inside changeStatus', event.target.value, status);
+    const id = event.target.value;
+    API.changeStatus(id, { status }).then((res) => {
+      console.log('in OwnerCard post ChangeStat', res);
+    });
+  };
+
   // Delete a Listing from the DB, then update the state so it no longer appears on the page
   handleDelete = (event) => {
     console.log('this will be deleted', event.target.value);
@@ -60,61 +69,51 @@ class OwnerCard extends React.Component {
       const updatedDbUserItems = this.state.dbUserItems.filter((userItem) => {
         if (userItem.id != itemId) return userItem;
       });
-      this.setState(
-        {
-          dbUserItems: updatedDbUserItems,
-        },
-      );
+      this.setState({
+        dbUserItems: updatedDbUserItems,
+      });
     });
   };
 
   render() {
     return (
       <div className="container mx-auto lg:grid grid-cols-3 gap-4">
-        
-            {this.state.dbUserItems.map((item) => (
-              
-              <div className="flex space-x-4 rounded-md" key={item.name}>
-              <div className="flex-2 rounded-md p-6 bg-gray-100">
+        {this.state.dbUserItems.map((item) => (
+          <div className="flex space-x-4 rounded-md" key={item.name}>
+            <div className="flex-2 rounded-md p-6 bg-gray-100">
               <img
-                    alt={item.name}
-                    src={process.env.PUBLIC_URL + item.image}
-                    className="bg-blue bg-cover pb-2 px-5"
-                  />
+                alt={item.name}
+                src={process.env.PUBLIC_URL + item.image}
+                className="bg-blue bg-cover pb-2 px-5"
+              />
               <hr />
               <div className="py-1 px-10">
                 <div className="text-2xl font-bold mb-3 underline">
                   {item.itemName}
                 </div>
-                
+
                 <div className="text-lg mb-3 font-bold">
                   Daily Fee: ${item.rentalFee}.00
                 </div>
-              
               </div>
-              <Link
-                // STILL NEED TO WRITE THIS NINA
-                  to="/editlisting"
-                  item={item}
-                  className="py-2 px-4 bg-green-500 hover:bg-green-600 text-white font-semibold rounded-lg shadow-md focus:outline-none mr-1"
-                >
-                  Edit <FontAwesomeIcon icon={faEdit} />
-                </Link>
-                <button
-                  className="py-2 px-4 bg-red-500 hover:bg-red-600 text-white font-semibold rounded-lg shadow-md focus:outline-none"
-                  type="button"
-                  value={item.id}
-                  onClick={(e) => this.handleDelete(e)}
-                >
-                  Delete <FontAwesomeIcon icon={faTrashAlt} />
-                </button>
-                </div>
-             
-              </div>
-            ))}
+              <RentalStatusButton
+                value={item.id}
+                isAvailable={item.availableStatus}
+                changeStatus={this.changeStatus}
+              />
+              <button
+                className="py-2 px-4 bg-red-500 hover:bg-red-600 text-white font-semibold rounded-lg shadow-md focus:outline-none"
+                type="button"
+                value={item.id}
+                onClick={(e) => this.handleDelete(e)}
+              >
+                Delete <FontAwesomeIcon icon={faTrashAlt} />
+              </button>
+            </div>
+          </div>
+        ))}
       </div>
-    
-    )
+    );
   }
 }
 

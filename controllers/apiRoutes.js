@@ -159,4 +159,19 @@ module.exports = function (app) {
         console.log(err);
       });
   });
+
+  // Update availableStatus
+  app.post("/api/isAvailable/:id", function (req, res) {
+    console.log("body.status, id", req.params.id, req.body)
+    db.Item.update({ availableStatus: req.body.status }, {
+      where: {
+        id: req.params.id
+      }
+    }).then(function (result) {
+      console.log("check if status updated")
+      res.json(result);
+    }).catch(function (err) {
+      console.log(err);
+    })
+  })
 };
