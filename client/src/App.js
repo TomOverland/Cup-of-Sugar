@@ -9,7 +9,7 @@ import SingleProductPage from "./components/SingleProductPage/SingleProductPage"
 import Contact from "./components/Contact/Contact";
 import ProtectedRoute from "./auth/ProtectedRoute";
 import OwnerList from "./components/OwnerList/OwnerList";
-import Wrapper from "./components/Wrapper/Wrapper";
+
 
 function App() {
   return (
