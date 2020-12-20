@@ -9,14 +9,14 @@ import SingleProductPage from "./components/SingleProductPage/SingleProductPage"
 import Contact from "./components/Contact/Contact";
 import ProtectedRoute from "./auth/ProtectedRoute";
 import OwnerList from "./components/OwnerList/OwnerList";
-// import Wrapper from "./components/Wrapper/Wrapper";
+
 
 function App() {
   return (
     <div>
       <Router>
         <Header />
-      
+        
           <Switch>
             <Route exact path="/">
               <Login />
@@ -28,6 +28,7 @@ function App() {
             <ProtectedRoute path="/contact" component={Contact} />
             <ProtectedRoute path="/owner" component={OwnerList} />
           </Switch>
+        
       </Router>
     </div>
   );
