@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useAuth0 } from "@auth0/auth0-react";
 import Loader from "../Loader/Loader";
-import API from "../../utils/API";
+// import API from "../../utils/API";
 
 const Profile = () => {
   const {
@@ -42,30 +42,30 @@ const Profile = () => {
     getUserMetadata();
   }, []);
 
-  useEffect(() => {
-    // API.getUsers() will get a list of all current users.
-    // we identify users by Auth0.sub, which is a hashed value.
-    // if the user's Auth.sub does not exist in our current database, we then post that new user to our DB.
-    API.getUsers().then((res) => {
-      // console.log("user response: ", res);
-      const apiUsers = res;
-      // console.log("user response data: ", apiUsers);
-    });
+  // useEffect(() => {
+  //   // API.getUsers() will get a list of all current users.
+  //   // we identify users by Auth0.sub, which is a hashed value.
+  //   // if the user's Auth.sub does not exist in our current database, we then post that new user to our DB.
+  //   API.getUsers().then((res) => {
+  //     // console.log("user response: ", res);
+  //     const apiUsers = res;
+  //     // console.log("user response data: ", apiUsers);
+  //   });
 
-    // Defining the new user info
-    const newUser = {
-      auth0_id: user.sub,
-      userName: user.name,
-      userEmail: user.email,
-    };
-    //*** Add if (user exists) {
-    //    API.postUser(newUser).then((res) => {
-    //     console.log("posting user: ", res);
-    // })
-    //  } else { console.log('user exists')} ***
+  //   // Defining the new user info
+  //   // const newUser = {
+  //   //   auth0_id: user.sub,
+  //   //   userName: user.name,
+  //   //   userEmail: user.email,
+  //   // };
+  //   //*** Add if (user exists) {
+  //   //    API.postUser(newUser).then((res) => {
+  //   //     console.log("posting user: ", res);
+  //   // })
+  //   //  } else { console.log('user exists')} ***
 
-    // console.log("newUser data: ", newUser)
-  });
+  //   // console.log("newUser data: ", newUser)
+  // });
 
   if (isLoading) {
     return <Loader />;

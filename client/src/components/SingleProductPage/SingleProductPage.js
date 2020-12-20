@@ -1,5 +1,5 @@
 // View of single product from results list
-import React, { useEffect, useState } from "react";
+import React from "react";
 // import { Link } from "react-router-dom";
 import { withAuthenticationRequired } from "@auth0/auth0-react";
 import Login from "../../views/Login";
