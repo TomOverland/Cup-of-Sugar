@@ -2,7 +2,7 @@
 
 ## Description:
 
-[Live Website](#).  
+[Live Website](https://fierce-inlet-58475.herokuapp.com/).  
 Full stack CRUD application that uses React and Tailwind.CSS for the front-end, and Node, Express.js, Sequelize, and MySQL for the back-end. This application was built as a capstone project for the University of Minnesota Full-Stack Web Development Bootcamp by a cohort consisting of Tom Overland, Nina Koller, Stephanie Tomlin, Alexander McDonald, and Nou Vang.  This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 This website is a peer to peer rental application where users can post, rent, update, and delete items.  For users to use the website, they must first create an account by signing up with Auth0 authentication (There is a known error where if the user signs in through Google, they will not get a valid JSON Web Token.  Please "sign-up" with your google account). Once signed in, the user will be able to view rentable items in their area. The user will also be able to post a new item using the "Post an Item" link in the side nav-menu.  After the user has posted an item, they can view a list of the items that belong to them which are rentable by viewing the "My Listings" link in the side nav-menu.

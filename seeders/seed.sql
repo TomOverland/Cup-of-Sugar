@@ -294,7 +294,7 @@ VALUES
         11),
 
     ("Record Player",
-        "https://docs.google.com/presentation/d/18jaA5OXE9wEQJF_clv-fBg4SgMXWR6I2q-op_pAI7QQ/edit?usp=sharing",
+        "Audio-Technica AT-LP140XP Direct-Drive Professional DJ Turntable  Silver",
         "https://www.guitarcenter.com/Audio-Technica/AT-LP140XP-Direct-Drive-Professional-DJ-Turntable-Silver-1500000263150.gc?source=4WWMWXGL&storeCode=&source=4WWRWXGL&gclid=Cj0KCQiA5vb-BRCRARIsAJBKc6IzxKJYI72VuxhGV9pd2MehEGsEEIJ0f46esmH5C2V2pWeqJSi-mHYaArLuEALw_wcB",
         "Music",
         15,
@@ -318,7 +318,7 @@ VALUES
         13),
 
     ("Bicycle",
-        "The Surly Pugsley may be the original fat bike, but this one is far from the original. Previously a great all-around fat bike, the Pugsley has been redesigned to be an ideal off-road touring and exploration rig",
+        "The Surly Pugsley may be the original fat bike, but this one is far from the original. Previously a great all-around fat bike, the Pugsley has been redesigned to be an ideal off-road touring and exploration rig.",
         "https://www.pristiwanicyclesstore.com/surly-pugsley/?sku=SKU-1399-Candied%20Yam%20Orange-Medium",
         "Bicycle",
         25,
