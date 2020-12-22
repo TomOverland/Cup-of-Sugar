@@ -14,6 +14,7 @@ This website is a peer to peer rental application where users can post, rent, up
 - [Technology Used](#technology-used)
 - [Built With](#built-with)
 - [License](#license)
+- [Project Management](#project-management)
 - [Contact](#contact)
 
 
@@ -92,6 +93,12 @@ If you would like to contribute to our project, please create a new branch for t
 ## Tests:
 
 This application was not developed with any tests.
+
+## Project Management:
+
+We used a Trello board to organize our project.  You can view that board [here](https://trello.com/b/P8AssTSn/cup-of-sugar-board).
+
+We presented our project to the Fall 2020 University of Minnesota Bootcamp cohort.  You can view our Google Presentation [here](https://docs.google.com/presentation/d/1TXB5NMjJcC-VnarSuva4PMZ_A24ZmkoI_sIm-wUMK-4/edit?usp=sharing).
 
 ## Contact:
 
