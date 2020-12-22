@@ -38,10 +38,15 @@ Once you are in the directory that you downloaded Cup of Sugar into, type the fo
 By typing "npm install" you will download all of the dependencies required for this application.
 
 #### Step 5 - Create your MySQL Database
+You will need a local MySQL Database for testing, and if you plan on deploying to Heroku you will need to connect your JawsDB to your MySQL workbench.  For a local MySQL database, you will want to create a database called "cupofsugar_db". Sequelize will create the user and item tables.
 
 #### Step 6 - Create your Config file
+You will need to create a config directory in your root directory, and create a config.json file inside of your config directory.  These files are already included in the .gitignore so you don't accidently push your information to GitHub.  You will need your username and password for your local MySQL connection.
 
 #### Step 7 - Create your Auth0 and Formspree accounts
+You will need to create an Auth0 account for the authentication.  You can sign up for one [here](https://auth0.com/signup?&signUpData=%7B%22category%22%3A%22button%22%7D&email=undefined).
+
+You will need a formspree account to route the contact form.  You can sign up for one [here](https://formspree.io/register)
 
 #### Step 8 - Start the application
 Start the application by typing "npm run start" in your CLI. This will prompt Sequelize to create the item and user tables in your database. 
@@ -93,21 +98,21 @@ This application was not developed with any tests.
 For more information about the application, please reach out to us!
 
 Tom Overland
-[GitHub](https://github.com/TomOverland)
-[LinkedIn](www.linkedin.com/in/thomasoverland)
+* [GitHub](https://github.com/TomOverland)
+* [LinkedIn](www.linkedin.com/in/thomasoverland)
 
 Nina Koller
-[Github](https://github.com/nckoller)
-[LinkedIn](https://www.linkedin.com/in/nina-koller-82b1994b/)
+* [Github](https://github.com/nckoller)
+* [LinkedIn](https://www.linkedin.com/in/nina-koller-82b1994b/)
 
 Alexander McDonald
-[Github](https://github.com/acm4219)
-[LinkedIn](https://www.linkedin.com/in/alexander-mcdonald-80b52a166/)
+* [Github](https://github.com/acm4219)
+* [LinkedIn](https://www.linkedin.com/in/alexander-mcdonald-80b52a166/)
 
 Steph Tomlin
-[Github](https://github.com/StephTomlin86)
-[LinkedIn](https://www.linkedin.com/in/stephanie-tomlin-935531145/)
+* [Github](https://github.com/StephTomlin86)
+* [LinkedIn](https://www.linkedin.com/in/stephanie-tomlin-935531145/)
 
 Nou Vang
-[Github](https://github.com/nomvaa)
-[LinkedIn](http://linkedin.com/in/nou-m-vang-8a766166)
+* [Github](https://github.com/nomvaa)
+* [LinkedIn](http://linkedin.com/in/nou-m-vang-8a766166)
